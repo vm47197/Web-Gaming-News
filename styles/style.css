@@ -322,7 +322,7 @@
   color:#607d8b;
   text-transform:capitalize;
   font-size:20px;
-  fonr-weight:900;
+  font-weight:900;
   margin-top:40px;
 }
 
@@ -495,3 +495,4 @@ input[type='text']:active:focus::-webkit-input-placeholder
     text-transform: capitalize;
     font-family: 'Open Sans', sans-serif;
 }
+
