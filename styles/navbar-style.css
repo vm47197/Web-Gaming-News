@@ -1,103 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-*, *::before, *::after{
+*{
   box-sizing: border-box;
-  margin:0;
-  padding:0;
-}
-
-:focus{
-  outline:none;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-    font-family:sans-serif;
-  font-size: 16px;
-  
-  background-repeat: no-repeat;
+  font-family: 'Nunito', sans-serif;
 }
 
-a{
+.navbar{
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.main-nav{
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo{
   text-decoration: none;
-  color:inherit;
-  cursor:pointer;
+  color: #fff;
 }
 
-#MainNav{
-  display:flex;
-  flex-wrap:wrap;
-  background-color:#ffffffaa;
-  padding:0 10%;
-  justify-content:space-between;
-  box-shadow:0 0 10px #00000077;
-  backdrop-filter:blur(5px);
+.main-nav li{
+  text-align: center;
+  margin: 15px auto;
 }
 
-#MainLogo{
-  width: 11%;
+.logo{
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
-.ul{
-  list-style:none;
-  display:flex;
-  align-items:center;
-  margin-left: auto !important;
-  margin-right: auto !important;
+.navbar-toggle{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
 }
 
-.li{
-  margin-left:2em;
+.active{
+  display: block;
 }
 
-.link{
-   position:relative;
-}
-
-.link::after{
-  content:"";
-  display:block;  
-  position:absolute;
-  background-color:#444;
-  width:100%;
-  height:.2em;
-  bottom:-.3em;
-  left:0;
-  border-radius:.1em;
-  transform:scaleX(0);
-  transition:transform .3s ease;
-  transform-origin:right;
-}
-
-.link:hover::after, .link:focus::after   {
-  transform:scaleX(1);
-  transform-origin:left;
-}
-
-#MenuLabel,input{
-  display:none;
-}
-
-@media screen and (max-width:600px){
-  
-  #MenuLabel{
-    display:inline;
-    align-self:center;
-    cursor:pointer;
+@media screen and (min-width: 760px){
+  .navbar{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      align-items: center;
   }
- 
-  .ul{
-    margin:6em 0;
-    display:none;
-    flex:100%;
+
+  .main-nav{
+      display: contents;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
   }
-  
-  .li{
-    margin-left:0;
-    text-align:center;
-    margin-bottom:3em;
+
+  .main-nav li{
+      margin: 0;
   }
-  
-  #toggle:checked + ul{
-    display:block;
+
+  .nav-links{
+      margin-left: 40px;
+  }
+
+  .logo{
+      margin-top: 0;
+  }
+
+  .navbar-toggle{
+      display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover{
+      color: #FF9800;
   }
 }

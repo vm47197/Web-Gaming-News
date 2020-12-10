@@ -2,86 +2,191 @@
 <html>
 <link rel="stylesheet" href="styles/navbar-style.css" />
 <link rel="stylesheet" href="styles/cards.css" />
+<link rel="stylesheet" href="styles/style.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Google Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+<div id="MainFadeDivID">
 
-<head>
-  <nav id="MainNav">
-    <img id="MainLogo" src="Images/MainLogo.png" href="#" />
-    <label id="MenuLabel" aria-hidden="true" for="toggle"><i class="fas fa-bars"></i></label>
-    <input aria-hidden="true" name="toggle" id="toggle" type="checkbox">
-    <ul class="ul">
-      <li class="li"><a class="link" href="#">Services</a></li>
-      <li class="li"><a class="link" href="#">About</a></li>
-      <li class="li"><a class="link" href="#">Contact</a></li>
-    </ul>
-  </nav>
-</head>
+    <head>
+        <nav class="navbar"
+            style="background-repeat: no-repeat;background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);z-index: 1000; ">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fa fa-bars"></i>
+            </span>
+            <a href="#" class="logo">Logo</a>
+            <ul class="main-nav" id="js-menu">
+                <div style="display: flex;margin-right: -5%;">
+                    <li>
+                        <a href="index.html" class="nav-links">Home</a>
+                    </li>
+                    <li>
+                        <a href="pages/about.html" class="nav-links">About Us</a>
+                    </li>
+                    <li>
+                        <a href="pages/snake.html" class="nav-links">Try out our new Games</a>
+                    </li>
+                    <li>
+                        <a href="pages/contact.html" class="nav-links">Contact Us</a>
+                    </li>
+                </div>
+                <li style="margin-right: 2%;">
+                    <a id="ModalOpen" class="nav-links">Login</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="WelcomeID" style="margin-top: 23%;margin-bottom: 30%;">
+            <h1 class="animated fadeIn center-align text-white" style="font-size: 6em;-moz-user-select: none;">Welcome!
+            </h1>
+            <br />
+            <h3 class="center-align text-white" style="font-size: 1.5em;">With us You can find the latest and greates
+                news in the regional gaming industry.</h3>
+            <h3 class="center-align text-white" style="font-size: 1.5em;">Followed by Accurate and daily/steady news
+            </h3>
+            <div class="buttons">
+                <a class="btn center-everything" id="explore-btn">Explore more</a>
+            </div>
+        </div>
+    </head>
+    <div id="section1"><br></div>
 
-<body style="background-image: url(Images/blackWallp.jpg);background-size: 100%; ">
+    <body style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);">
+        <div class="animated fadeIn" style="background: #fff;margin: 10%;">
+            <header style="padding: 5px;">
+                <h1 style="-moz-user-select: none;">Cool Articles</h1>
+            </header>
+            <div class="band">
+                <div class="item-1">
+                    <a href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852"
+                        class="card">
+                        <div class="thumb" style="background-image: url(Images/PostImages/GjirafaPrizePool.jpg);">
+                        </div>
+                        <article>
+                            <h1>International Artist Feature: Malaysia</h1>
+                            <span>Mary Winkler</span>
+                        </article>
+                    </a>
+                </div>
+                <div class="item-2">
+                    <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045"
+                        class="card">
+                        <div class="thumb" style="background-image: url(Images/PostImages/GjirafaPrizePool.jpg);">
+                        </div>
+                        <article>
+                            <h1>How to Conduct Remote Usability Testing</h1>
+                            <span>Harry Brignull</span>
+                        </article>
+                    </a>
+                </div>
+                <div class="item-3">
+                    <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724"
+                        class="card">
+                        <div class="thumb" style="background-image: url(Images/PostImages/GjirafaPrizePool.jpg);">
+                        </div>
+                        <article>
+                            <h1>Created by You, July Edition</h1>
+                            <p>Welcome to our monthly feature of fantastic tutorial results created by you, the Envato
+                                Tuts+
+                                community! </p>
+                            <span>Melody Nieves</span>
+                        </article>
+                    </a>
+                </div>
+                <div class="item-4">
+                    <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826"
+                        class="card">
+                        <div class="thumb" style="background-image: url(Images/PostImages/GjirafaPrizePool.jpg);">
+                        </div>
+                        <article>
+                            <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+                            <p>We’ll be putting things together so that as you scroll down from the top of the page
+                                you’ll
+                                see
+                                an “Alien Lander” making its way to touch down.</p>
+                            <span>Kezz Bracey</span>
+                        </article>
+                    </a>
+                </div>
+                <div class="item-5">
+                    <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139"
+                        class="card">
+                        <div class="thumb" style="background-image: url(Images/PostImages/GjirafaPrizePool.jpg);">
+                        </div>
+                        <article>
+                            <h1>How to Create a “Stranger Things” Text Effect in Adobe Photoshop</h1>
+                            <span>Rose</span>
+                        </article>
+                    </a>
+                </div>
+                <div class="item-6">
+                    <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338"
+                        class="card">
+                        <div class="thumb" style="background-image: url(Images/PostImages/GjirafaPrizePool.jpg);"></div>
+                        <article>
+                            <h1>5 Inspirational Business Portraits and How to Make Your Own</h1>
 
-  <div class="row">
-    <div class="example-1 card">
-      <div class="wrapper">
-        <div class="date">
-          <span class="day">12</span>
-          <span class="month">Aug</span>
-          <span class="year">2016</span>
+                            <span>Marie Gardiner</span>
+                        </article>
+                    </a>
+                </div>
+                <div class="item-7">
+                    <a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281"
+                        class="card">
+                        <div class="thumb" style="background-image: url(Images/PostImages/GjirafaPrizePool.jpg);"></div>
+                        <article>
+                            <h1>Notes From Behind the Firewall: The State of Web Design in China</h1>
+                            <span>Kendra Schaefer</span>
+                        </article>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="data">
-          <div class="content">
-            <span class="author">Jane Doe</span>
-            <h1 class="title"><a href="#">Boxing icon has the will for a couple more fights</a></h1>
-            <p class="text">The highly anticipated world championship fight will take place at 10am and is the second major boxing blockbuster in the nation after 43 years.</p>
-            <label for="show-menu" class="menu-button"><span></span></label>
-          </div>
-          <input type="checkbox" id="show-menu" />
-          <ul class="menu-content">
-            <li>
-              <a href="#" class="fa fa-bookmark-o"></a>
-            </li>
-            <li><a href="#" class="fa fa-heart-o"><span>47</span></a></li>
-            <li><a href="#" class="fa fa-comment-o"><span>8</span></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="example-2 card">
-      <div class="wrapper">
-        <div class="header">
-          <div class="date">
-            <span class="day">12</span>
-            <span class="month">Aug</span>
-            <span class="year">2016</span>
-          </div>
-          <ul class="menu-content">
-            <li>
-              <a href="#" class="fa fa-bookmark-o"></a>
-            </li>
-            <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
-            <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
-          </ul>
-        </div>
-        <div class="data">
-          <div class="content">
-            <span class="author">Jane Doe</span>
-            <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
-            <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
-            <a href="#" class="button">Read more</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        <a class="buttons" id="ShowModal" href="#openModal">Open Modal</a>
 
+        <div id="openModal" class="modalDialog">
+            <section class="container">
+                <div>
+                    <a href="" title="Close" class="close" style="float: right;margin-right: 3%;margin-top: 1%;"><span
+                            aria-hidden="true" id="exit">&times;</span></a>
+                </div>
+                <section class="one">
+                    <div class="logo">
+                        <img src="https://image.flaticon.com/icons/svg/143/143361.svg">
+                    </div>
+                    <h2 class="heading">
+                        please subscribe to get updates
+                    </h2>
+                    <p> signup with your email to get latest updates
+                    </p>
+                    <form>
+                        <input type='text' placeholder="enter your email"><br />
+                        <button class="btn" role="button">
+                            Subscribe
+                        </button>
+                    </form>
+                </section>
+                <section class="two">
+                    <div>
+                        <a title="Close" span aria-hidden="true" onclick="$('#exit').trigger('click')"
+                            style="float: right;margin-right: 3%;margin-top: 1%;">&times;</span></a>
+                    </div>
+                    <h3>
+                        thank you for subscribing !
+                    </h3>
+                    <div class="close">
+                        <button class="AnotherEmailID btn" role="button">
+                            <span>Subscribe With another Email?</span>
+                        </button>
+                    </div>
+        </div>
+        </section>
+        </section>
+</div>
+</div>
 
 </body>
-<script src="scripts/main.js"></script>
-<script src="scripts/jquery-3.5.1.min.js">
-</script>
-
-<style>
-  .getStyle {
-    @include '/styles/cards.css'
-  }
-</style>
+</div>
 
 </html>
+<script src="scripts/jquery-3.5.1.js"></script>
+<script src="scripts/main.js"></script>
