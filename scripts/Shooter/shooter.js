@@ -132,7 +132,7 @@ let animationId
 let score = 0
 function animate() {
     animationId = requestAnimationFrame(animate);
-    c.fillStyle = 'rgba(0,0,0,0.1)';
+    c.fillStyle = 'rgba(0,0,0,0.3)';
     c.fillRect(0, 0, canvas.width, canvas.height);
     player.draw();
     particles.forEach((particle, index) => {
@@ -159,6 +159,7 @@ function animate() {
             cancelAnimationFrame(animationId);
             modal.style.display = 'flex';
             MainScore.innerHTML = score;
+            console.log("Here")
         }
         projectiles.forEach((projectile, projectileindex) => {
             const dist = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y);
@@ -187,7 +188,6 @@ function animate() {
                     setTimeout(() => {
                         enemies.splice(index, 1);
                         projectiles.splice(projectileindex, 1);
-
                     }, 0)
                 }
             }

@@ -171,6 +171,7 @@ StartBtn.addEventListener('click', () => {
     user.score = 0;
     loop = setInterval(game, 1000 / framePerSecond);
     modal.style.display = 'none';
+    EndBtn.style.display = 'block';
 })
 EndBtn.addEventListener('click', () => {
     ComScore.innerHTML = com.score;
@@ -178,4 +179,8 @@ EndBtn.addEventListener('click', () => {
     clearInterval(loop);
     resetBall()
     modal.style.display = 'flex';
+    EndBtn.style.display = 'none';
 })
+$(document).ready(function (){
+    EndBtn.style.display = 'none';
+});
