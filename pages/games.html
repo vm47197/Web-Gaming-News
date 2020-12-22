@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html>
+<title>Games</title>
+<link rel="stylesheet" href="../styles/navbar-style.css" />
+<link rel="stylesheet" href="../styles/style.css" />
 
 <head>
-
-
+    <nav class="navbar" style="z-index: 2000">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fa fa-bars"></i>
+        </span>
+        <a href="#" class="logo">Logo</a>
+        <ul class="main-nav" id="js-menu">
+            <div style="display: flex;margin-right: -5%;">
+                <li>
+                    <a href="../index.html" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="../pages/about.html" class="nav-links">About Us</a>
+                </li>
+                <li>
+                    <a href="../pages/games.html" class="nav-links">Try out our new Games</a>
+                </li>
+                <li>
+                    <a href="../pages/contact.html" class="nav-links">Contact Us</a>
+                </li>
+            </div>
+            <li style="margin-right: 2%;">
+                <a id="ModalOpen" class="nav-links">Login</a>
+            </li>
+        </ul>
+    </nav>
 </head>
 
-<body style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);">
-    <wrapper>
-        <h2><strong>All Games<span>( 4 )</span></strong></h2>
-        <div class="cards">
-            <figure class="card" >
+<div style="margin-top:5%;margin-left: 1.3%;color: #aeafaf;">
+    <h1>Warning!</h1>
+    <h2>Shumica e ketyre lojrave jane ende ne "Demo Version", qe do te thote eshte versioni beta i tyre, Dhe keto mund
+        ti luani vetem ne PC/Desktop Kompjuter</h2>
+    <h2>Ne do te ju ofrojme mundesine per raportimin e "bugs", qe mund ti gjeni gjate luajtjes. Qdo ndihme nga ju do te
+        jete e vlefshme ne permirsimin e kesaj Website</h2>
+</div>
 
-                <a href="shooter.html"><img src="../Images/SHOOTERMAINJPEG.jpg"/></a>
+<body style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);">
+
+    <wrapper>
+        <h2 id="AllGamesID"><strong>All Games<span>(4)</span></strong></h2>
+        <div class="cards">
+            <figure class="card">
+                <a href="shooter.html"><img src="../Images/Shooter.jpg" /></a>
                 <div style="display: flex;">
                     <figcaption style="color:#fff">Shooter</figcaption><button><span>Play Me</span></button>
                 </div>
             </figure>
             <figure class="card">
-
-                <img src="https://mrreiha.keybase.pub/codepen/hover-fx/1.jpg" />
-
-                <figcaption style="color:#fff">Dota 2</figcaption>
-
+                <a href="snake.html"><img src="../Images/Snake.PNG" /></a>
+                <div style="display: flex;">
+                    <figcaption style="color:#fff">Snake</figcaption>
+                </div>
             </figure>
+            <figure class="card">
+                <a href="pingpong.html"><img src="../Images/PingPong.png" /></a>
+                <div style="display: flex;">
+                    <figcaption style="color:#fff">Ping Pong</figcaption><button><span>Play Me</span></button>
+                </div>
+            </figure>
+            <figure class="card">
+                <div style="display: flex;">
+                    <figcaption style="color:#fff">Dota 2</figcaption>
+                </div>
+            </figure>
+        </div>
     </wrapper>
 </body>
 
@@ -31,15 +76,15 @@
 </html>
 <style>
     .abs,
-    h2:after,
+    #AllGamesID:after,
     .cards .card figcaption,
     .cards .card:after {
         position: absolute;
     }
 
     .rel,
-    h2,
-    h2 strong,
+    #AllGamesID,
+    #AllGamesID strong,
     .cards .card {
         position: relative;
     }
@@ -49,9 +94,9 @@
     }
 
     .vm,
-    h2,
-    h2 strong,
-    h2 span {
+    #AllGamesID,
+    #AllGamesID strong,
+    #AllGamesID span {
         vertical-align: middle;
     }
 
@@ -64,26 +109,26 @@
         padding: 15px;
     }
 
-    h2 {
+    #AllGamesID {
         padding: 10px;
         padding-left: 25px;
         color: #ccc;
         margin: 0;
     }
 
-    h2 strong {
+    #AllGamesID strong {
         z-index: 2;
         background: #24282f;
         padding: 4px 8px;
     }
 
-    h2 span {
+    #AllGamesID span {
         font-size: 0.7em;
         color: #aaa;
         margin-left: 10px;
     }
 
-    h2:after {
+    #AllGamesID:after {
         content: '';
         z-index: 1;
         bottom: 50%;
@@ -100,7 +145,7 @@
 
     .cards .card {
         margin: 20px;
-        width: 23%;
+        width: 19%;
         height: auto;
         overflow: hidden;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
@@ -121,7 +166,7 @@
         right: 0;
         padding: 20px;
         padding-bottom: 10px;
-        font-size: 20px;
+        font-size: 31px;
         background: none;
         color: #fff;
         transform: translateY(100%);
