@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="styles/navbar-style.css" />
-<link rel="stylesheet" href="styles/cards.css" />
-<link rel="stylesheet" href="styles/style.css" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Google Font -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
 <div id="MainFadeDivID">
-
     <head>
+        <link rel="stylesheet" href="styles/navbar-style.css" />
+        <link rel="stylesheet" href="styles/cards.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+
+        <!--ONLY FOR SLIDER-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!--ONLY FOR SLIDER-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <nav class="navbar">
             <span class="navbar-toggle" id="js-navbar-toggle">
                 <i class="fa fa-bars"></i>
             </span>
-            <a href="#" class="logo">Logo</a>
+            <a href="#" class="logo"><img src="Images/MainLogo.png" id="MainLogo"></a>
             <ul class="main-nav" id="js-menu">
                 <div style="display: flex;margin-right: -5%;">
                     <li>
@@ -72,7 +78,8 @@
                         <div class="thumb" style="background-image: url(Images/PostImages/Untitled1.jpg);">
                         </div>
                         <article>
-                            <h1>Microsoft offers Cyberpunk 2077 refunds for all digital sales, but it’s not pulling the game</h1>
+                            <h1>Microsoft offers Cyberpunk 2077 refunds for all digital sales, but it’s not pulling the
+                                game</h1>
                             <span>Tom Warren</span>
                         </article>
                     </a>
@@ -178,9 +185,18 @@
         </div>
     </body>
 </div>
-
-</div>
-
 </html>
+<style>
+
+
+    #MainLogo {
+        position: fixed;
+        top: 0;
+        left: 0%;
+        height: 15%;
+        margin-top: -2.5%;
+        margin-left: 0.5%;
+    }
+</style>
 <script src="scripts/jquery-3.5.1.js"></script>
 <script src="scripts/main.js"></script>

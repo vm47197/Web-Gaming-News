@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <title>Games</title>
-<link rel="stylesheet" href="../styles/navbar-style.css" />
-<link rel="stylesheet" href="../styles/style.css" />
 
 <head>
-    <nav class="navbar" style="z-index: 2000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/navbar-style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    
+    <nav class="navbar"
+        style="z-index: 2000;background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fa fa-bars"></i>
         </span>
@@ -32,12 +35,16 @@
     </nav>
 </head>
 
-<div style="margin-top:5%;margin-left: 1.3%;color: #aeafaf;">
+<div id="WarningText">
     <h1>Warning!</h1>
-    <h2>Shumica e ketyre lojrave jane ende ne "Demo Version", qe do te thote eshte versioni beta i tyre, Dhe keto mund
-        ti luani vetem ne PC/Desktop Kompjuter</h2>
-    <h2>Ne do te ju ofrojme mundesine per raportimin e "bugs", qe mund ti gjeni gjate luajtjes. Qdo ndihme nga ju do te
-        jete e vlefshme ne permirsimin e kesaj Website</h2>
+    <h2>
+        Shumica e ketyre lojrave jane ende ne "Demo Version", qe do te thote eshte versioni beta i tyre, Dhe keto mund
+        ti luani vetem ne PC/Desktop Kompjuter
+    </h2>
+    <h2>
+        Ne do te ju ofrojme mundesine per raportimin e "bugs", qe mund ti gjeni gjate luajtjes. Qdo ndihme nga ju do te
+        jete e vlefshme ne permirsimin e kesaj Website
+    </h2>
 </div>
 
 <body style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);">
@@ -45,36 +52,60 @@
     <wrapper>
         <h2 id="AllGamesID"><strong>All Games<span>(4)</span></strong></h2>
         <div class="cards">
-            <figure class="card">
-                <a href="shooter.html"><img src="../Images/Shooter.jpg" /></a>
-                <div style="display: flex;">
-                    <figcaption style="color:#fff">Shooter</figcaption><button><span>Play Me</span></button>
-                </div>
-            </figure>
-            <figure class="card">
-                <a href="snake.html"><img src="../Images/Snake.PNG" /></a>
-                <div style="display: flex;">
-                    <figcaption style="color:#fff">Snake</figcaption>
-                </div>
-            </figure>
-            <figure class="card">
-                <a href="pingpong.html"><img src="../Images/PingPong.png" /></a>
-                <div style="display: flex;">
-                    <figcaption style="color:#fff">Ping Pong</figcaption><button><span>Play Me</span></button>
-                </div>
-            </figure>
-            <figure class="card">
-                <div style="display: flex;">
-                    <figcaption style="color:#fff">Dota 2</figcaption>
-                </div>
-            </figure>
+            <div class="card">
+                <a href="shooter.html" style="text-decoration: none;color: #000;">
+                    <img src="../Images/Shooter.jpg" />
+                    <div style="display: flex;">
+                        <figcaption style="color:#fff">Shooter</figcaption><button id="StartBtn"><span
+                                style="text-decoration: none;">Start Game</span></button>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="snake.html" style="text-decoration: none;color: #000;">
+                    <img src="../Images/Snake.PNG" />
+                    <div style="display: flex;">
+                        <figcaption style="color:#fff">Snake</figcaption><button id="StartBtn">Start Game</button>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="pingpong.html" style="text-decoration: none;color: #000;">
+                    <img src="../Images/PingPong.png" />
+                    <div style="display: flex;">
+                        <figcaption style="color:#fff">Ping Pong</figcaption><button id="StartBtn">Start Game</button>
+                    </div>
+                </a>
+            </div>
         </div>
     </wrapper>
+    
 </body>
 
-
 </html>
+<script src="../scripts/jquery-3.5.1.js"></script>
+</script>
 <style>
+    #StartBtn {
+        background-color: #ffc107;
+        width: 100%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-radius: 11px;
+        border-color: #ffc107;
+        border-style: solid;
+        font-size: 1.5em;
+        cursor: pointer;
+        margin-top: -4px;
+        border-radius: 1px 1px 10px 10px;
+    }
+
+    #WarningText {
+        margin-top: 5%;
+        margin-left: 1.3%;
+        color: #aeafaf;
+    }
+
     .abs,
     #AllGamesID:after,
     .cards .card figcaption,
@@ -101,8 +132,7 @@
     }
 
     body {
-        background: #24282f;
-        font-family: 'Alegreya Sans';
+        font-family: 'Nunito', sans-serif;
     }
 
     .wrapper {
@@ -147,12 +177,13 @@
         margin: 20px;
         width: 19%;
         height: auto;
-        overflow: hidden;
+        overflow: visible;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
         transform-origin: center top;
         transform-style: preserve-3d;
         transform: translateZ(0);
         transition: 0.3s;
+        cursor: pointer;
     }
 
     .cards .card img {
@@ -169,10 +200,11 @@
         font-size: 31px;
         background: none;
         color: #fff;
-        transform: translateY(100%);
+        /*transform: translateY(100%);*/
         transition: 0.3s;
     }
 
+    /* 
     .cards .card:after {
         content: '';
         z-index: 10;
@@ -184,7 +216,7 @@
         transform: rotate(45deg);
         background: linear-gradient(to top, transparent, #fff 15%, rgba(255, 255, 255, 0.5));
         transition: 0.3s;
-    }
+    } */
 
     .cards .card:hover,
     .cards .card:focus,
@@ -205,5 +237,31 @@
         transform: rotate(25deg);
         top: -40%;
         opacity: 0.15;
+    }
+
+    @media (max-width: 900px) {
+        .cards .card {
+            width: 43%;
+        }
+
+        #WarningText {
+            margin-top: 6%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .cards .card {
+            width: 39%;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .cards .card {
+            width: 100%;
+        }
+
+        #WarningText {
+            margin-top: 20%;
+        }
     }
 </style>
