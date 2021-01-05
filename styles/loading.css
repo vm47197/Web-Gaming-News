@@ -1,0 +1,24 @@
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: url(./loading2.0.gif);
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 1.5em;
+}
+
+.loading {
+    overflow: hidden;
+}
+
+.loading {
+    display: block;
+}

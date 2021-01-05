@@ -1,201 +1,588 @@
 <!DOCTYPE html>
-<html>
-<div id="MainFadeDivID">
-    <head>
-        <link rel="stylesheet" href="styles/navbar-style.css" />
-        <link rel="stylesheet" href="styles/cards.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Google Font -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+<html id="">
 
-        <!--ONLY FOR SLIDER-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <!--ONLY FOR SLIDER-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <nav class="navbar">
-            <span class="navbar-toggle" id="js-navbar-toggle">
-                <i class="fa fa-bars"></i>
-            </span>
-            <a href="#" class="logo"><img src="Images/MainLogo.png" id="MainLogo"></a>
-            <ul class="main-nav" id="js-menu">
-                <div style="display: flex;margin-right: -5%;">
-                    <li>
-                        <a href="index.html" class="nav-links">Home</a>
-                    </li>
-                    <li>
-                        <a href="pages/about.html" class="nav-links">About Us</a>
-                    </li>
-                    <li>
-                        <a href="pages/games.html" class="nav-links">Try out our new Games</a>
-                    </li>
-                    <li>
-                        <a href="pages/contact.html" class="nav-links">Contact Us</a>
-                    </li>
-                </div>
+<head>
+    <!--<div style="background: url(Images/pubg-2020-games-pubg-mobile-tournament-3840x1920-688.jpg);">-->
+    <link rel="stylesheet" href="styles/navbar-style.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+    <nav class="navbar" style="z-index: 1001;backdrop-filter: blur(3px);">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fa fa-bars"></i>
+        </span>
+        <a href="#" class="logo"><img src="Images/MainLogo.png" id="MainLogo" style="margin-top: 8%;"></a>
+        <ul class="main-nav" id="js-menu">
+            <div style="display: flex;margin-right: 6%;">
+                <li>
+                    <a href="../index.html" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="pages/about.html" class="nav-links">About Us</a>
+                </li>
+                <li>
+                    <a href="pages/games.html" class="nav-links">Try out our new Games</a>
+                </li>
+                <li>
+                    <a href="pages/contact.html" class="nav-links">Contact Us</a>
+                </li>
+            </div>
+            <div>
                 <li style="margin-right: 2%;">
                     <a id="ModalOpen" class="nav-links">Login</a>
                 </li>
-            </ul>
-        </nav>
-        <div id="WelcomeID" style="margin-top: 23%;margin-bottom: 30%;">
-            <h1 class="animated fadeIn center-align text-white" style="font-size: 6em;-moz-user-select: none;">Welcome!
-            </h1>
-            <br />
-            <h3 class="center-align text-white" style="font-size: 1.5em;">With us You can find the latest and greates
-                news in the regional gaming industry.</h3>
-            <h3 class="center-align text-white" style="font-size: 1.5em;">Followed by Accurate and daily/steady news
-            </h3>
-            <div class="buttons">
-                <a class="btn center-everything" id="explore-btn">Explore more</a>
+            </div>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="item">
+            <h1>Assassin's Creed Valhalla</h1>
+            <h3 style="margin-top: 1%;">Explore the newest game from Ubisoft, <br>and watch the Cinematic Trailer of
+                this game</h3>
+            <button class="FindOutMore" id="TopFindOutMore" onclick="CheckScroll(1)">Find Out More</button>
+        </div>
+    </div>
+</head>
+<div style="background-color: #000;filter: blur(13px);margin-top: 1.5%;margin-left: -1%;padding-bottom: 2%;">
+    <br />
+    <br />
+</div>
+
+<body>
+    <!--#region Cards  -->
+    <div class="band">
+        <h1>Top News</h1>
+        <div class="item-1">
+            <div href="" class="card">
+                <div class="thumb" style="background-image: url(Images/PostImages/Cyberpunk.jpg);"></div>
+                <article>
+                    <h1>Microsoft offers Cyberpunk 2077 refunds for all digital sales, but it’s not pulling the game
+                    </h1>
+                    <button type="button" class="FindOutMore" id="CB2077Btn" onclick="CheckScroll(2)">Read More</button>
+                </article>
             </div>
         </div>
-    </head>
-    <div id="section1"><br></div>
-
-    <body style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);">
-        <div class="animated fadeIn" style="background: #fff;margin: 10%;">
-            <header style="padding: 5px;">
-                <h1 style="-moz-user-select: none;">NEWS STREAM</h1>
-            </header>
-            <div class="band">
-                <div class="item-1">
-                    <a href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852"
-                        class="card">
-                        <div class="thumb" style="background-image: url(Images/PostImages/Riot.jpg);">
-                        </div>
-                        <article>
-                            <h1>Riot confirms it’s making a League of Legends MMO</h1>
-                            <span>Jay Peters</span>
-                        </article>
-                    </a>
-                </div>
-                <div class="item-2">
-                    <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045"
-                        class="card">
-                        <div class="thumb" style="background-image: url(Images/PostImages/Cyberpunk.jpg);">
-                        </div>
-                        <article>
-                            <h1>Microsoft offers Cyberpunk 2077 refunds for all digital sales, but it’s not pulling the
-                                game</h1>
-                            <span>Tom Warren</span>
-                        </article>
-                    </a>
-                </div>
-                <div class="item-3">
-                    <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724"
-                        class="card">
-                        <div class="thumb" style="background-image: url(Images/PostImages/Hades.jpg);">
-                        <article>
-                            <h1>Why Hades is my game of the year</h1>
-                            <span>Chaim Gartenberg</span>
-                        </article>
-                    </a>
-                </div>
-                <div class="item-4">
-                    <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826"
-                        class="card">
-                        <div class="thumb" style="background-image: url(Images/PostImages/Among-us.jpg);">
-                        </div>
-                        <article>
-                            <h1>Among Us launches for the Nintendo Switch today</h1>
-                            <p>A surprise arrival with cross-play</p>
-                            <span>Megan Farokhmanesh</span>
-                        </article>
-                    </a>
-                </div>
-                <div class="item-5">
-                    <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139"
-                        class="card">
-                        <div class="thumb" style="background-image: url(Images/PostImages/Fortnite.jpg);">
-                        </div>
-                        <article>
-                            <h1>Fortnite gets a performance mode so it runs better on older PCs</h1>
-                            <p>Now everything runs Fortnite</p>
-                            <span>Bijan Stephen</span>
-                        </article>
-                    </a>
-                </div>
-                <div class="item-6">
-                    <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338"
-                        class="card">
-                        <div class="thumb" style="background-image: url(Images/PostImages/Snapchat.jpg);"></div>
-                        <article>
-                            <h1>Snapchat is releasing Bitmoji Paint, a massively multiplayer online painting game</h1>
-                            <p> It’s Snap’s fourth original game </p>
-                            <span>Bijan Stephen</span>
-                        </article>
-                    </a>
-                </div>
-                <div class="item-7">
-                    <a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281"
-                        class="card">
-                        <div class="thumb" style="background-image: url(Images/PostImages/Codemasters.jpg);"></div>
-                        <article>
-                            <h1>EA is buying Codemasters for $1.2 billion to take lead in racing game market</h1>
-                            <p> Need for Speed, F1, Grid, Project Cars, and Dirt all under the same roof </p>
-                            <span>Sam Byfordr</span>
-                        </article>
-                    </a>
-                </div>
+        <div class="item-2">
+            <div href="" class="card">
+                <div class="thumb" style="background-image: url(Images/PostImages/Riot.jpg);"></div>
+                <article>
+                    <h1>Riot confirms it’s making a League of Legends MMO</h1>
+                    <hr>
+                    <p>League of Legends developer Riot Games is working on a massively multiplayer online (MMO)
+                        roleplaying game in the League universe, Riot’s VP of IP and entertainment, Greg Street, tweeted
+                        on Thursday.</p>
+                    <button class="FindOutMore" id="RiotBtn" onclick="CheckScroll(3)">Read More</button>
+                </article>
             </div>
         </div>
-        <a class="buttons" id="ShowModal" href="#openModal">Open Modal</a>
+        <div class="item-3">
+            <div href="" class="card">
+                <div class="thumb" style="background-image: url(Images/PostImages/Among-us.jpg);"></div>
+                <article>
+                    <h1>Among Us launches for the Nintendo Switch today</h1>
+                    <hr>
+                    <p>Among Us is now available on Nintendo Switch! During the Indie World Showcase on December 15, the
+                        final announcement was for an Among Us Switch port. The port's price is very cheap, and it even
+                        comes with crossplay and voice chat, which isn't always standard for Switch games.</p>
+                    <button class="FindOutMore" id="AmongUsBtn" onclick="CheckScroll(4)">Read More</button>
+                </article>
+            </div>
+        </div>
+        <div class="item-4">
+            <div href="" class="card">
+                <div class="thumb" style="background-image: url(Images/PostImages/Fortnite.jpg);"></div>
+                <article>
+                    <h1>Fortnite gets a performance mode so it runs better on older PCs</h1>
+                    <hr>
+                    <p>"Beginning December 15th, we’re launching a new performance mode on all PCs that meet Fortnite’s
+                        minimum specifications. Available in Alpha, Performance Mode will be selectable through the
+                        in-game settings menu and offers significant performance gains by trading out visual quality to
+                        lower memory usage and lighten the load on CPU and GPU. For players already on low scalability
+                        settings or less powerful hardware, this mode will allow the game to run better than ever before
+                        and maintain a smoother framerate" Says the Fortnite Team.</p>
+                    <button class="FindOutMore" id="FortniteBtn" onclick="CheckScroll(5)">Read More</button>
+                </article>
+            </div>
+        </div>
+        <div class="item-5">
+            <div href="" class="card">
+                <div class="thumb" style="background-image: url(Images/PostImages/Snapchat.jpg);"></div>
+                <article>
+                    <h1>Snapchat is releasing Bitmoji Paint, a massively multiplayer online painting game </h1>
+                    <hr>
+                    <p>Snapchat is getting a new original game called Bitmoji Paint. As the name suggests, the game
+                        involves Bitmoji — those cutely grotesque customizable avatars — and painting. It’s Snap Inc.’s
+                        fourth title from its internal games studio, which began putting out games last year. “Our goal
+                        with Bitmoji has always been to be the world’s avatar, to give people a digital version of
+                        themselves that represents them and lets them be themselves online,” says Ba Blackstock,
+                        co-founder of Bitmoji. “And so now with games, it’s also letting people play together in a
+                        really new and fun and exciting way.”</p>
+                    <button class="FindOutMore" id="SnapBtn" onclick="CheckScroll(6)">Read More</button>
+                </article>
+            </div>
+        </div>
+        <div class="item-6">
+            <div href="" class="card">
+                <div class="thumb" style="background-image: url(Images/PostImages/Codemasters.jpg);"></div>
+                <article>
+                    <h1>EA is buying Codemasters for $1.2 billion to take lead in racing game market</h1>
+                    <hr>
+                    <p>Electronic Arts has agreed to buy out UK developer Codemasters in a move that could see the US
+                        publishing giant wrest control of the racing video game genre. The deal is expected to close in
+                        the first quarter of next year for £6.04 (~$7.98) a share, valuing Codemasters at around $1.2
+                        billion.
 
-        <div id="openModal" class="modalDialog">
-            <section class="container">
-                <div>
-                    <a href="" title="Close" class="close" style="float: right;margin-right: 3%;margin-top: 1%;"><span
-                            aria-hidden="true" id="exit">&times;</span></a>
-                </div>
-                <section class="one">
-                    <div class="logo">
-                        <img src="https://image.flaticon.com/icons/svg/143/143361.svg">
-                    </div>
-                    <h2 class="heading">
-                        please subscribe to get updates
-                    </h2>
-                    <p> signup with your email to get latest updates
-                    </p>
-                    <form>
-                        <input type='text' placeholder="enter your email"><br />
-                        <button class="btn" role="button">
-                            Subscribe
-                        </button>
-                    </form>
-                </section>
-                <section class="two">
+                        Sky News first reported EA’s interest in Codemasters over the weekend, saying that the British
+                        company had previously agreed a $970 million deal with Rockstar Games and 2K Sports owner
+                        Take-Two Interactive. EA confirmed the agreement early Monday morning.</p>
+                    <button class="FindOutMore" id="EABtn" onclick="CheckScroll(7)">Read More</button>
+                </article>
+            </div>
+        </div>
+        <div class="item-7">
+            <div href="" class="card">
+                <div class="thumb" style="background-image: url(Images/PostImages/FarCry6.jpg);"></div>
+                <article>
+                    <h1>Far Cry 6</h1>
+                    <hr>
+                    <p>Soon Coming for us to play!Ubisoft debuted the first trailer for Far Cry 6 as part of its Ubisoft
+                        Forward digital conference today. The cinematic trailer didn’t have any gameplay, but showed a
+                        city in revolt under the regime of Antón Castillo, who is played by Giancarlo Esposito, perhaps
+                        best known as Gus Fring in Breaking Bad and Better Call Saul.
+                        In Far Cry 6, players control Dani Rojas, who is tasked with stopping Castillo’s regime. Much
+                        like its predecessors Far Cry 5 and Far Cry New Dawn, the playable character will be
+                        customizable and can be played as either a male or female. But Far Cry 6 will also see the
+                        return of a voiced protagonist, GameSpot reports.</p>
+                    <button class="FindOutMore" id="FarCry6Btn" onclick="CheckScroll(8)">Read More</button>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!--#endregion -->
+    <hr id="ACV" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <!--Assassin's Creed Valhalla-->
+    <div>
+        <div style="margin-top: 2%;margin-bottom: 5%;display: flex;justify-content:center">
+            <div
+                style="display: inline-block;border: 1px;border-bottom: 0;border-color: #fff;border-style: solid;max-width: 1000px;">
+                <img src="Images/eivor-assassins-creed-valhalla-pc-games-playstation-4-3840x2160-1753.jpg"
+                    style="max-width: 100%;">
+                <div style="display: inline;">
                     <div>
-                        <a title="Close" span aria-hidden="true" onclick="$('#exit').trigger('click')"
-                            style="float: right;margin-right: 3%;margin-top: 1%;">&times;</span></a>
+                        <h1>Assassin's Creed Valhalla</h1>
                     </div>
-                    <h3>
-                        thank you for subscribing !
-                    </h3>
-                    <div class="close">
-                        <button class="AnotherEmailID btn" role="button">
-                            <span>Subscribe With another Email?</span>
-                        </button>
+                    <div style="margin: 1%;">
+                        <span>Assassin's Creed Valhalla is an action role-playing video game developed by Ubisoft
+                            Montreal and published by Ubisoft. It is the twelfth major installment and the twenty-second
+                            release in the Assassin's Creed series, and a successor to the 2018's Assassin's Creed
+                            Odyssey. Set in 873 AD, the game recounts a fictional story during the Viking invasion of
+                            Britain. The player controls Eivor, a Viking raider who becomes embroiled in the conflict
+                            between the Brotherhood of Assassins and the Templar Order.[c]
+
+                            The game was released on November 10, 2020, for Microsoft Windows, PlayStation 4, Xbox One,
+                            Xbox Series X and Series S, and Stadia, while the PlayStation 5 version was released on
+                            November 12. The game received generally positive reviews from critics, who praised the
+                            graphics and story, but criticized it for technical issues and lack of innovation.</span>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!--#region Iframe-->
+        <div style="display: flex;justify-content: center;margin-top: -5%">
+            <iframe width="1000" height="500"
+                src="C:\Users\Valon\Desktop\Web\Gaming News Website\Web-Gaming-News\Images\Media\Assassin's Creed Valhalla - Official Trailer.mp4"></iframe>
+        </div>
+        <!--#endregion-->
+    </div>
+    <!--CyberPunk 2077-->
+    <hr id="CB2077" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <div>
+        <div style="margin-top: 2%;display: flex;justify-content:center">
+            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+                <img src="Images/PostImages/CyberPunkPostImg.jpg" style="max-width: 100%;">
+                <div style="display: inline;">
+                    <div>
+                        <h1>CyberPunk 2077</h1>
+                    </div>
+                    <div style="margin: 1%;">
+                        <span>Cyberpunk 2077 is a 2020 action role-playing video game developed and published by CD
+                            Projekt. The story takes place in Night City, an open world set in the Cyberpunk universe.
+                            Players assume the first-person perspective of a customisable mercenary known as V, who can
+                            acquire skills in hacking and machinery with options for melee and ranged combat.
+                            The game was developed using the REDengine 4 by a team of around 500 people, exceeding the
+                            number that worked on the studio's previous game The Witcher 3: Wild Hunt (2015). CD Projekt
+                            launched a new division in Wrocław, Poland, and partnered with Digital Scapes, Nvidia, QLOC,
+                            and Jali Research to aid the production. Cyberpunk creator Mike Pondsmith was a consultant,
+                            and actor Keanu Reeves has a starring role. The original score was led by Marcin
+                            Przybyłowicz, featuring the contributions of several licensed artists.
+                            CD Projekt released Cyberpunk 2077 for PlayStation 4, Stadia, Windows, and Xbox One on 10
+                            December 2020, with PlayStation 5 and Xbox Series X/S versions planned to follow in 2021. It
+                            received praise for its narrative, setting, and graphics, although some of its gameplay
+                            elements received mixed responses. In contrast, it was widely criticized for bugs,
+                            particularly in the console versions which also suffered from performance issues; Sony
+                            removed it from the PlayStation Store on 17 December 2020.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="Riot" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <div>
+        <div style="margin-top: 2%;display: flex;justify-content:center">
+            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+                <img src="Images/PostImages/Riot.jpg" style="max-width: 100%;">
+                <div style="display: inline;">
+                    <div>
+                        <h1>Riot MMO</h1>
+                    </div>
+                    <div style="margin: 1%;">
+                        <span>League of Legends developer Riot Games is working on a massively multiplayer online (MMO)
+                            roleplaying game in the League universe, Riot’s VP of IP and entertainment, Greg Street,
+                            tweeted on Thursday.
+
+                            “My recent job at Riot has been to help develop the League universe, which we’re going to
+                            need!” Street said. “My new job is to kick off a big (some might say massive) game that many
+                            of you, and many Rioters, have been asking us to create.” If the deliberate use of the word
+                            “massive” in that quote wasn’t enough of a hint, in a reply to another Twitter user, Street
+                            confirmed the game is an MMO.The new MMO isn’t entirely surprising, as Riot has been working
+                            to expand the League universe into other games and mediums as of late</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="AmongUs" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <div>
+        <div style="margin-top: 2%;display: flex;justify-content:center">
+            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+                <img src="Images/PostImages/Among-us.jpg" style="max-width: 100%;">
+                <div style="display: inline;">
+                    <div>
+                        <h1>Among Us</h1>
+                    </div>
+                    <div style="margin: 1%;">
+                        <span>Among Us, Innersloth’s breakout hit of 2020, is coming to the Nintendo Switch today. The
+                            news was announced during a special indie game-focused Nintendo Direct. The game will
+                            feature crossplay.
+                            Among Us is an online social deduction game, one in which players have to work together to
+                            complete tasks around the ship and figure out who the crew’s imposters are. Imposters,
+                            meanwhile, attempt to quietly kill as many other players as they can. Although the game
+                            first launched in 2018, it’s become a sensation, thanks to a newfound popularity on Twitch,
+                            played by streamers and Rep. Alexandria Ocasio-Cortez. Among Us has become so popular, in
+                            fact, that Innersloth canceled the game’s sequel to focus on improving the original.
+                            The game picked up the award for best multiplayer title of the year during this year’s Game
+                            Awards. A new airship map is expected next year.
+                            FEATURED VIDEOS FROM THE VERGE
+                            iPhone 12 Pro review: more shine
+                            MORE FROM THE VERGE
+                            Nearly half a billion users played Among Us in November
+                            Discord adds mobile screensharing, and it’s perfect for casual hangouts with your friends
+                            NPR shows are now available on Spotify worldwide
+                            The Surface Duo gets better TikTok support and availability outside the US
+                            Spelunky is coming to the Switch along with other great-looking indies
+                            Nomad’s new leather MacBook Pro sleeves are luxurious but pricey.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="Fortnite" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <div>
+        <div style="margin-top: 2%;display: flex;justify-content:center">
+            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+                <img src="Images/PostImages/Fortnite.jpg" style="max-width: 100%;">
+                <div style="display: inline;">
+                    <div>
+                        <h1>Fortnite</h1>
+                    </div>
+                    <div style="margin: 1%;">
+                        <span>Beginning December 15th, the Fortnite team is launching a new performance mode on all PCs
+                            that meet
+                            Fortnite’s minimum specifications. Available in Alpha, Performance Mode will be selectable
+                            through the in-game settings menu and offers significant performance gains by trading out
+                            visual quality to lower memory usage and lighten the load on CPU and GPU. For players
+                            already on low scalability settings or less powerful hardware, this mode will allow the game
+                            to run better than ever before and maintain a smoother framerate.Performance Mode is opt-in
+                            for most users and will launch with support for Battle Royale and Creative mode only. Users
+                            running on older hardware will see a prompt pushing them to the mode to try it out as the
+                            recommended way to experience the game. Performance Mode can be enabled or disabled at any
+                            time through the in-game settings menu and restarting the game.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="Snap" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <div>
+        <div style="margin-top: 2%;display: flex;justify-content:center">
+            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+                <img src="Images/PostImages/Snapchat.jpg" style="max-width: 100%;">
+                <div style="display: inline;">
+                    <div>
+                        <h1>Snapchat Game</h1>
+                    </div>
+                    <div style="margin: 1%;">
+                        <span>"Today, we announced Bitmoji Paint, a new game inside of Snapchat where millions of
+                            players can come together simultaneously to contribute to one, massive collage.
+                            Built by Snap Games Studio, Bitmoji Paint introduces a whole new kind of game inside of
+                            Snapchat. Snapchatters’ Bitmojis can travel the globe, team up with friends and let their
+                            imagination run free on one shared canvas. Simple scribbles, fun messages or even giant
+                            landscapes are all possible in Bitmoji Paint.We are also introducing Snap Tokens to
+                            customize the Bitmoji Paint experience for Android users. Snap Tokens are digital goods that
+                            can be purchased and stored in a virtual wallet tied to your Snapchat account. Within
+                            Bitmoji Paint on Android, Snap Tokens can be used toward roller skates or hoverboards to
+                            move around the game more quickly, or things like an ink painter or a paint roller to make
+                            larger creations." Say the Snapchat Bitmoji Paint Team.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="EA" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <div>
+        <div style="margin-top: 2%;display: flex;justify-content:center">
+            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+                <img src="Images/PostImages/Codemasters.jpg" style="max-width: 100%;">
+                <div style="display: inline;">
+                    <div>
+                        <h1>EA && CodeMasters</h1>
+                    </div>
+                    <div style="margin: 1%;">
+                        <span>Electronic Arts has agreed to buy out UK developer Codemasters in a move that could see
+                            the US publishing giant wrest control of the racing video game genre. The deal is expected
+                            to close in the first quarter of next year for £6.04 (~$7.98) a share, valuing Codemasters
+                            at around $1.2 billion.
+
+                            Sky News first reported EA’s interest in Codemasters over the weekend, saying that the
+                            British company had previously agreed a $970 million deal with Rockstar Games and 2K Sports
+                            owner Take-Two Interactive. EA confirmed the agreement early Monday morning.
+
+                            Codemasters is one of the oldest British game developers, having been founded in the ‘80s
+                            and producing early hits like Dizzy for systems that were popular in the UK like the ZX
+                            Spectrum and the Commodore 64. In recent decades it’s been best known for creating racing
+                            games like the Dirt, Grid, and Formula 1 series, and last year acquired the developer behind
+                            Project Cars.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="FarCry6" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <div>
+        <div style="margin-top: 2%;display: flex;justify-content:center">
+            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+                <img src="Images/PostImages/FarCry6.jpg" style="max-width: 100%;">
+                <div style="display: inline;">
+                    <div>
+                        <h1>Far Cry 6</h1>
+                    </div>
+                    <div style="margin: 1%;padding-bottom: 10%;">
+                        <span>Far Cry 6 is an upcoming first-person shooter game developed by Ubisoft Toronto and
+                            published by Ubisoft. It is the sixth main installment of the Far Cry series for Amazon
+                            Luna, Microsoft Windows, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, and
+                            Stadia.
+
+                            The game is set on Yara, a fictional Caribbean island ruled as a dictatorship by "El
+                            Presidente" Antón Castillo (portrayed by Giancarlo Esposito), who is raising his son Diego
+                            (Anthony Gonzalez) to follow in his rule. The player takes the role of guerilla fighter Dani
+                            Rojas, attempting to topple Castillo and his regime.Production of Far Cry 6 had been ongoing
+                            for four years at the time of its July 2020 announcement, with Ubisoft Toronto the lead
+                            studio for the game.[5] Narrative director Navid Khavari said that they started researching
+                            on revolutions of the past, they came across the idea of the modern guerrilla revolution
+                            such as the Cuban Revolution, which gave them numerous ideas of how to drive the
+                            player-character into fighting against a repressive government. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex;justify-content: center;margin-top: -5%">
+            <iframe width="1000" height="500"
+                src="Images/Media/Far Cry 6 - Official Reveal Trailer _ Ubisoft Forward.mp4"></iframe>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <div id="wrap">
+        <div></div>
+        <article class="section" id="lightings">
+            <section class="section" id="one">
+                <section class="section" id="two">
+                    <section class="section" id="three">
+                        <section class="section" id="four">
+                            <section class="section" id="five">
+                            </section>
+                        </section>
+                    </section>
                 </section>
             </section>
-        </div>
-    </body>
-</div>
+        </article>
+    </div>
+</footer>
+
+
 </html>
-<style>
-
-
-    #MainLogo {
-        position: fixed;
-        top: 0;
-        left: 0%;
-        height: 15%;
-        margin-top: -2.5%;
-        margin-left: 0.5%;
-    }
-</style>
 <script src="scripts/jquery-3.5.1.js"></script>
 <script src="scripts/main.js"></script>
+<script>
+    $(document).scroll(function () {
+        var test = document.scrollTop;
+        var b = window.scrollY;
+        if (window.scrollY > 700) {
+            $(".navbar").css("transition", "1s");
+            $(".navbar").css("background", "#000");
+        }
+        if (window.scrollY < 700) {
+            $(".navbar").css("transition", "1s");
+            $(".navbar").css("background", "transparent");
+        }
+    })
+    function CheckScroll(data) {
+        console.log("success");
+        if (data == 1) {
+            $('html, body').animate({
+                scrollTop: $("#ACV").offset().top
+            }, 2000);
+        }
+        else if (data == 2) {
+            $('html, body').animate({
+                scrollTop: $("#CB2077").offset().top
+            }, 2000);
+            console.log(1);
+        }
+        else if (data == 3) {
+            $('html, body').animate({
+                scrollTop: $("#Riot").offset().top
+            }, 2000);
+        }
+        else if (data == 4) {
+            $('html, body').animate({
+                scrollTop: $("#AmongUs").offset().top
+            }, 2000);
+        }
+        else if (data == 5) {
+            $('html, body').animate({
+                scrollTop: $("#Fortnite").offset().top
+            }, 2000);
+        }
+        else if (data == 6) {
+            $('html, body').animate({
+                scrollTop: $("#Snap").offset().top
+            }, 2000);
+        }
+        else if (data == 7) {
+            $('html, body').animate({
+                scrollTop: $("#EA").offset().top
+            }, 2000);
+        }
+        else if (data == 8) {
+            $('html, body').animate({
+                scrollTop: $("#FarCry6").offset().top
+            }, 2000);
+        }
+    }
+</script>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,700");
+
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        color: #fff;
+        line-height: 1.6;
+    }
+
+    .img-responsive {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: "Oswald", sans;
+        font-size: 4rem;
+        font-weight: normal;
+        line-height: 3.5rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        margin: -2.5% auto;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(Images/eivor-assassins-creed-valhalla-pc-games-playstation-4-3840x2160-1753.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .item {
+        /* Padding is used for smaller screens */
+        padding: 0 30px 0 30px;
+        text-align: center;
+        color: #000;
+        margin-left: 50% !important;
+        margin-right: auto !important;
+    }
+
+    .FindOutMore {
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 1rem;
+        display: inline-block;
+        line-height: 1.25rem;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .btn.btn-primary {
+        color: #fff;
+        background-color: #000;
+        border-color: #666;
+    }
+
+    .btn.btn-primary:hover {
+        color: #fff;
+        background-color: #333;
+        border-color: #666;
+    }
+
+    @media (min-width: 992px) {
+        .item {
+            width: 80%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .item {
+            width: 60%;
+        }
+    }
+</style>
