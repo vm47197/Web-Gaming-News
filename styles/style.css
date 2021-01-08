@@ -536,10 +536,9 @@ html, body
 #wrap
 {
 	width: 100%;
-	height: 100%;
+	height: 0%;
 	position: relative;
 	margin: 0 auto 0 auto;
-	overflow: hidden;
 }
 
 #lightings
@@ -759,4 +758,10 @@ box-shadow: 0 0 250px 20px #42F2A1;
 }
 
 to { box-shadow: 0 0 100px 15px #F4F6AD; }
+}
+
+@media(min-width : 400px){
+  .Post{
+    width: 96%;
+  }
 }

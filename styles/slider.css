@@ -236,15 +236,7 @@
   
   html,
   body {
-    height: 100%;
-    overflow-x: hidden;
     text-align: center;
-    font: 400 100% 'Raleway', 'Lato';
-    background-color: #282828;
-    color: #CCC;
-  }
-  body {
-    padding-bottom: 60px;
   }
   h1 {
     font-weight: 700;

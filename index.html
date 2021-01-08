@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="">
+<html>
 
 <head>
     <!--<div style="background: url(Images/pubg-2020-games-pubg-mobile-tournament-3840x1920-688.jpg);">-->
@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="styles/cards.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/slider.css" />
+    <link rel="stylesheet" href="styles/loading.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
-    <nav class="navbar" style="z-index: 1001;backdrop-filter: blur(3px);">
+    <nav class="navbar" style="z-index: 1001;backdrop-filter: blur(2px);">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fa fa-bars"></i>
         </span>
@@ -37,12 +38,12 @@
             </div>
         </ul>
     </nav>
-    <div class="container">
+    <div class="TopContainer">
         <div class="item">
             <h1>Assassin's Creed Valhalla</h1>
             <h3 style="margin-top: 1%;">Explore the newest game from Ubisoft, <br>and watch the Cinematic Trailer of
                 this game</h3>
-            <button class="FindOutMore" id="TopFindOutMore" onclick="CheckScroll(1)">Find Out More</button>
+            <button class="FindOutMore" id="TopFindOutMore" onclick="CheckScroll('#ACV')">Find Out More</button>
         </div>
     </div>
 </head>
@@ -61,7 +62,8 @@
                 <article>
                     <h1>Microsoft offers Cyberpunk 2077 refunds for all digital sales, but it’s not pulling the game
                     </h1>
-                    <button type="button" class="FindOutMore" id="CB2077Btn" onclick="CheckScroll(2)">Read More</button>
+                    <button type="button" class="FindOutMore" id="CB2077Btn" onclick="CheckScroll('#CB2077')">Read
+                        More</button>
                 </article>
             </div>
         </div>
@@ -74,7 +76,7 @@
                     <p>League of Legends developer Riot Games is working on a massively multiplayer online (MMO)
                         roleplaying game in the League universe, Riot’s VP of IP and entertainment, Greg Street, tweeted
                         on Thursday.</p>
-                    <button class="FindOutMore" id="RiotBtn" onclick="CheckScroll(3)">Read More</button>
+                    <button class="FindOutMore" id="RiotBtn" onclick="CheckScroll('#Riot')">Read More</button>
                 </article>
             </div>
         </div>
@@ -87,7 +89,7 @@
                     <p>Among Us is now available on Nintendo Switch! During the Indie World Showcase on December 15, the
                         final announcement was for an Among Us Switch port. The port's price is very cheap, and it even
                         comes with crossplay and voice chat, which isn't always standard for Switch games.</p>
-                    <button class="FindOutMore" id="AmongUsBtn" onclick="CheckScroll(4)">Read More</button>
+                    <button class="FindOutMore" id="AmongUsBtn" onclick="CheckScroll('#AmongUs')">Read More</button>
                 </article>
             </div>
         </div>
@@ -103,7 +105,7 @@
                         lower memory usage and lighten the load on CPU and GPU. For players already on low scalability
                         settings or less powerful hardware, this mode will allow the game to run better than ever before
                         and maintain a smoother framerate" Says the Fortnite Team.</p>
-                    <button class="FindOutMore" id="FortniteBtn" onclick="CheckScroll(5)">Read More</button>
+                    <button class="FindOutMore" id="FortniteBtn" onclick="CheckScroll('#Fortnite')">Read More</button>
                 </article>
             </div>
         </div>
@@ -120,7 +122,7 @@
                         themselves that represents them and lets them be themselves online,” says Ba Blackstock,
                         co-founder of Bitmoji. “And so now with games, it’s also letting people play together in a
                         really new and fun and exciting way.”</p>
-                    <button class="FindOutMore" id="SnapBtn" onclick="CheckScroll(6)">Read More</button>
+                    <button class="FindOutMore" id="SnapBtn" onclick="CheckScroll('#Snap')">Read More</button>
                 </article>
             </div>
         </div>
@@ -138,7 +140,7 @@
                         Sky News first reported EA’s interest in Codemasters over the weekend, saying that the British
                         company had previously agreed a $970 million deal with Rockstar Games and 2K Sports owner
                         Take-Two Interactive. EA confirmed the agreement early Monday morning.</p>
-                    <button class="FindOutMore" id="EABtn" onclick="CheckScroll(7)">Read More</button>
+                    <button class="FindOutMore" id="EABtn" onclick="CheckScroll('#EA')">Read More</button>
                 </article>
             </div>
         </div>
@@ -156,7 +158,7 @@
                         like its predecessors Far Cry 5 and Far Cry New Dawn, the playable character will be
                         customizable and can be played as either a male or female. But Far Cry 6 will also see the
                         return of a voiced protagonist, GameSpot reports.</p>
-                    <button class="FindOutMore" id="FarCry6Btn" onclick="CheckScroll(8)">Read More</button>
+                    <button class="FindOutMore" id="FarCry6Btn" onclick="CheckScroll('#FarCry6')">Read More</button>
                 </article>
             </div>
         </div>
@@ -166,8 +168,7 @@
     <!--Assassin's Creed Valhalla-->
     <div>
         <div style="margin-top: 2%;margin-bottom: 5%;display: flex;justify-content:center">
-            <div
-                style="display: inline-block;border: 1px;border-bottom: 0;border-color: #fff;border-style: solid;max-width: 1000px;">
+            <div class="Post" style="display: inline-block;border: 1px;border-bottom: 0;border-color: #fff;border-style: solid;max-width: 1000px;">
                 <img src="Images/eivor-assassins-creed-valhalla-pc-games-playstation-4-3840x2160-1753.jpg"
                     style="max-width: 100%;">
                 <div style="display: inline;">
@@ -197,11 +198,11 @@
         </div>
         <!--#endregion-->
     </div>
-    <!--CyberPunk 2077-->
     <hr id="CB2077" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
+    <!--CyberPunk 2077-->
     <div>
         <div style="margin-top: 2%;display: flex;justify-content:center">
-            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+            <div class="Post" style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
                 <img src="Images/PostImages/CyberPunkPostImg.jpg" style="max-width: 100%;">
                 <div style="display: inline;">
                     <div>
@@ -232,7 +233,7 @@
     <hr id="Riot" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
     <div>
         <div style="margin-top: 2%;display: flex;justify-content:center">
-            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+            <div class="Post" style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
                 <img src="Images/PostImages/Riot.jpg" style="max-width: 100%;">
                 <div style="display: inline;">
                     <div>
@@ -257,7 +258,7 @@
     <hr id="AmongUs" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
     <div>
         <div style="margin-top: 2%;display: flex;justify-content:center">
-            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+            <div class="Post" style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
                 <img src="Images/PostImages/Among-us.jpg" style="max-width: 100%;">
                 <div style="display: inline;">
                     <div>
@@ -293,7 +294,7 @@
     <hr id="Fortnite" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
     <div>
         <div style="margin-top: 2%;display: flex;justify-content:center">
-            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+            <div class="Post" style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
                 <img src="Images/PostImages/Fortnite.jpg" style="max-width: 100%;">
                 <div style="display: inline;">
                     <div>
@@ -319,7 +320,7 @@
     <hr id="Snap" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
     <div>
         <div style="margin-top: 2%;display: flex;justify-content:center">
-            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+            <div class="Post" style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
                 <img src="Images/PostImages/Snapchat.jpg" style="max-width: 100%;">
                 <div style="display: inline;">
                     <div>
@@ -345,7 +346,7 @@
     <hr id="EA" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
     <div>
         <div style="margin-top: 2%;display: flex;justify-content:center">
-            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+            <div class="Post" style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
                 <img src="Images/PostImages/Codemasters.jpg" style="max-width: 100%;">
                 <div style="display: inline;">
                     <div>
@@ -374,7 +375,7 @@
     <hr id="FarCry6" style="color: #fff;margin: 0 auto;width: 96%;margin-top:2%">
     <div>
         <div style="margin-top: 2%;display: flex;justify-content:center">
-            <div style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
+            <div class="Post" style="display: inline-block;border: 1px;border-color: #fff;border-style: solid;max-width: 1000px;">
                 <img src="Images/PostImages/FarCry6.jpg" style="max-width: 100%;">
                 <div style="display: inline;">
                     <div>
@@ -404,166 +405,198 @@
                 src="Images/Media/Far Cry 6 - Official Reveal Trailer _ Ubisoft Forward.mp4"></iframe>
         </div>
     </div>
-<!--#region Slider-->
-<h1 style="padding-top: 60px;">Regional News</h1>
-<div class="csslider infinity" id="slider1">
-  <input type="radio" name="slides" checked="checked" id="slides_1"/>
-  <input type="radio" name="slides" id="slides_2"/>
-  <input type="radio" name="slides" id="slides_3"/>
-  <input type="radio" name="slides" id="slides_4"/>
-  <input type="radio" name="slides" id="slides_5"/>
-  <input type="radio" name="slides" id="slides_6"/>
-  <ul>
-    <li>
-      <div class="bg" id="bg" style="color: #fff;height: 47%;">
-        <div>
-          <h1 style="text-align: unset !important;font-size: 2rem;">Gaming & Esports MeetUp</h1>
-          <p>The first national event dedicated to the development of video games and electronic sports, Gaming & Esports MeetUp will be held on December 15th, 2020, organized by Amplitudo and Amplitudo Academy. Experts from the region and the world will gather in one place, to lay the foundations of the gaming industry in Montenegro and announce the first Montenegrin Esports event, MontEsports, whose organization is planned for the second half of 2021.</p>
+    <!--#region Slider-->
+    <h1 style="padding-top: 60px;">Regional News</h1>
+    <div class="csslider infinity" id="slider1">
+        <input type="radio" name="slides" checked="checked" id="slides_1" />
+        <input type="radio" name="slides" id="slides_2" />
+        <input type="radio" name="slides" id="slides_3" />
+        <input type="radio" name="slides" id="slides_4" />
+        <input type="radio" name="slides" id="slides_5" />
+        <input type="radio" name="slides" id="slides_6" />
+        <ul>
+            <li>
+                <div class="bg" id="bg" style="color: #fff;height: 47%;">
+                    <div>
+                        <h1 style="text-align: unset !important;font-size: 2rem;">Gaming & Esports MeetUp</h1>
+                        <p>The first national event dedicated to the development of video games and electronic sports,
+                            Gaming & Esports MeetUp will be held on December 15th, 2020, organized by Amplitudo and
+                            Amplitudo Academy. Experts from the region and the world will gather in one place, to lay
+                            the foundations of the gaming industry in Montenegro and announce the first Montenegrin
+                            Esports event, MontEsports, whose organization is planned for the second half of 2021.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="bg" id="bg" style="color: #fff;height: 31%;">
+                    <div>
+                        <h1 style="text-align: unset !important;font-size: 2rem;">Balkan Entertainment and Gaming Expo
+                        </h1>
+                        <p>Balkan Entertainment and Gaming Expo is one of the most significant gaming events in
+                            Europe,that also happened this year.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="bg" id="bg" style="color: #fff;height: 31%;">
+                    <div>
+                        <h1 style="text-align: unset !important;font-size: 2rem;">Global Game Jam</h1>
+                        <p>This hackathon is organized by Girls Coding Kosova organization which has the mission of
+                            empowering and encouraging young girls and women in the field of technology.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="bg" id="bg" style="color: #fff;height: 27%;">
+                    <div>
+                        <h1 style="text-align: unset !important;font-size: 2rem;">Games' festival,London</h1>
+                        <p>A festival where Gamers from all over the world join and share talents, interests,games etc.
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="bg" id="bg" style="color: #fff;">
+                    <div>
+                        <h1 style="text-align: unset !important;font-size: 2rem;">Reboot Develop Blue 2020</h1>
+                        <p>COmpetitive Game Festival for all kinds of games and gamers.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="bg" id="bg" style="color: #fff;height: 30%;">
+                    <div>
+                        <h1 style="text-align: unset !important;font-size: 2rem;">Gjirafa Masters League</h1>
+                        <p>A gaming evenet with a Prize Pool of over 25,000$ will be taking place in Kosovo hosted by
+                            Gjirafa and played by Regional Teams.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="arrows">
+            <label for="slides_1"></label>
+            <label for="slides_2"></label>
+            <label for="slides_3"></label>
+            <label for="slides_4"></label>
+            <label for="slides_5"></label>
+            <label for="slides_6"></label>
+            <label class="goto-first" for="slides_1"></label>
+            <label class="goto-last" for="slides_6"></label>
         </div>
-      </div>
-    </li>
-    <li>
-      <div class="bg" id="bg" style="color: #fff;height: 31%;">
-        <div>
-          <h1 style="text-align: unset !important;font-size: 2rem;">Balkan Entertainment and Gaming Expo </h1>
-          <p>Balkan Entertainment and Gaming Expo is one of the most significant gaming events in Europe,that also happened this year.</p>
+        <div class="navigation">
+            <div>
+                <label for="slides_1"></label>
+                <label for="slides_2"></label>
+                <label for="slides_3"></label>
+                <label for="slides_4"></label>
+                <label for="slides_5"></label>
+                <label for="slides_6"></label>
+            </div>
         </div>
-      </div>
-    </li>
-    <li>
-      <div class="bg" id="bg" style="color: #fff;height: 31%;">
-        <div>
-          <h1 style="text-align: unset !important;font-size: 2rem;">Global Game Jam</h1>
-          <p>This hackathon is organized by Girls Coding Kosova organization which has the mission of empowering and encouraging young girls and women in the field of technology.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="bg" id="bg" style="color: #fff;height: 27%;">
-        <div>
-          <h1 style="text-align: unset !important;font-size: 2rem;">Games' festival,London</h1>
-          <p>A festival where Gamers from all over the world join and share talents, interests,games etc.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="bg" id="bg" style="color: #fff;">
-        <div>
-          <h1 style="text-align: unset !important;font-size: 2rem;">Reboot Develop Blue 2020</h1>
-          <p>COmpetitive Game Festival for all kinds of games and gamers.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="bg" id="bg" style="color: #fff;height: 30%;">
-        <div>
-          <h1 style="text-align: unset !important;font-size: 2rem;">Gjirafa Masters League</h1>
-          <p>A gaming evenet with aPrize Pool of over 10000$ will be taking place in Kosovo hosted by Gjirafa and played by Regional Teams.</p>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <div class="arrows">
-    <label for="slides_1"></label>
-    <label for="slides_2"></label>
-    <label for="slides_3"></label>
-    <label for="slides_4"></label>
-    <label for="slides_5"></label>
-    <label for="slides_6"></label>
-    <label class="goto-first" for="slides_1"></label>
-    <label class="goto-last" for="slides_6"></label>
-  </div>
-  <div class="navigation"> 
-    <div>
-      <label for="slides_1"></label>
-      <label for="slides_2"></label>
-      <label for="slides_3"></label>
-      <label for="slides_4"></label>
-      <label for="slides_5"></label>
-      <label for="slides_6"></label>
     </div>
-  </div>
-
-<!--#endregion-->
+    <!--#endregion-->
 </body>
-<footer>
-    <div id="wrap">
-        <div></div>
-        <article class="section" id="lightings">
-            <section class="section" id="one">
-                <section class="section" id="two">
-                    <section class="section" id="three">
-                        <section class="section" id="four">
-                            <section class="section" id="five">
-                            </section>
+
+</html>
+<div class="item-4side" style="position: fixed;top: 22%;right: 1.8%;width: 17%;">
+    <div href="" class="card">
+        <div class="thumb" style="background-image: url(Images/PostImages/GjirafaPrizePool.jpg);"></div>
+        <article>
+            <h1>Go watch all the online matches being played for thes Gjirafa Prize Pool</h1>
+            <hr>
+            <button class="FindOutMore" style="background-color: #ffc107;"><a href="https://video.gjirafa.com/mastersleague" style="text-decoration: none;color: #000;">Watch Now</a></button>
+        </article>
+    </div>
+</div>
+<!-- Site footer -->
+<link rel="stylesheet" href="styles/footer.css">
+<hr style="color:#fff;margin-top: 5%">
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <img src="Images/MainLogo.png" style="margin-top: -12% !important;">
+        <p class="footer-links">
+            <a href="../index.html" class="link-1">Home</a>
+            <a href="pages/about.html">About Us</a>
+            <a href="pages/games.html">Try Our new Games</a>
+            <a href="pages/contact.html">Contact</a>
+            <a href="#">Login</a>
+        </p>
+        <p class="footer-company-name">GameHub © 2015</p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p>Prishtine/Kosovo</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <form>
+            <h1 style="font-size: 2rem;float:left">Newsletter Signup</h1>
+            <div class="info">
+              <input type="text" placeholder="Your Name">
+              <input type="email" placeholder="Your Email">
+            </div>
+            <input type="submit" value="Subscribe">
+          </form>
+    </div>
+
+</footer>
+<article id="wrap">
+    <article id="lightings">
+        <section id="one">
+            <section id="two">
+                <section id="three">
+                    <section id="four">
+                        <section id="five">
+
                         </section>
                     </section>
                 </section>
             </section>
-        </article>
-    </div>
-</footer>
-
-
-</html>
+        </section>
+    </article>
+</article>
+<div class="loading" style="opacity:0.95;background-size:150px 150px">
+    <h3 style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, 300%);">
+        The Request is being Processed!
+    </h3>
+</div>
 <script src="scripts/jquery-3.5.1.js"></script>
 <script src="scripts/main.js"></script>
 <script>
+    $(document).ready(function () {
+        setTimeout(function(){
+            $(".loading").fadeIn();
+            $(".loading").fadeOut();
+        },100)
+    });
     $(document).scroll(function () {
         var test = document.scrollTop;
         var b = window.scrollY;
         if (window.scrollY > 700) {
+            $(".item-4side").fadeIn();
             $(".navbar").css("transition", "1s");
             $(".navbar").css("background", "#000");
         }
         if (window.scrollY < 700) {
+            $(".item-4side").fadeOut();
             $(".navbar").css("transition", "1s");
             $(".navbar").css("background", "transparent");
         }
     })
+
     function CheckScroll(data) {
-        console.log("success");
-        if (data == 1) {
-            $('html, body').animate({
-                scrollTop: $("#ACV").offset().top
-            }, 2000);
-        }
-        else if (data == 2) {
-            $('html, body').animate({
-                scrollTop: $("#CB2077").offset().top
-            }, 2000);
-            console.log(1);
-        }
-        else if (data == 3) {
-            $('html, body').animate({
-                scrollTop: $("#Riot").offset().top
-            }, 2000);
-        }
-        else if (data == 4) {
-            $('html, body').animate({
-                scrollTop: $("#AmongUs").offset().top
-            }, 2000);
-        }
-        else if (data == 5) {
-            $('html, body').animate({
-                scrollTop: $("#Fortnite").offset().top
-            }, 2000);
-        }
-        else if (data == 6) {
-            $('html, body').animate({
-                scrollTop: $("#Snap").offset().top
-            }, 2000);
-        }
-        else if (data == 7) {
-            $('html, body').animate({
-                scrollTop: $("#EA").offset().top
-            }, 2000);
-        }
-        else if (data == 8) {
-            $('html, body').animate({
-                scrollTop: $("#FarCry6").offset().top
-            }, 2000);
-        }
+        $('html,body').animate({
+            scrollTop: $(data).offset().top
+        }, 1800);
     }
 </script>
 <style>
@@ -600,7 +633,7 @@
         letter-spacing: 1px;
     }
 
-    .container {
+    .TopContainer {
         margin: -2.5% auto;
         width: 100%;
         height: 100vh;
