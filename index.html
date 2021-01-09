@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles/slider.css" />
     <link rel="stylesheet" href="styles/loading.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
     <!-- <nav class="navbar" style="z-index: 1001;backdrop-filter: blur(2px);">
@@ -200,8 +202,7 @@
         </div>
         <!--#region Iframe-->
         <div style="display: flex;justify-content: center;margin-top: -5%">
-            <iframe width="1000" height="500"
-                src="C:\Users\Valon\Desktop\Web\Gaming News Website\Web-Gaming-News\Images\Media\Assassin's Creed Valhalla - Official Trailer.mp4"></iframe>
+            <iframe width="1000" height="500" src="Images/Media/Assassin's Creed Valhalla - Official Trailer.mp4"></iframe>
         </div>
         <!--#endregion-->
     </div>
@@ -598,13 +599,15 @@
 <div class="overlay" id="overlay">
     <nav class="overlay-menu">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/games.html">Try our Newest Games</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="pages/login.html" class="fa fa-user">Login</a></li>
         </ul>
     </nav>
 </div>
+
 <script src="scripts/jquery-3.5.1.js"></script>
 <script src="scripts/main.js"></script>
 <script>
@@ -662,6 +665,7 @@
     html {
         font-size: 100%;
         overflow-x: hidden;
+        max-width: 100% !important;
     }
 
     body {
@@ -669,6 +673,7 @@
         font-family: "Open Sans", sans-serif;
         color: #fff;
         line-height: 1.6;
+        max-width: 100% !important;
     }
 
     .img-responsive {
