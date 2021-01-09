@@ -7,7 +7,32 @@
     <link rel="stylesheet" href="../styles/navbar-style.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     
-    
+    <nav class="navbar"
+        style="z-index: 2000;background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fa fa-bars"></i>
+        </span>
+        <a href="#" class="logo">Logo</a>
+        <ul class="main-nav" id="js-menu">
+            <div style="display: flex;margin-right: -5%;">
+                <li>
+                    <a href="../index.html" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="../pages/about.html" class="nav-links">About Us</a>
+                </li>
+                <li>
+                    <a href="../pages/games.html" class="nav-links">Try out our new Games</a>
+                </li>
+                <li>
+                    <a href="../pages/contact.html" class="nav-links">Contact Us</a>
+                </li>
+            </div>
+            <li style="margin-right: 2%;">
+                <a id="ModalOpen" class="nav-links">Login</a>
+            </li>
+        </ul>
+    </nav>
 </head>
 
 <div id="WarningText">
@@ -22,7 +47,7 @@
     </h2>
 </div>
 
-<body style="background: #000;">
+<body style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(87,83,83,1) 50%, rgba(0,0,0,1) 100%);">
 
     <wrapper>
         <h2 id="AllGamesID"><strong>All Games<span>(4)</span></strong></h2>
@@ -65,103 +90,8 @@
     
 </body>
 
-<link rel="stylesheet" href="../styles/footer.css">
-<link rel="stylesheet" href="../styles/navbar-style.css">
-<hr style="color:#fff;margin-top: 6%">
-<footer class="footer-distributed">
-    <div class="footer-left">
-        <img src="../Images/MainLogo.png" style="margin-top: 0% !important;">
-        <p class="footer-links">
-            <a href="../index.html" class="link-1">Home</a>
-            <a href="pages/about.html">About Us</a>
-            <a href="pages/games.html">Try Our new Games</a>
-            <a href="pages/contact.html">Contact</a>
-            <a href="#">Login</a>
-        </p>
-        <p class="footer-company-name">GameHub © 2015</p>
-    </div>
-    <div class="footer-center">
-        <div>
-            <i class="fa fa-map-marker"></i>
-            <p>Prishtine/Kosovo</p>
-        </div>
-        <div>
-            <i class="fa fa-phone"></i>
-            <p>+1.555.555.5555</p>
-        </div>
-        <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">support@company.com</a></p>
-        </div>
-    </div>
-    <div class="footer-right">
-        <form>
-            <h1 style="font-size: 2rem;float:left">Newsletter Signup</h1>
-            <div class="info">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-            </div>
-            <input type="submit" value="Subscribe">
-        </form>
-    </div>
-
-</footer>
-<article id="wrap">
-    <article id="lightings">
-        <section id="one">
-            <section id="two">
-                <section id="three">
-                    <section id="four">
-                        <section id="five">
-
-                        </section>
-                    </section>
-                </section>
-            </section>
-        </section>
-    </article>
-</article>
-<!--Next Stage-->
-<!-- <div class="loading" style="opacity:0.95;background-size:150px 150px">
-    <h3 style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, 300%);">
-        The Request is being Processed!
-    </h3>
-</div> -->
-<div style="position: absolute;left: 1%;top: 0">
-    <a href="#" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
-</div>
-<div class="button_container" id="toggle">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-</div>
-<div class="overlay" id="overlay">
-    <nav class="overlay-menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/about.html">About</a></li>
-            <li><a href="../pages/games.html">Try our Newest Games</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
-            <li><a href="../pages/login.html" class="fa fa-user">Login</a></li>
-        </ul>
-    </nav>
-</div>
 </html>
 <script src="../scripts/jquery-3.5.1.js"></script>
-</script>
-<script>
-     $('#toggle').click(function () {
-        $(this).toggleClass('active');
-        $('#overlay').toggleClass('open');
-        if ($(this).hasClass('active')) {
-            //$("#overlay").css("backdrop-filter","blur(5px)",2000);
-            $("#overlay").css("backdrop-filter", "blur(5px)");
-        }
-        else {
-            //$("#overlay").css("backdrop-filter","blur(0px)",2000);
-            $("#overlay").css("backdrop-filter", "blur(0px)");
-        }
-    });
 </script>
 <style>
     #StartBtn {

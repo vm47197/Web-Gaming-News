@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="../styles/navbar-style.css" />
     <script src="https://use.fontawesome.com/6be8a65006.js"></script>
     <title>Tic Tac Toe</title>
+    <nav class="navbar"
+        style="z-index: 2000;background-color: #000;">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fa fa-bars"></i>
+        </span>
+        <a href="#" class="logo">Logo</a>
+        <ul class="main-nav" id="js-menu">
+            <div style="display: flex;margin-right: -5%;">
+                <li>
+                    <a href="../index.html" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="../pages/about.html" class="nav-links">About Us</a>
+                </li>
+                <li>
+                    <a href="../pages/games.html" class="nav-links">Try out our new Games</a>
+                </li>
+                <li>
+                    <a href="../pages/contact.html" class="nav-links">Contact Us</a>
+                </li>
+            </div>
+            <li style="margin-right: 2%;">
+                <a id="ModalOpen" class="nav-links">Login</a>
+            </li>
+        </ul>
+    </nav>
 </head>
 <body>
     <div style="position: absolute;top: 50%;margin-top: -200px;left: 0;width: 100%;">
@@ -225,41 +251,5 @@
         <h5>Note: use the Full Page view for the best experience.</h5>
     </div>
 </body>
-<link rel="stylesheet" href="../styles/footer.css">
-<link rel="stylesheet" href="../styles/navbar-style.css">
-<div style="position: absolute;left: 1%;top: 0">
-    <a href="#" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
-</div>
-<div class="button_container" id="toggle">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-</div>
-<div class="overlay" id="overlay">
-    <nav class="overlay-menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/about.html">About</a></li>
-            <li><a href="../pages/games.html">Try our Newest Games</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
-            <li><a href="../pages/login.html" class="fa fa-user">Login</a></li>
-        </ul>
-    </nav>
-</div>
-<script src="../scripts/jquery-3.5.1.js"></script>
-<script>
-    $('#toggle').click(function () {
-       $(this).toggleClass('active');
-       $('#overlay').toggleClass('open');
-       if ($(this).hasClass('active')) {
-           //$("#overlay").css("backdrop-filter","blur(5px)",2000);
-           $("#overlay").css("backdrop-filter", "blur(5px)");
-       }
-       else {
-           //$("#overlay").css("backdrop-filter","blur(0px)",2000);
-           $("#overlay").css("backdrop-filter", "blur(0px)");
-       }
-   });
-</script>
-<styles></styles>
+
 </html>

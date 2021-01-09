@@ -13,32 +13,32 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="#" class="sign-in-form" id="signup">
+        <form action="#" class="sign-in-form">
           <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" name="signinusername" autocomplete="off"/>
+            <input type="text" placeholder="Username" />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" name="signinpass" autocomplete="off"/>
+            <input type="password" placeholder="Password" />
           </div>
           <input type="submit" value="Login" class="btn solid" />
         </form>
 
-        <form action="#" class="sign-up-form" id="signup" autocomplete="off">
+        <form action="#" class="sign-up-form">
           <h2 class="title">Sign up</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" name="signupusername" autocomplete="off"/>
+            <input type="text" placeholder="Username" />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" name="signupemail" autocomplete="off"/>
+            <input type="email" placeholder="Email" />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" name="signuppass" autocomplete="off" />
+            <input type="password" placeholder="Password" />
           </div>
           <input type="submit" class="btn" value="Sign up" />
         </form>
@@ -50,7 +50,8 @@
         <div class="content">
           <h3>New here ?</h3>
           <p>
-            <hr>
+            ....................................................................................
+            ....................................................................................
           </p>
           <button class="btn transparent" id="sign-up-btn">
             Sign up
@@ -62,7 +63,7 @@
         <div class="content">
           <h3>One of us ?</h3>
           <p>
-            <hr>
+           ...
           </p>
           <button class="btn transparent" id="sign-in-btn">
             Sign in
@@ -74,100 +75,6 @@
   </div>
 
   <script src="../scripts/login.js"></script>
-  <script src="../scripts/jquery-3.5.1.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
-  <script>
-
-    var $register = $(".sign-up-form");
-    var $login = $(".sign-up-form");
-    if ($register.length) {
-      $(".sign-up-form").validate({
-        rules: {
-          signupusername: {
-            required: true
-          },
-          signupemail: {
-            required: true,
-            email: true
-          },
-          signuppass: {
-            required: true
-          }
-        },
-        messages: {
-          signupusername: {
-            required: "Field is Required"
-          },
-          signupemail: {
-            required: "Field is Required"
-          },
-          signuppass: {
-            required: "Field is Required"
-          }
-        }
-      })
-    }
-    if ($login.length) {
-      $(".sign-in-form").validate({
-        rules: {
-          signinusername: {
-            required: true
-          },
-          signinpass: {
-            required: true,
-          }
-        },
-        messages: {
-          signinusername: {
-            required: "Field is Requeired"
-          },
-          signinpass: {
-            required: "Field is Requeired"
-          }
-        }
-      })
-    }
-  </script>
 </body>
-<link rel="stylesheet" href="../styles/navbar-style.css">
-<!--Next Stage-->
-<!-- <div class="loading" style="opacity:0.95;background-size:150px 150px">
-    <h3 style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, 300%);">
-        The Request is being Processed!
-    </h3>
-</div> -->
-<div style="position: absolute;left: 1%;top: 0 ;z-index: 100;">
-    <a href="#" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100" ></a>
-</div>
-<div class="button_container" id="toggle">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-</div>
-<div class="overlay" id="overlay">
-    <nav class="overlay-menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/about.html">About</a></li>
-            <li><a href="../pages/games.html">Try our Newest Games</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
-            <li><a href="../pages/login.html" class="fa fa-user">Login</a></li>
-        </ul>
-    </nav>
-</div>
 
 </html>
-<script>
-  $('#toggle').click(function () {
-     $(this).toggleClass('active');
-     $('#overlay').toggleClass('open');
-     if ($(this).hasClass('active')) {
-         //$("#overlay").css("backdrop-filter","blur(5px)",2000);
-         $("#overlay").css("backdrop-filter", "blur(5px)");
-     }
-     else {
-         //$("#overlay").css("backdrop-filter","blur(0px)",2000);
-         $("#overlay").css("backdrop-filter", "blur(0px)");
-     }
- });
-</script>

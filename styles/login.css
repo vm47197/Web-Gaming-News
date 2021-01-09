@@ -4,42 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
 
 body,
 input {
   font-family: "Poppins", sans-serif;
-}
-
-#signinusername-error{
-  color:#fff;
-  grid-area: signinusername;
-  position: absolute;
-  margin-left: 4%;
-}
-#signinpass-error{
-  color:#fff;
-  grid-area: signinpass;
-  position: absolute;
-  margin-left: 4%;
-}
-#signupusername-error{
-  color:#fff;
-  grid-area: signupusername;
-  position: absolute;
-  margin-left: 4%;
-}
-#signupemail-error{
-  color:#fff;
-  grid-area: signupemail;
-  position: absolute;
-  margin-left: 4%;
-}
-#signuppass-error{
-  color:#fff;
-  grid-area: signuppass;
-  position: absolute;
-  margin-left: 4%;
 }
 
 .container {
@@ -101,7 +70,7 @@ form.sign-in-form {
   max-width: 380px;
   width: 100%;
   background-color: #272727;
-  margin: 15px 0;
+  margin: 10px 0;
   height: 55px;
   border-radius: 55px;
   display: grid;
