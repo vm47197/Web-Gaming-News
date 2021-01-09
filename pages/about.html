@@ -10,31 +10,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
         <link rel="stylesheet" href="../styles/navbar-style.css" />
         <link rel="stylesheet" type="text/css" href="../styles/about-us.css">
-        <nav class="navbar" style="z-index: 2000;background-color:transparent;">
-            <span class="navbar-toggle" id="js-navbar-toggle">
-                <i class="fa fa-bars"></i>
-            </span>
-            <a href="#" class="logo">Logo</a>
-            <ul class="main-nav" id="js-menu">
-                <div style="display: flex;margin-right: -5%;">
-                    <li>
-                        <a href="../index.html" class="nav-links">Home</a>
-                    </li>
-                    <li>
-                        <a href="../pages/about.html" class="nav-links">About Us</a>
-                    </li>
-                    <li>
-                        <a href="../pages/games.html" class="nav-links">Try out our new Games</a>
-                    </li>
-                    <li>
-                        <a href="../pages/contact.html" class="nav-links">Contact Us</a>
-                    </li>
-                </div>
-                <li style="margin-right: 2%;">
-                    <a id="ModalOpen" class="nav-links">Login</a>
-                </li>
-            </ul>
-        </nav>
+        
     </head>
 
     <body>
@@ -125,5 +101,40 @@
         </article>
 </article>
 </body>
-
+<div style="position: absolute;left: 1%;top: 0">
+    <a href="#" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
+</div>
+<div class="button_container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+</div>
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/games.html">Try our Newest Games</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/login.html" class="fa fa-user">Login</a></li>
+        </ul>
+    </nav>
+</div>
+</html>
+<script src="../scripts/jquery-3.5.1.js"></script>
+</script>
+<script>
+     $('#toggle').click(function () {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+        if ($(this).hasClass('active')) {
+            //$("#overlay").css("backdrop-filter","blur(5px)",2000);
+            $("#overlay").css("backdrop-filter", "blur(5px)");
+        }
+        else {
+            //$("#overlay").css("backdrop-filter","blur(0px)",2000);
+            $("#overlay").css("backdrop-filter", "blur(0px)");
+        }
+    });
+</script>
 </html>
