@@ -12,31 +12,31 @@ input {
 }
 
 #signinusername-error{
-  color:#fff;
+  color:#eb2314;
   grid-area: signinusername;
   position: absolute;
   margin-left: 4%;
 }
 #signinpass-error{
-  color:#fff;
+  color:#eb2314;
   grid-area: signinpass;
   position: absolute;
   margin-left: 4%;
 }
 #signupusername-error{
-  color:#fff;
+  color:#eb2314;
   grid-area: signupusername;
   position: absolute;
   margin-left: 4%;
 }
 #signupemail-error{
-  color:#fff;
+  color:#eb2314;
   grid-area: signupemail;
   position: absolute;
   margin-left: 4%;
 }
 #signuppass-error{
-  color:#fff;
+  color:#eb2314;
   grid-area: signuppass;
   position: absolute;
   margin-left: 4%;

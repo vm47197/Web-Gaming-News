@@ -17,11 +17,27 @@
           <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" name="signinusername" autocomplete="off"/>
+            <input type="text" placeholder="Name" name="Name" autocomplete="off"/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Surname" name="Surname" autocomplete="off"/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Email" name="Email" autocomplete="off"/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="password" placeholder="Password" name="Password" autocomplete="off"/>
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" name="signinpass" autocomplete="off"/>
+            <input type="password" placeholder="Confirm Password" name="Confirm_Password" autocomplete="off"/>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="text" placeholder="Phone Number" name="Phone_Number" autocomplete="off"/>
           </div>
           <input type="submit" value="Login" class="btn solid" />
         </form>
@@ -72,12 +88,22 @@
       </div>
     </div>
   </div>
-
+<!--#region Preloader-->
+<link rel="stylesheet" href="../styles/loading.css" />
+<div id="loader-wrapper" style="display: block;">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!--#endregion-->
   <script src="../scripts/login.js"></script>
   <script src="../scripts/jquery-3.5.1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
   <script>
-
+    $(document).ready(function () {
+        $(".item-4side").hide();
+        $("#loader-wrapper").fadeOut(900);
+    });
     var $register = $(".sign-up-form");
     var $login = $(".sign-up-form");
     if ($register.length) {
@@ -119,10 +145,10 @@
         },
         messages: {
           signinusername: {
-            required: "Field is Requeired"
+            required: "Field is Required"
           },
           signinpass: {
-            required: "Field is Requeired"
+            required: "Field is Required"
           }
         }
       })
@@ -137,7 +163,7 @@
     </h3>
 </div> -->
 <div style="position: absolute;left: 1%;top: 0 ;z-index: 100;">
-    <a href="#" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100" ></a>
+    <a href="../index.html" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100" ></a>
 </div>
 <div class="button_container" id="toggle">
     <span class="top"></span>
@@ -171,3 +197,38 @@
      }
  });
 </script>
+
+
+<?php
+$servername="localhost";
+$username="root";
+$password="";
+$database_name="web_gaming_db";
+
+$conn=mysqli_connect($server_name,$username,$password,$database_name);
+if(!$conn)
+{
+    die("Connection Failed:" . mysqli_connect_error());
+}
+
+if(isset($_POST['save'])){
+
+    $Name = $_POST['Name']; 
+    $Surname = $_POST['Surname']; 
+    $Email = $_POST['Email']; 
+    $Password = $_POST['Password']; 
+    $Confirm_Password = $_POST['Confirm_Password']; 
+    $Phone_Number = $_POST['Phone_Number']; 
+
+    $sql_query = "INSERT INTO register_details (Name,Surname,Email,Password,Confirm_Password,Phone_Number)
+    VALUES ('$Name','$Surname','$Email','$Password','$Confirm_Password','Phone_Number')";
+
+    if(mysqli_query($conn,$sql_query)){
+        echo "New register added succesfuly!";
+    }
+    else{
+        echo "Error:".$sql."".mysqli_error($conn);
+    }
+    mysqli_close($conn);
+}
+?>

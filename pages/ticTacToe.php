@@ -228,7 +228,7 @@
 <link rel="stylesheet" href="../styles/footer.css">
 <link rel="stylesheet" href="../styles/navbar-style.css">
 <div style="position: absolute;left: 1%;top: 0">
-    <a href="#" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
+    <a href="../index.html" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
 </div>
 <div class="button_container" id="toggle">
     <span class="top"></span>
@@ -246,8 +246,19 @@
         </ul>
     </nav>
 </div>
+<!--#region Preloader-->
+<link rel="stylesheet" href="../styles/loading.css" />
+<div id="loader-wrapper" style="display: block;">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
 <script src="../scripts/jquery-3.5.1.js"></script>
 <script>
+    $(document).ready(function () {
+        $(".item-4side").hide();
+        $("#loader-wrapper").fadeOut(900);
+    });
     $('#toggle').click(function () {
        $(this).toggleClass('active');
        $('#overlay').toggleClass('open');

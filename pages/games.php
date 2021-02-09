@@ -5,11 +5,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/navbar-style.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/style.css" />
-    
-    
+    <link rel="stylesheet" href="../styles/games.css" />
+    <script src="../scripts/jquery-3.5.1.js"></script>
+    <script src="../scripts/snow.js"></script>
 </head>
-
 <div id="WarningText">
     <h1>Warning!</h1>
     <h2>
@@ -22,8 +23,7 @@
     </h2>
 </div>
 
-<body style="background: #000;">
-
+<body>
     <wrapper>
         <h2 id="AllGamesID"><strong>All Games<span>(4)</span></strong></h2>
         <div class="cards">
@@ -62,108 +62,26 @@
             </div>
         </div>
     </wrapper>
-    
 </body>
-
-<link rel="stylesheet" href="../styles/footer.css">
-<link rel="stylesheet" href="../styles/navbar-style.css">
+<!--#region Preloader-->
+<link rel="stylesheet" href="../styles/loading.css" />
+<div id="loader-wrapper" style="display: block;">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!--#endregion-->
 <hr style="color:#fff;margin-top: 6%">
-<footer class="footer-distributed">
-    <div class="footer-left">
-        <img src="../Images/MainLogo.png" style="margin-top: 0% !important;">
-        <p class="footer-links">
-            <a href="../index.html" class="link-1">Home</a>
-            <a href="pages/about.html">About Us</a>
-            <a href="pages/games.html">Try Our new Games</a>
-            <a href="pages/contact.html">Contact</a>
-            <a href="#">Login</a>
-        </p>
-        <p class="footer-company-name">GameHub © 2015</p>
-    </div>
-    <div class="footer-center">
-        <div>
-            <i class="fa fa-map-marker"></i>
-            <p>Prishtine/Kosovo</p>
-        </div>
-        <div>
-            <i class="fa fa-phone"></i>
-            <p>+1.555.555.5555</p>
-        </div>
-        <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">support@company.com</a></p>
-        </div>
-    </div>
-    <div class="footer-right">
-        <form>
-            <h1 style="font-size: 2rem;float:left">Newsletter Signup</h1>
-            <div class="info">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-            </div>
-            <input type="submit" value="Subscribe">
-        </form>
-    </div>
-
-</footer>
-<article id="wrap">
-    <article id="lightings">
-        <section id="one">
-            <section id="two">
-                <section id="three">
-                    <section id="four">
-                        <section id="five">
-
-                        </section>
-                    </section>
-                </section>
-            </section>
-        </section>
-    </article>
-</article>
-<!--Next Stage-->
-<!-- <div class="loading" style="opacity:0.95;background-size:150px 150px">
-    <h3 style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, 300%);">
-        The Request is being Processed!
-    </h3>
-</div> -->
-<div style="position: absolute;left: 1%;top: 0">
-    <a href="#" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
-</div>
-<div class="button_container" id="toggle">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-</div>
-<div class="overlay" id="overlay">
-    <nav class="overlay-menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/about.html">About</a></li>
-            <li><a href="../pages/games.html">Try our Newest Games</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
-            <li><a href="../pages/login.html" class="fa fa-user">Login</a></li>
-        </ul>
-    </nav>
-</div>
+<?php include '../includeFiles/navbar.php'?>
+<?php include '../includeFiles/footer.php'?>
 </html>
-<script src="../scripts/jquery-3.5.1.js"></script>
-</script>
 <script>
-     $('#toggle').click(function () {
-        $(this).toggleClass('active');
-        $('#overlay').toggleClass('open');
-        if ($(this).hasClass('active')) {
-            //$("#overlay").css("backdrop-filter","blur(5px)",2000);
-            $("#overlay").css("backdrop-filter", "blur(5px)");
-        }
-        else {
-            //$("#overlay").css("backdrop-filter","blur(0px)",2000);
-            $("#overlay").css("backdrop-filter", "blur(0px)");
-        }
+    $(document).ready(function () {
+        $("#loader-wrapper").fadeOut(900);
     });
 </script>
 <style>
+
     #StartBtn {
         background-color: #ffc107;
         width: 100%;

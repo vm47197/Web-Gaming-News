@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-
 <article id="wrap">
-
     <head>
         <title>team section</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
         <link rel="stylesheet" href="../styles/navbar-style.css" />
         <link rel="stylesheet" type="text/css" href="../styles/about-us.css">
-        
+        <script src="../scripts/jquery-3.5.1.js"></script>
     </head>
-
     <body>
         <section class="team">
             <div class="container" style="margin-top: 5%;">
@@ -85,45 +81,21 @@
                 </div>
             </div>
         </section>
-
-        <article class="section" id="lightings">
-            <section class="section" id="one">
-                <section class="section" id="two">
-                    <section class="section" id="three">
-                        <section class="section" id="four">
-                            <section class="section" id="five">
-
-                            </section>
-                        </section>
-                    </section>
-                </section>
-            </section>
-        </article>
-</article>
-</body>
-<div style="position: absolute;left: 1%;top: 0">
-    <a href="#" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
+<!--#region Preloader-->
+<link rel="stylesheet" href="../styles/loading.css" />
+<div id="loader-wrapper" style="display: block;">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
 </div>
-<div class="button_container" id="toggle">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-</div>
-<div class="overlay" id="overlay">
-    <nav class="overlay-menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/about.html">About</a></li>
-            <li><a href="../pages/games.html">Try our Newest Games</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
-            <li><a href="../pages/login.html" class="fa fa-user">Login</a></li>
-        </ul>
-    </nav>
-</div>
+<!--#endregion-->
+<?php include '../includeFiles/navbar.php'?>
 </html>
-<script src="../scripts/jquery-3.5.1.js"></script>
-</script>
 <script>
+    $(document).ready(function () {
+        $(".item-4side").hide();
+        $("#loader-wrapper").fadeOut(900);
+    });
      $('#toggle').click(function () {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
