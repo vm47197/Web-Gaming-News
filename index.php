@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>GamingHub</title>
+		<title>GameHub</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,7 +18,7 @@
 		<!-- Header -->
 			<header id="header" class="alt">
 				<div class="inner">
-					<h1>Welcome</h1>
+					<h1>Welcome to GameHub</h1>
 					<p>Explore the latest news from the gaming industry</p>
 				</div>
 				<a onclick="CheckScroll('#wrapper')" style="cursor:pointer;">
@@ -38,31 +38,31 @@
 						<span class="icon"><img href=""/></span>
 						<h2  style="color:#fff;">Latest Gaming Events of 2020/2021</h2>
 						<section class="main items">
-						<article class="item" style="width: calc(33% - 2em);border:1px solid #000">
+						<article class="item intro-items" style="">
 							<header>
 								<a href="#"><img src="images/COD.webp" alt="" /></a>
 							</header>
-							<ul class="actions"  style="margin: -2.6em -3em 0 -3em;">
-								<p style="margin-bottom:4%">Call of Duty: Cold War pros are placing in the lowest bracket of the new ranked mode</p>
-								<li><a href="#" class="button">More</a></li>
+							<ul class="actions">
+								<p style="margin-bottom:4%"><b>Call of Duty</b>: Cold War pros are placing in the lowest bracket of the new ranked mode</p>
+								<li><a href="#" class="button">Read More</a></li>
 							</ul>
 						</article>
-						<article class="item" style="width: calc(33% - 2em);border:1px solid #000">
+						<article class="item intro-items" style="">
 							<header>
-								<a href="#"><img src="images/pic02.jpg" alt="" /></a>
-								<h3>Blandit adipiscing</h3>
+								<a href="#"><img src="images/BloodBorne.jpg" alt="" /></a>
 							</header>
-							<ul class="actions" style="margin: -2.6em -3em 0 -3em;">
-								<li><a href="#" class="button">More</a></li>
+							<ul class="actions">
+								<p style="margin-bottom:4%"><b>Bloodborne</b> 60fps Patch Released By Hacker named Lance McDonald</p>
+								<li><a href="#" class="button">Read More</a></li>
 							</ul>
 						</article>
-						<article class="item" style="width: calc(33% - 2em);border:1px solid #000">
+						<article class="item intro-items" style="">
 							<header>
-								<a href="#"><img src="images/pic03.jpg" alt="" /></a>
-								<h3>Lorem massa nulla</h3>
+								<a href="#"><img src="images/CyberPunk.jpg" alt="" /></a>
 							</header>
-							<ul class="actions" style="margin: -2.6em -3em 0 -3em;">
-								<li><a href="#" class="button">More</a></li>
+							<ul class="actions">
+								<p style="margin-bottom:4%"><b>Cyberpunk 2077</b> Dev CD Projekt Red Hacked, Perpetrator Demands Ransom</p>
+								<li><a href="#" class="button">Read More</a></li>
 							</ul>
 						</article>
 					</section>
@@ -75,43 +75,31 @@
 					<section class="main items">
 						<article class="item" id="firstDiv">
 							<header>
-								<a href="#"><img src="images/pic01.jpg" alt="" /></a>
-								<h3>Feugiat et faucibus</h3>
+							<a href="#"><img src="images/COD.webp" alt="" /></a>
+							</header>
+								<p>
+									Following the first day of Call of Duty: Black Ops – Cold War's new ranked mode, League Play, players are starting to suspect that its ranking system isn't hitting the mark. Several Cold War pros report that they've been placed in the bottom-tier Competitor ranking following their five placement matches.
+									Normally, I wouldn't lend much credence to your average player proclaiming that they've been given a lower rank than they deserve, but I raise an eyebrow at any system in which I can outrank a pro. As spotted by the Twitter account CDL Intel, a few pro players are expressing disbelief at their official ranking following an impressive performance.
+									Here's Joseph "Owakening" Conley of the Flordia Mutineers and Adam "Assault" Garcia of the Los Angeles Guerillas reacting to their new Competitor designations.
+								</p>
+							</article>
+						<article class="item">
+							<header>
+							<a href="#"><img src="images/BloodBorne.jpg" alt="" /></a>
 							</header>
 							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
 						</article>
 						<article class="item">
 							<header>
-								<a href="#"><img src="images/pic02.jpg" alt="" /></a>
-								<h3>Blandit adipiscing</h3>
+								<a href="#"><img src="images/CyberPunk.jpg" alt="" /></a>
 							</header>
 							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/pic03.jpg" alt="" /></a>
-								<h3>Lorem massa nulla</h3>
-							</header>
-							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
 						</article>
 						<article class="item">
 							<header>
 								<a href="#"><img src="images/pic04.jpg" alt="" /></a>
-								<h3>Ipsum sed tempus</h3>
 							</header>
 							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
 						</article>
 					</section>
 
@@ -147,9 +135,7 @@
 						</ul>
 						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
 					</footer>
-
 			</div>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
@@ -167,6 +153,5 @@
 			</script>
 			<script src="assets/js/snow.js"></script>
 	</body>
-	
 </html>
 <?php include 'assets/includeFiles/navbar.php'?>

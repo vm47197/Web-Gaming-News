@@ -1,19 +1,23 @@
+<link rel="stylesheet" href="/Web-Gaming-News/assets/css/navbar.css">
 <div class="menu-icon">
 	<span class="menu-icon__line menu-icon__line-left"></span>
 	<span class="menu-icon__line"></span>
 	<span class="menu-icon__line menu-icon__line-right"></span>
 </div>
-
-<div class="nav">
 	<div class="nav__content">
 		<ul class="nav__list">
-			<li class="nav__list-item">Home</li>
-			<li class="nav__list-item">About</li>
-			<li class="nav__list-item">Projects</li>
-			<li class="nav__list-item">Contact</li>
+			<li class="nav__list-item"><a href="/Web-Gaming-News/index.php">Home</a></li>
+			<li class="nav__list-item"><a href="/Web-Gaming-News/pages/contact-us.php">About</a></li>
+			<li class="nav__list-item"><a href="/Web-Gaming-News/pages/contact-us.php">Games</a></li>
+			<li class="nav__list-item"><a href="/Web-Gaming-News/pages/contact-us.php">Contact</a></li>
 		</ul>
-	</div>
 </div>
+<div>
+	<a href="/Web-Gaming-News/index.php">
+		<img src="/Web-Gaming-News/images/MainLogo.png" width="200" height="100" id="mainLogo"/>
+	</a>
+</div>
+<script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
 <script>
 	$(document).ready(function () {
 		$(".nav__content").css("cursor","default");
