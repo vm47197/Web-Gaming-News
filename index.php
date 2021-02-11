@@ -44,7 +44,7 @@
 							</header>
 							<ul class="actions">
 								<p style="margin-bottom:4%"><b>Call of Duty</b>: Cold War pros are placing in the lowest bracket of the new ranked mode</p>
-								<li><a href="#" class="button">Read More</a></li>
+								<li><a class="button" onclick="CheckScroll('#Cod')">Read More</a></li>
 							</ul>
 						</article>
 						<article class="item intro-items" style="">
@@ -53,7 +53,7 @@
 							</header>
 							<ul class="actions">
 								<p style="margin-bottom:4%"><b>Bloodborne</b> 60fps Patch Released By Hacker named Lance McDonald</p>
-								<li><a href="#" class="button">Read More</a></li>
+								<li><a class="button" onclick="CheckScroll('#Bloodborne')">Read More</a></li>
 							</ul>
 						</article>
 						<article class="item intro-items" style="">
@@ -62,20 +62,18 @@
 							</header>
 							<ul class="actions">
 								<p style="margin-bottom:4%"><b>Cyberpunk 2077</b> Dev CD Projekt Red Hacked, Perpetrator Demands Ransom</p>
-								<li><a href="#" class="button">Read More</a></li>
+								<li><a class="button" onclick="CheckScroll('#Cyberpunk')">Read More</a></li>
 							</ul>
 						</article>
 					</section>
-						<ul class="actions">
-							<li><a class="button big" onclick="CheckScroll('#firstDiv')">Learn More</a></li>
-						</ul>
 					</section>
 
 				<!-- Items -->
 					<section class="main items">
-						<article class="item" id="firstDiv">
+						<article class="item" id="Cod">
 							<header>
 							<a href="#"><img src="images/COD.webp" alt="" /></a>
+							<h1>Call of Duty<h1>
 							</header>
 								<p>
 									Following the first day of Call of Duty: Black Ops – Cold War's new ranked mode, League Play, players are starting to suspect that its ranking system isn't hitting the mark. Several Cold War pros report that they've been placed in the bottom-tier Competitor ranking following their five placement matches.
@@ -83,15 +81,17 @@
 									Here's Joseph "Owakening" Conley of the Flordia Mutineers and Adam "Assault" Garcia of the Los Angeles Guerillas reacting to their new Competitor designations.
 								</p>
 							</article>
-						<article class="item">
+						<article class="item" id="Bloodborne">
 							<header>
 							<a href="#"><img src="images/BloodBorne.jpg" alt="" /></a>
+							<h1>Bloodborne</h1>
 							</header>
 							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 						</article>
-						<article class="item">
+						<article class="item" id="Cyberpunk">
 							<header>
 								<a href="#"><img src="images/CyberPunk.jpg" alt="" /></a>
+								<h1>CyberPunk 2077</h1>
 							</header>
 							<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare.</p>
 						</article>
@@ -103,38 +103,25 @@
 						</article>
 					</section>
 
-				<!-- CTA -->
 					<section id="cta" class="main special">
-						<h2>Etiam veroeros lorem</h2>
-						<p>Phasellus ac augue ac magna auctor tempus proin<br />
-						accumsan lacus a nibh commodo in pellentesque dui<br />
-						in hac habitasse platea dictumst.</p>
+						<h2>/////////////////</h2>
+						<p>////////////////////</p>
 						<ul class="actions">
-							<li><a href="#" class="button big">Get Started</a></li>
+							<li><a href="#" class="button big">/////////////////</a></li>
 						</ul>
 					</section>
 
-				<!-- Main -->
-				<!--
-					<section id="main" class="main">
-						<header>
-							<h2>Lorem ipsum dolor</h2>
-						</header>
-						<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-					</section>
-				-->
-
-				<!-- Footer -->
+				<!-- Footer
 					<footer id="footer">
 						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
-					</footer>
+						<p class="copyright">&copy; Gamehub Copyrighted</p>
+					</footer> -->
 			</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -151,7 +138,8 @@
 					}, 800)
 				}
 			</script>
-			<script src="assets/js/snow.js"></script>
+			<!-- <script src="assets/js/snow.js"></script> -->
 	</body>
 </html>
 <?php include 'assets/includeFiles/navbar.php'?>
+<?php include 'assets/includeFiles/footer.php'?>

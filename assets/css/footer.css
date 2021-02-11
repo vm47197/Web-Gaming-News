@@ -1,0 +1,210 @@
+.section
+		{
+			/*border-radius*/
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			width: 100%;
+			position: relative;
+			margin: auto;
+		
+		}
+		
+		#one
+		{
+			/*animation*/
+			-webkit-animation: one 5s ease-in-out infinite alternate;
+			-moz-animation: one 5s ease-in-out infinite alternate;
+			-ms-animation: one 5s ease-in-out infinite alternate;
+			-o-animation: one 5s ease-in-out infinite alternate;
+			animation: one 5s ease-in-out infinite alternate;
+		}
+		@-webkit-keyframes 
+		one { from {
+		-webkit-box-shadow: 0 0 250px 20px #0073e4;
+		}
+		
+		to { -webkit-box-shadow: 0 0 100px 15px #0483ff; }
+		}
+		@-moz-keyframes 
+		one { from {
+		-moz-box-shadow: 0 0 250px 20px #43a2ff;
+		}
+		
+		to { -moz-box-shadow: 0 0 100px 15px #2b96ff; }
+		}
+		@-o-keyframes 
+		one { from {
+		-o-box-shadow: 0 0 250px 20px #61b1ff;
+		}
+		
+		to { -o-box-shadow: 0 0 100px 15px #b2d9ff; }
+		}
+		
+		@keyframes 
+		one { from {
+		box-shadow: 0 0 250px 20px #005bb4;
+		}
+		
+		to {box-shadow: 0 0 100px 15px #006eda; }
+		}
+		
+		#two
+		{
+			width: 90%;
+			/*animation*/
+			-webkit-animation: two 4s ease-in-out infinite alternate;
+			-moz-animation: two 4s ease-in-out infinite alternate;
+			-ms-animation: two 4s ease-in-out infinite alternate;
+			-o-animation: two 4s ease-in-out infinite alternate;
+			animation: two 4s ease-in-out infinite alternate;
+		}
+		@-webkit-keyframes 
+		two { from {
+		-webkit-box-shadow: 0 0 250px 20px #0073e4;
+		}
+		
+		to { -webkit-box-shadow: 0 0 100px 15px #0483ff; }
+		}
+		@-moz-keyframes 
+		two { from {
+		-moz-box-shadow: 0 0 250px 20px #43a2ff;
+		}
+		
+		to { -moz-box-shadow: 0 0 100px 15px #61b1ff; }
+		}
+		@-o-keyframes 
+		two { from {
+		-o-box-shadow: 0 0 250px 20px #b2d9ff;
+		}
+		
+		to { -o-box-shadow: 0 0 100px 15px #43a2ff; }
+		}
+		
+		@keyframes 
+		two { from {
+		box-shadow: 0 0 250px 20px #006eda;
+		}
+		
+		to { box-shadow: 0 0 100px 15px #2b96ff; }
+		}
+		
+		#three
+		{
+			width: 80%;
+			/*animation*/
+			-webkit-animation: three 3s ease-in-out infinite alternate;
+			-moz-animation: three 3s ease-in-out infinite alternate;
+			-ms-animation: three 3s ease-in-out infinite alternate;
+			-o-animation: three 3s ease-in-out infinite alternate;
+			animation: three 3s ease-in-out infinite alternate;
+		}
+		@-webkit-keyframes 
+		three { from {
+		-webkit-box-shadow: 0 0 250px 20px #0073e4;
+		}
+		
+		to { -webkit-box-shadow: 0 0 100px 15px #0483ff; }
+		}
+		@-moz-keyframes 
+		three { from {
+		-moz-box-shadow: 0 0 250px 20px #43a2ff;
+		}
+		
+		to { -moz-box-shadow: 0 0 100px 15px #2b96ff }
+		}
+		@-o-keyframes 
+		three { from {
+		-o-box-shadow: 0 0 250px 20px #61b1ff;
+		}
+		
+		to { -o-box-shadow: 0 0 100px 15px #b2d9ff }
+		}
+		
+		@keyframes 
+		three { from {
+		box-shadow: 0 0 250px 20px #005bb4;
+		}
+		
+		to { box-shadow: 0 0 100px 15px #006eda }
+		}
+		
+		#four
+		{
+			width: 70%;
+			/*animation*/
+			-webkit-animation: four 2s ease-in-out infinite alternate;
+			-moz-animation: four 2s ease-in-out infinite alternate;
+			-ms-animation: four 2s ease-in-out infinite alternate;
+			-o-animation: four 2s ease-in-out infinite alternate;
+			animation: four 2s ease-in-out infinite alternate;
+		}
+		@-webkit-keyframes 
+		four { from {
+		-webkit-box-shadow: 0 0 250px 20px #0073e4;
+		}
+		
+		to { -webkit-box-shadow: 0 0 100px 15px #0483ff; }
+		}
+		@-moz-keyframes 
+		four { from {
+		-moz-box-shadow: 0 0 250px 20px #43a2ff;
+		}
+		
+		to { -moz-box-shadow: 0 0 100px 15px #61b1ff; }
+		}
+		@-o-keyframes 
+		four { from {
+		-o-box-shadow: 0 0 250px 20px #b2d9ff;
+		}
+		
+		to { -o-box-shadow: 0 0 100px 15px #005bb4; }
+		}
+		
+		@keyframes 
+		four { from {
+		shadow: 0 0 250px 20px #006eda;
+		}
+		
+		to { shadow: 0 0 100px 15px #006eda; }
+		}
+		
+		#five
+		{
+			width: 60%;
+			/*animation*/
+			-webkit-animation: five 1s ease-in-out infinite alternate;
+			-moz-animation: five 1s ease-in-out infinite alternate;
+			-ms-animation: five 1s ease-in-out infinite alternate;
+			-o-animation: five 1s ease-in-out infinite alternate;
+			animation: five 1s ease-in-out infinite alternate;
+		}
+		@-webkit-keyframes 
+		five { from {
+		-webkit-box-shadow: 0 0 250px 20px #0073e4;
+		}
+		
+		to { -webkit-box-shadow: 0 0 100px 15px #0483ff; }
+		}
+		@-moz-keyframes 
+		five { from {
+		-moz-box-shadow: 0 0 250px 20px #43a2ff;
+		}
+		
+		to { -moz-box-shadow: 0 0 100px 15px #2b96ff; }
+		}
+		@-o-keyframes 
+		five { from {
+		-o-box-shadow: 0 0 250px 20px #61b1ff;
+		}
+		
+		to { -o-box-shadow: 0 0 100px 15px #b2d9ff; }
+		}
+		
+		@keyframes 
+		five { from {
+		box-shadow: 0 0 250px 20px #005bb4;
+		}
+		
+		to { box-shadow: 0 0 100px 15px #006eda; }
+		}
