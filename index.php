@@ -12,6 +12,16 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<link rel="shortcut icon" href="images/titlelogo.png" type="image/x-icon">
+		<style>
+.first-items {
+			width: 30%;
+		}
+	@media screen and (max-width: 450px) {
+		.first-items {
+			width: 100%;
+		}
+	}
+			</style>
 	</head>
 	<body>
 
@@ -32,41 +42,39 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+				<div>
+					<h2 class="text-center">Latest Gaming news</h2>
+				</div>
 				<!-- Banner -->
-					<section id="intro" class="main" style="background-color:transparent;">
-						<span class="icon"><img href=""/></span>
-						<h2  style="color:#fff;">Latest Gaming Events of 2020/2021</h2>
-						<section class="main items">
-						<article class="item intro-items" style="">
+				<section class="main items">
+						<article class="item first-items" id="Cyberpunk" >
 							<header>
 								<a href="#"><img src="images/COD.webp" alt="" /></a>
 							</header>
 							<ul class="actions">
-								<p style="margin-bottom:4%"><b>Call of Duty</b>: Cold War pros are placing in the lowest bracket of the new ranked mode</p>
+							<p style="margin-bottom:4%"><b>Call of Duty</b>: Cold War pros are placing in the lowest bracket of the new ranked mode</p>
 								<li><a class="button" onclick="CheckScroll('#Cod')">Read More</a></li>
 							</ul>
 						</article>
-						<article class="item intro-items" style="">
+						<article class="item first-items" id="Cyberpunk" >
 							<header>
 								<a href="#"><img src="images/BloodBorne.jpg" alt="" /></a>
 							</header>
 							<ul class="actions">
-								<p style="margin-bottom:4%"><b>Bloodborne</b> 60fps Patch Released By Hacker named Lance McDonald</p>
+							<p style="margin-bottom:4%"><b>Bloodborne</b> 60fps Patch Released By Hacker named Lance McDonald</p>
 								<li><a class="button" onclick="CheckScroll('#Bloodborne')">Read More</a></li>
 							</ul>
 						</article>
-						<article class="item intro-items" style="">
+						<article class="item first-items" id="Cyberpunk" > 
 							<header>
 								<a href="#"><img src="images/CyberPunk.jpg" alt="" /></a>
 							</header>
 							<ul class="actions">
-								<p style="margin-bottom:4%"><b>Cyberpunk 2077</b> Dev CD Projekt Red Hacked, Perpetrator Demands Ransom</p>
+							<p style="margin-bottom:4%"><b>Cyberpunk 2077</b> Dev CD Projekt Red Hacked, Perpetrator Demands Ransom</p>
 								<li><a class="button" onclick="CheckScroll('#Cyberpunk')">Read More</a></li>
 							</ul>
 						</article>
-					</section>
-					</section>
+				</section>
 
 				<!-- Items -->
 					<section class="main items">
@@ -110,18 +118,6 @@
 							<li><a href="#" class="button big">/////////////////</a></li>
 						</ul>
 					</section>
-
-				<!-- Footer
-					<footer id="footer">
-						<ul class="icons">
-							<li><a class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p class="copyright">&copy; Gamehub Copyrighted</p>
-					</footer> -->
 			</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
