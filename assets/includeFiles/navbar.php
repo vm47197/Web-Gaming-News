@@ -8,7 +8,7 @@
 		<ul class="nav__list">
 			<li class="nav__list-item"><a href="/Web-Gaming-News/index.php">Home</a></li>
 			<li class="nav__list-item"><a href="/Web-Gaming-News/pages/contact-us.php">About</a></li>
-			<li class="nav__list-item"><a href="/Web-Gaming-News/pages/contact-us.php">Games</a></li>
+			<li class="nav__list-item"><a href="/Web-Gaming-News/pages/games.php">Games</a></li>
 			<li class="nav__list-item"><a href="/Web-Gaming-News/pages/contact-us.php">Contact</a></li>
 		</ul>
 </div>

@@ -1070,8 +1070,6 @@
 	}
 
 		.item header {
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
 			margin: -3em 0 3em -3em;
 			width: calc(100% + 6em);
 			height: 15em;
@@ -1194,6 +1192,7 @@
 		.items .first-items {
 			margin: 2em 0 0 2em;
 			width: calc(33% - 2em);
+			border-radius: 20px;
 		}
 	.second-items {
 		display: -moz-flex;
