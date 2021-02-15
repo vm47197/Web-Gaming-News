@@ -13,9 +13,7 @@
       <h2 class="nav__title">About Us</h2>
       <ul class="nav__ul nav__ul--extra">
         <li>
-            Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed
-            feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus
-            lacus non ornare.
+        Our team is made of young,ambitious and hard-working Computer Science majors.What brought us together is a project that required us to create our first website from sratch.We learned together through the process basic html,css,js and php knowledge and did our best to succeed at it.
         </li>
       </ul>
     </li>
