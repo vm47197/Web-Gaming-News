@@ -15,8 +15,8 @@
 			<li class="active" style="text-transform:initial;font-size:20px"><div>User Name:</div></li>
 			<li class="active" style="text-transform:initial;font-size:20px;margin-top:-10%"><?php echo $_SESSION['username']; ?></li>
 			<li><a href="">Change Password</a></li>
-			<li><a href="/Web-Gaming-News/pages/login.php">Log In / Register</a></li>
-			<li><a href="/Web-Gaming-News/index.php?logout='1'">Log Out</a></li>
+			<li><a href="/pages/login.php">Log In / Register</a></li>
+			<li><a href="index.php?logout='1'">Log Out</a></li>
 		</ul>
 	</button>
 	
@@ -26,10 +26,10 @@
 
 <div class="nav__content">
 	<ul class="nav__list">
-		<li class="nav__list-item"><a href="/Web-Gaming-News/index.php">Home</a></li>
-		<li class="nav__list-item"><a href="/Web-Gaming-News/pages/about-us.php">About</a></li>
-		<li class="nav__list-item"><a href="/Web-Gaming-News/pages/games.php">Games</a></li>
-		<li class="nav__list-item"><a href="/Web-Gaming-News/pages/contact-us.php">Contact</a></li>
+		<li class="nav__list-item"><a href="/index.php">Home</a></li>
+		<li class="nav__list-item"><a href="/pages/about-us.php">About</a></li>
+		<li class="nav__list-item"><a href="/pages/games.php">Games</a></li>
+		<li class="nav__list-item"><a href="pages/contact-us.php">Contact</a></li>
 	</ul>
 </div>
 <div>

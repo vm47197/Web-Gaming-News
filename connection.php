@@ -1,6 +1,5 @@
 <?php 
-$con = mysqli_connect('localhost', 'root', '', 'login_db');
-session_start();
+$con = mysqli_connect('localhost', 'frida_root', ')qoyn++@N0g$', 'frida_gamehubdb');session_start();
 if(isset($_POST['register'])){
         $username = mysqli_real_escape_string($con,$_POST['username']);
         $email = mysqli_real_escape_string($con,$_POST['email']);
