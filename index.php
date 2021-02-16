@@ -1,12 +1,14 @@
+<?php  
+include('connection.php'); 
+if(!isset($_SESSION['username']))
+{
+	header("location: pages/login.php");
+}
+?>
 <!DOCTYPE HTML>
-<!--
-	Epilogue by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
-
 <head>
+	<!-- <title>GameHub</title> -->
 	<title>GameHub</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,8 +16,11 @@
 	<link rel="stylesheet" href="assets/css/style.css" />
 	<link rel="shortcut icon" href="images/titlelogo.png" type="image/x-icon">
 </head>
-
+<?php 
+echo $_SESSION['role'];
+?>
 <body>
+<?php if(isset($_SESSION['username'])){ ?>
 
 	<!-- Header -->
 	<header id="header" class="alt">
@@ -31,7 +36,7 @@
 			</div>
 		</a>
 	</header>
-
+	
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<div>
@@ -40,7 +45,7 @@
 		<!-- Banner -->
 		<section class="main items">
 			<article class="item first-items" >
-				<header>
+				<header style="border:none">
 					<a href="#"><img src="images/COD.webp" alt="" /></a>
 				</header>
 				<ul class="actions">
@@ -50,7 +55,7 @@
 				</ul>
 			</article>
 			<article class="item first-items">
-				<header>
+				<header style="border:none">
 					<a href="#"><img src="images/BloodBorne.jpg" alt="" /></a>
 				</header>
 				<ul class="actions">
@@ -60,7 +65,7 @@
 				</ul>
 			</article>
 			<article class="item first-items">
-				<header>
+				<header style="border:none">
 					<a href="#"><img src="images/CyberPunk.jpg" alt="" /></a>
 				</header>
 				<ul class="actions">
@@ -162,6 +167,7 @@
 			</ul>
 		</section>
 	</div>
+	
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
@@ -178,6 +184,7 @@
 		}
 	</script>
 	<!-- <script src="assets/js/snow.js"></script> -->
+	<?php } ?>
 </body>
 
 </html>

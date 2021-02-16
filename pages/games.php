@@ -1,3 +1,10 @@
+<?php  
+include('../connection.php'); 
+if(empty($_SESSION['username']))
+{
+	header("location: login.php");
+}
+?>
 <!DOCTYPE HTML>
 <!--
 	Epilogue by TEMPLATED
