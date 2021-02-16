@@ -128,7 +128,7 @@ else{
 		<hr>
 		<section class="main">
 			<div class="outer-wrapper">
-				<h1>Gaming Events in November</h1>
+				<h1>Gaming TESTTTTT</h1>
 				<div class="s-wrap s-type-1" role="slider">
 					<input type="radio" id="s-1" name="slider-control" checked="checked">
 					<input type="radio" id="s-2" name="slider-control">
