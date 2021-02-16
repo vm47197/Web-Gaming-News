@@ -1,8 +1,15 @@
 <?php  
-include('../connection.php'); 
-if(empty($_SESSION['username']))
+include('connection.php'); 
+if(!isset($_SESSION['username']))
 {
 	header("location: login.php");
+}
+else{
+	if($_SESSION['role'] == "user"){
+	}
+	else if($_SESSION['role'] == "admin"){
+		header("location: pages/admin-dashboard.php");
+	}
 }
 ?>
 <!DOCTYPE HTML>

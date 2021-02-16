@@ -1,5 +1,5 @@
 <?php 
-include("../connection.php")
+include("../connection.php");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -32,7 +32,7 @@ echo $_SESSION['error'];
     </div>
     </form>
   </div>
-  <div class="right"></div>
+  <div class="right">WELCOME</div>
 </div>
 
 </body>
@@ -67,7 +67,7 @@ body {
 
 .container {
   display: flex;
-  height: 100vh;
+  height: 98vh;
 }
 
 .left {

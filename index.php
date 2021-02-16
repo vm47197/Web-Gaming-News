@@ -4,6 +4,13 @@ if(!isset($_SESSION['username']))
 {
 	header("location: pages/login.php");
 }
+else{
+	if($_SESSION['role'] == "user"){
+	}
+	else if($_SESSION['role'] == "admin"){
+		header("location: pages/admin-dashboard.php");
+	}
+}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -16,9 +23,6 @@ if(!isset($_SESSION['username']))
 	<link rel="stylesheet" href="assets/css/style.css" />
 	<link rel="shortcut icon" href="images/titlelogo.png" type="image/x-icon">
 </head>
-<?php 
-echo $_SESSION['role'];
-?>
 <body>
 <?php if(isset($_SESSION['username'])){ ?>
 

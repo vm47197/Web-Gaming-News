@@ -22,6 +22,12 @@ include("../connection.php")
       <input type="text" class="form-field animation a3" placeholder="Username" name="username">
       <input type="email" class="form-field animation a3" placeholder="Email Address" name="email">
       <input type="password" class="form-field animation a4" placeholder="Password" name="password">
+      <div class="animation a4" style="margin-top:2%;">
+        <input id="r1" type="radio" name="role"  value="1">
+        <label for="r1">User</label>
+        <input id="r2" type="radio" name="role" value="2" checked>
+        <label for="r2">Admin</label>
+      </div>
       <p class="animation a5"><a href="#">Forgot Password</a></p>
       <p class="animation a5" style="margin: 0"><a href="login.php">Log In</a></p>
       <button class="animation a6" type="submit" name="register">Sign Up</button>
@@ -54,6 +60,9 @@ include("../connection.php")
 </script>
 <style>
     @import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+    .error{
+      color:red !important;
+    }
 * {
   box-sizing: border-box;
 }
@@ -233,6 +242,106 @@ body {
     padding: 20px 40px;
     width: 440px;
   }
+}
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+input[type=radio] {
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  }
+input[type=radio]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  }
+input[type=radio]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+  }
+input[type=radio]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+input[type=radio]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+input[type=radio]:disabled + label {
+    cursor: not-allowed;
+  }
+input[type=radio]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+input[type=radio]:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+input[type=radio]:not(.switch) {
+    width: 21px;
+  }
+input[type=radio]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+input[type=radio]:not(.switch):checked {
+    --o: 1;
+  }
+input[type=radio] + label {
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+
+  input[type=radio] {
+    border-radius: 50%;
+  }
+  input[type=radio]:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    transform: scale(var(--s, 0.7));
+  }
+  input[type=radio]:checked {
+    --s: .5;
+  }
+}
+ul {
+  margin: 12px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 320px;
+}
+ul li {
+  margin: 16px 0;
+  position: relative;
 }
 </style>
 </html> 
