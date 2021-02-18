@@ -3,56 +3,52 @@
 ?>
 <link rel="stylesheet" href="/Web-Gaming-News/assets/css/navbar.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="container">
 	<!-- <span><i class="fa fa-user" id="user-login" aria-hidden="true" style="position: fixed;top: 3.8%;right: 4.5%;color:#fff"></i></span> -->
+	<div class="container">
 	<div class="menu-icon">
 		<span class="menu-icon__line menu-icon__line-left"></span>
 		<span class="menu-icon__line"></span>
 		<span class="menu-icon__line menu-icon__line-right"></span>
 	</div>
-	<button class="btn-acc"><span></span><i class="fa fa-user" style="color: #fff;"></i>
-		<ul class="dropdown" style="width: 14em;">
-			<li class="active" style="text-transform:initial;font-size:20px"><div>User Name:</div></li>
-			<li class="active" style="text-transform:initial;font-size:20px;margin-top:-10%"><?php echo $_SESSION['username']; ?></li>
-			<li><a href="">Change Password</a></li>
-			<li><a href="/pages/login.php">Log In / Register</a></li>
-			<li><a href="index.php?logout='1'">Log Out</a></li>
-		</ul>
-	</button>
-	
+		<button class="btn-acc"><span></span><i class="fa fa-user" style="color: #fff;"></i>
+			<ul class="dropdown" style="width: 14em;">
+				<li class="active" style="text-transform:initial;font-size:20px"><div>User Name:</div></li>
+				<li class="active" style="text-transform:initial;font-size:20px;margin-top:-10%"><?php echo $_SESSION['username']; ?></li>
+				<li><a href="">Change Password</a></li>
+				<li><a href="login.php">Log In / Register</a></li>
+				<li><a href="index.php?logout='1'">Log Out</a></li>
+			</ul>
+		</button>
+
 </div>
-
-
 
 <div class="nav__content">
 	<ul class="nav__list">
-		<li class="nav__list-item"><a href="/index.php">Home</a></li>
-		<li class="nav__list-item"><a href="/pages/about-us.php">About</a></li>
-		<li class="nav__list-item"><a href="/pages/games.php">Games</a></li>
-		<li class="nav__list-item"><a href="pages/contact-us.php">Contact</a></li>
+		<li class="nav__list-item"><a href="index.php">Home</a></li>
+		<li class="nav__list-item"><a href="about-us.php">About</a></li>
+		<li class="nav__list-item"><a href="games.php">Games</a></li>
+		<li class="nav__list-item"><a href="contact-us.php">Contact</a></li>
 	</ul>
 </div>
 <div>
-	<a href="/Web-Gaming-News/index.php">
-		<img src="/Web-Gaming-News/images/MainLogo.png" width="200" height="100" id="mainLogo" />
+	<a href="index.php">
+		<img src="../images/MainLogo.png" width="200" height="100" id="mainLogo" />
 	</a>
 </div>
 <style>
 	/* Body */
 	 .container {
-		position: fixed;
+		position: fixed !important;
 		top: 3%;
 		right: 0.3%;
 		z-index: 11;
+		margin-right: 1em;
 	} 
 	.menu-icon {
-		height: 30px;
-		width: 30px;
-		/* position: fixed; */
-		z-index: 20;
-		/* right: 0;
-		top: 0; 
-		margin: 2%;*/
+		height: 15px;
+		width: 30px ;
+		position: absolute ;
+		z-index: 12 ;
 		cursor: pointer;
 	}
 
@@ -75,11 +71,13 @@
 		font-size: 100%;
 		font-weight: 600;
 		letter-spacing: 1.2px;
+		margin-left: -0.5em;
+		margin-top: 1em;
 		text-transform: uppercase;
 		overflow: hidden;
 		cursor: pointer;
-		margin-top: 0.5em;
-		margin-left: -0.5em;
+		/* margin-top: 0.5em;
+		margin-left: -0.5em; */
 	}
 
 	.btn-acc:hover {
@@ -88,7 +86,7 @@
 
 	.btn-acc:focus .dropdown,
 	.btn-acc:active .dropdown {
-		transform: translate(0, 20px);
+		/* transform: translate(0, 23%); */
 		opacity: 1;
 		visibility: visible;
 	}
@@ -171,7 +169,7 @@
 		}
 	}
 </style>
-<script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
 <script>
 	$(document).ready(function () {
 		$(".nav__content").css("cursor", "default");

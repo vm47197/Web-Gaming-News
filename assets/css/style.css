@@ -139,7 +139,7 @@
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		text-decoration: none;
 	}
-
+	
 		a:hover {
 			border-bottom-color: transparent;
 		}
@@ -153,7 +153,7 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

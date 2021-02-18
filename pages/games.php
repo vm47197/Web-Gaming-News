@@ -1,4 +1,5 @@
 <?php  
+include('connection.php'); 
 if(!isset($_SESSION['username']))
 {
 	header("location: login.php");
@@ -107,7 +108,7 @@ else{
 	}
 
 	#header.alt {
-		height: 52em;
+		height: 38em;
 		min-height: 75vh;
 	}
 

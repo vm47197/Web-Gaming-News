@@ -2,13 +2,13 @@
 include('connection.php'); 
 if(!isset($_SESSION['username']))
 {
-	header("location: pages/login.php");
+	header("location: login.php");
 }
 else{
 	if($_SESSION['role'] == "user"){
 	}
 	else if($_SESSION['role'] == "admin"){
-		header("location: pages/admin-dashboard.php");
+		header("location:admin-dashboard.php");
 	}
 }
 ?>
@@ -19,9 +19,9 @@ else{
 	<title>GameHub</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="shortcut icon" href="images/titlelogo.png" type="image/x-icon">
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+	<link rel="shortcut icon" href="../images/titlelogo.png" type="image/x-icon">
 </head>
 <body>
 <?php if(isset($_SESSION['username'])){ ?>
@@ -50,7 +50,7 @@ else{
 		<section class="main items">
 			<article class="item first-items" >
 				<header style="border:none">
-					<a href="#"><img src="images/COD.webp" alt="" /></a>
+					<a href="#"><img src="../images/COD.webp" alt="" /></a>
 				</header>
 				<ul class="actions">
 					<p style="margin-bottom:4%"><b>Call of Duty</b>: Cold War pros are placing in the lowest bracket of
@@ -60,7 +60,7 @@ else{
 			</article>
 			<article class="item first-items">
 				<header style="border:none">
-					<a href="#"><img src="images/BloodBorne.jpg" alt="" /></a>
+					<a href="#"><img src="../images/BloodBorne.jpg" alt="" /></a>
 				</header>
 				<ul class="actions">
 					<p style="margin-bottom:4%"><b>Bloodborne</b> 60fps Patch Released By Hacker named Lance McDonald
@@ -70,7 +70,7 @@ else{
 			</article>
 			<article class="item first-items">
 				<header style="border:none">
-					<a href="#"><img src="images/CyberPunk.jpg" alt="" /></a>
+					<a href="#"><img src="../images/CyberPunk.jpg" alt="" /></a>
 				</header>
 				<ul class="actions">
 					<p style="margin-bottom:4%"><b>Cyberpunk 2077</b> Dev CD Projekt Red Hacked, Perpetrator Demands
@@ -83,7 +83,7 @@ else{
 		<section class="main items">
 			<article class="item" id="Cod">
 				<header>
-					<a href="#"><img src="images/COD.webp" alt="" /></a>
+					<a href="#"><img src="../images/COD.webp" alt="" /></a>
 					<h1>Call of Duty<h1>
 				</header>
 				<p>
@@ -101,7 +101,7 @@ else{
 			</article>
 			<article class="item" id="Bloodborne">
 				<header>
-					<a href="#"><img src="images/BloodBorne.jpg" alt="" /></a>
+					<a href="#"><img src="../images/BloodBorne.jpg" alt="" /></a>
 					<h1>Bloodborne</h1>
 				</header>
 				<p>Many can agree that Bloodborne is one of the best games of the previous console generation--perhaps even the best--but playing it at sub-30 frames per second can be a major adjustment if you're used to dodging your way through Sekiro at 60fps. Now, the well-known hacker Lance McDonald has released his 60 FPS patch for Bloodborne on his Patreon, but you'll need a jailbroken PS4 to try it out.
@@ -110,7 +110,7 @@ else{
 			</article>
 			<article class="item" id="Cyberpunk">
 				<header>
-					<a href="#"><img src="images/CyberPunk.jpg" alt="" /></a>
+					<a href="#"><img src="../images/CyberPunk.jpg" alt="" /></a>
 					<h1>CyberPunk 2077</h1>
 				</header>
 				<p>CD Projekt Red has revealed it has been the victim of a cyberattack. The Cyberpunk 2077 and Witcher developer shared a ransom note, which threatened to release sensitive information, including source code for CDPR's games, if the hackers' demands aren't met.
@@ -118,7 +118,7 @@ else{
 			</article>
 			<article class="item">
 				<header>
-					<a href="#"><img src="images/pic04.jpg" alt="" /></a>
+					<a href="#"><img src="../images/pic04.jpg" alt="" /></a>
 				</header>
 				<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed
 					feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus
@@ -173,10 +173,10 @@ else{
 	</div>
 	
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/skel.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
 	<script>
 		function CheckScroll(data) {
 			var position = $(data).position();
@@ -192,5 +192,5 @@ else{
 </body>
 
 </html>
-<?php include 'assets/includeFiles/navbar.php'?>
-<?php include 'assets/includeFiles/footer.php'?>
+<?php include '../assets/includeFiles/navbar.php'?>
+<?php include '../assets/includeFiles/footer.php'?>

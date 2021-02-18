@@ -13,16 +13,15 @@
     font-size: calc(2vw + 10px);
   }
   
-  .menu-icon {
+  /* .menu-icon {
     height: 30px;
+    position: fixed; 
     width: 30px;
-    position: fixed;
     z-index: 11;
-    right: 0;
-    top: 0;
     margin: 2%;
     cursor: pointer;
-  }
+  } */
+   
   .menu-icon__line {
     height: 2px;
     width: 100%;

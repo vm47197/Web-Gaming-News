@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="/Web-Gaming-News/assets/css/footer.css" />
+<link rel="stylesheet" href="../assets/css/footer.css" />
 <!--footer Lights-->
 
 <footer class="footer">
   <div class="footer__addr">
-      <img src="/Web-Gaming-News/images/MainLogo.png">
+      <img src="../images/MainLogo.png">
   </div>
   
   <ul class="footer__nav">
@@ -22,16 +22,16 @@
   
         <ul class="nav__ul">
           <li>
-            <a href="/Web-Gaming-News/index.php">Home</a>
+            <a href="index.php">Home</a>
           </li>
           <li>
-            <a href="/Web-Gaming-News/pages/about.php">About</a>
+            <a href="about.php">About</a>
           </li>
           <li>
-            <a href="/Web-Gaming-News/pages/games.php">Games</a>
+            <a href="games.php">Games</a>
           </li>
           <li>
-              <a href="/Web-Gaming-News/pages/contact-us.php">Contact-Us</a>
+              <a href="contact-us.php">Contact-Us</a>
           </li>
         </ul>
       </li>
