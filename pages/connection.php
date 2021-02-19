@@ -18,10 +18,9 @@ if(isset($_POST['register'])){
     }
         $sql = "INSERT INTO users (username,email,password,role) VALUES ('$username','$email','$password','$mainrole')";
         mysqli_query($con,$sql);
-        session_destroy();
         $_SESSION['username'] = $username;
         $_SESSION['role'] = $role;
-        header('location: index.php');
+        header('location: ../index.php');
 } 
 
 if(isset($_POST['login'])){
@@ -33,7 +32,7 @@ if(isset($_POST['login'])){
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
         $_SESSION['role'] = $row['role'];
-        header("location: index.php");
+        header('Location: ../index.php');
         } else {
         print("no user exists");
         }

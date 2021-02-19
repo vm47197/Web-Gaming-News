@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html style="overflow: none;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/navbar-style.css" />
-  <link rel="stylesheet" href="../styles/style.css" />
 <head>
   <title>Snake Game</title>
   
@@ -33,8 +31,7 @@
     </div>
   </div>
 </body>
-<link rel="stylesheet" href="../styles/footer.css">
-<link rel="stylesheet" href="../styles/navbar-style.css">
+<
 <!--Next Stage-->
 <!-- <div class="loading" style="opacity:0.95;background-size:150px 150px">
     <h3 style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, 300%);">
@@ -42,54 +39,16 @@
     </h3>
 </div> -->
 <div style="position: absolute;left: 1%;top: 0">
-    <a href="../index.html" class="logo"><img src="../Images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
+    <a href="../index.html" class="logo"><img src="../../images/MainLogo.png" id="MainLogo" width="200" height="100"></a>
 </div>
-<div class="button_container" id="toggle" style="z-index: 9001;">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-</div>
-<div class="overlay" id="overlay" style="z-index: 9000;">
-    <nav class="overlay-menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/about.html">About</a></li>
-            <li><a href="../pages/games.html">Try our Newest Games</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
-            <li><a href="../pages/login.html" class="fa fa-user">Login</a></li>
-        </ul>
-    </nav>
-</div>
-<!--#region Preloader-->
-<link rel="stylesheet" href="../styles/loading.css" />
-<div id="loader-wrapper" style="display: block;">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-</div>
-<script type="text/javascript" src="../scripts/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="../scripts/Snake/fruit.js"></script>
-<script type="text/javascript" src="../scripts/Snake/draw.js"></script>
 
+<!--#region Preloader-->
+<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../assets/js/snake/draw.js"></script>
+<script type="text/javascript" src="../../assets/js/snake/fruit.js"></script>
+<script type="text/javascript" src="../../assets/js/snake/snake.js"></script>
 </html>
-<script>
-  $(document).ready(function () {
-        $(".item-4side").hide();
-        $("#loader-wrapper").fadeOut(900);
-    });
-  $('#toggle').click(function () {
-     $(this).toggleClass('active');
-     $('#overlay').toggleClass('open');
-     if ($(this).hasClass('active')) {
-         //$("#overlay").css("backdrop-filter","blur(5px)",2000);
-         $("#overlay").css("backdrop-filter", "blur(5px)");
-     }
-     else {
-         //$("#overlay").css("backdrop-filter","blur(0px)",2000);
-         $("#overlay").css("backdrop-filter", "blur(0px)");
-     }
- });
-</script>
+
 <style>
   #StartBtn {
     background-color: #ffc107;

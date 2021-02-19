@@ -24,8 +24,8 @@ else{
 	<title>GameHub</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../assets/css/style.css" />
-	<link rel="shortcut icon" href="../images/titlelogo.png" type="image/x-icon">
+	<link rel="stylesheet" href="/Web-Gaming-News/assets/css/style.css" />
+	<link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -78,7 +78,7 @@ else{
 		<section class="main items">
 			<article class="item first-items">
 				<header>
-					<a href="#"><img src="../images/AboutUs/imageone.jpg" alt="" /></a>
+					<a href="#"><img src="/Web-Gaming-News/images/AboutUs/imageone.jpg" alt="" /></a>
 					<h3>Gjylasfije Pulti</h3>
 				</header>
 				<ul class="actions">
@@ -96,7 +96,7 @@ else{
 			</article>
 			<article class="item first-items">
 				<header>
-					<a href="#"><img src="../images/AboutUs/imagethree.jpg" alt="" /></a>
+					<a href="#"><img src="/Web-Gaming-News/images/AboutUs/imagethree.jpg" alt="" /></a>
 					<h3>Reetila Ramadani</h3>
 				</header>
 				<ul class="actions">
@@ -115,7 +115,7 @@ else{
 			</article>
 			<article class="item first-items">
 				<header>
-					<a href="#"><img src="../images/AboutUs/imagetwo.jpg" alt="" /></a>
+					<a href="#"><img src="/Web-Gaming-News/images/AboutUs/imagetwo.jpg" alt="" /></a>
 					<h3>Valon Marku</h3>
 				</header>
 				<ul class="actions">
@@ -133,10 +133,10 @@ else{
 	</div>
 
 	<!-- Scripts -->
-	<script src="../assets/js/jquery.min.js"></script>
-	<script src="../assets/js/skel.min.js"></script>
-	<script src="../assets/js/util.js"></script>
-	<script src="../assets/js/main.js"></script>
+	<script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
+	<script src="/Web-Gaming-News/assets/js/skel.min.js"></script>
+	<script src="/Web-Gaming-News/assets/js/util.js"></script>
+	<script src="/Web-Gaming-News/assets/js/main.js"></script>
 	<script>
 		function CheckScroll(data) {
 			var position = $(data).position();

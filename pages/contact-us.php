@@ -19,9 +19,9 @@ else{
     <title>Contact Us</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../assets/css/contact.css" />
-    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
-    <link rel="shortcut icon" href="../images/titlelogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Web-Gaming-News/assets/css/contact.css" />
+    <link rel="stylesheet" href="/Web-Gaming-News/assets/css/font-awesome.min.css" />
+    <link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
 </head>
 <body>
     <div id="wrapper">

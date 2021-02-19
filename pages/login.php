@@ -36,14 +36,14 @@ echo $_SESSION['error'];
 </div>
 
 </body>
-<script src="../assets/js/jquery.min.js"></script>
+<script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 <script>
     $("#loginform").validate({
         rules:{
             password:{
                 required:true,
-                minlength:8
+                minlength:5
             },
             email:{
                 required:true,

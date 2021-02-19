@@ -9,7 +9,7 @@ else{
 	if($_SESSION['role'] == "user"){
 	}
 	else if($_SESSION['role'] == "admin"){
-		header("location: pages/admin-dashboard.php");
+		header("location: /Web-Gaming-News/pages/admin-dashboard.php");
 	}
 }
 ?>
@@ -24,9 +24,9 @@ else{
 		<title>GameHub</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/style.css" />
-		<link rel="shortcut icon" href="../images/titlelogo.png" type="image/x-icon">
+		<link rel="stylesheet" href="/Web-Gaming-News/assets/css/main.css" />
+		<link rel="stylesheet" href="/Web-Gaming-News/assets/css/style.css" />
+		<link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
 	</head>
 	<body>
 
@@ -48,7 +48,7 @@ else{
 				<section class="main items">
 					<article class="item first-items" >
 						<header style="border:none">
-							<a href="#"><img src="../images/Shooter.jpg" alt="" /></a>
+							<a href="#"><img src="/Web-Gaming-News/images/Shooter.jpg" alt="" /></a>
 						</header>
 						<ul class="actions">
 							<p style="margin-bottom:4%"><b>Shooter</b>: Shoot to kill foreign objects that are trying to destroy you</p>
@@ -57,16 +57,16 @@ else{
 					</article>
 					<article class="item first-items">
 						<header style="border:none">
-							<a href="#"><img src="../images/Snake.PNG" alt="" /></a>
+							<a href="#"><img src="/Web-Gaming-News/images/Snake.PNG" alt="" /></a>
 						</header>
 						<ul class="actions">
 							<p style="margin-bottom:4%"><b>Snake</b>: Based on the old Snake game.</p>
-							<li><a class="button" href="">Play</a></li>
+							<li><a class="button" href="games/snake.php">Play</a></li>
 						</ul>
 					</article>
 					<article class="item first-items">
 						<header style="border:none">
-							<a href="#"><img src="../images/PingPong.png" alt="" /></a>
+							<a href="#"><img src="/Web-Gaming-News/images/PingPong.png" alt="" /></a>
 						</header>
 						<ul class="actions">
 							<p style="margin-bottom:4%"><b>Ping Pong</b></p>
@@ -75,7 +75,7 @@ else{
 					</article>
 					<article class="item first-items">
 						<header style="border:none">
-							<a href="#"><img src="../images/tictactoe.PNG" alt="" /></a>
+							<a href="#"><img src="/Web-Gaming-News/images/tictactoe.PNG" alt="" /></a>
 						</header>
 						<ul class="actions">
 							<p style="margin-bottom:4%"><b>Tic Tac Toe</b></p>
@@ -85,10 +85,10 @@ else{
 				</section>
 			</div>
 		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/skel.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+			<script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
+			<script src="/Web-Gaming-News/assets/js/skel.min.js"></script>
+			<script src="/Web-Gaming-News/assets/js/util.js"></script>
+			<script src="/Web-Gaming-News/assets/js/main.js"></script>
 			<script>
 				function CheckScroll(data) {
 					var position = $(data).position();
@@ -104,7 +104,7 @@ else{
 </html>
 <style>
 	#header {
-		background-image: url(../images/games.png) !important;
+		background-image: url(/Web-Gaming-News/images/games.png) !important;
 	}
 
 	#header.alt {
