@@ -20,6 +20,7 @@ include("connection.php")
     <form method="post" action="register.php" id="registerform">
     <div class="form">
       <input type="text" class="form-field animation a3" placeholder="Username" name="username">
+      <input type="text" class="form-field animation a3" placeholder="Full Name" name="full_name">
       <input type="email" class="form-field animation a3" placeholder="Email Address" name="email">
       <input type="password" class="form-field animation a4" placeholder="Password" name="password">
       <div class="animation a4" style="margin-top:2%;">
@@ -55,6 +56,10 @@ include("connection.php")
                 required:true,
                 email:true,
             },
+            full_name:{
+              required:true,
+              minlength:2
+            }
         }
     });
 </script>

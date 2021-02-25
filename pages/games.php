@@ -6,9 +6,9 @@ if(!isset($_SESSION['username']))
 	
 }
 else{
-	if($_SESSION['role'] == "user"){
+	if($_SESSION['role'] == "User"){
 	}
-	else if($_SESSION['role'] == "admin"){
+	else if($_SESSION['role'] == "Admin"){
 		header("location: /Web-Gaming-News/pages/admin-dashboard.php");
 	}
 }

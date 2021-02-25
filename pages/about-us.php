@@ -5,9 +5,9 @@ if(empty($_SESSION['username']))
 	header("location: login.php");
 }
 else{
-	if($_SESSION['role'] == "user"){
+	if($_SESSION['role'] == "User"){
 	}
-	else if($_SESSION['role'] == "admin"){
+	else if($_SESSION['role'] == "Admin"){
 		header("location: admin-dashboard.php");
 	}
 }

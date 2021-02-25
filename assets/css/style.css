@@ -1070,7 +1070,7 @@
 	}
 
 		.item header {
-			margin: -3em 0 3em -3em;
+			margin: -3em 0 1em -3em;
 			width: calc(100% + 6em);
 			height: 15em;
 			display: -moz-flex;

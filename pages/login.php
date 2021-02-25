@@ -32,7 +32,7 @@ echo $_SESSION['error'];
     </div>
     </form>
   </div>
-  <div class="right">WELCOME</div>
+  <div class="right"></div>
 </div>
 
 </body>

@@ -6,13 +6,14 @@ if(!isset($_SESSION['username']))
 	header("location: pages/login.php");
 }
 else{
-	if($_SESSION['role'] == "user"){
+	if($_SESSION['role'] == "User"){
+		$conn = mysqli_connect('localhost', 'frida_root', ')qoyn++@N0g$', 'frida_gamehubdb');
+		$posts = $conn-> query("SELECT * FROM posts WHERE active = 1");
 	}
-	else if($_SESSION['role'] == "admin"){
-		header("location:admin-dashboard.php");
+	else if($_SESSION['role'] == "Admin"){
+	header("location:pages/admin-dashboard.php");
 	}
 }
-
 	?>
 <!DOCTYPE HTML>
 <html>
@@ -26,9 +27,6 @@ else{
 	<link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
 </head>
 <body>
-<?php if(isset($_SESSION['username'])){ ?>
-
-	<!-- Header -->
 	<header id="header" class="alt">
 		<div class="inner">
 			<h1>Welcome to GameHub</h1>
@@ -50,82 +48,31 @@ else{
 		</div>
 		<!-- Banner -->
 		<section class="main items">
+		<?php foreach($posts as $item): ?>
 			<article class="item first-items" >
 				<header style="border:none">
-					<a href="#"><img src="/Web-Gaming-News/images/COD.webp" alt="" /></a>
+					<a href="#"><img src="/Web-Gaming-News/images/<?php echo $item['image'];?>"/> </a>
 				</header>
 				<ul class="actions">
-					<p style="margin-bottom:4%"><b>Call of Duty</b>: Cold War pros are placing in the lowest bracket of
-						the new ranked mode</p>
-					<li><a class="button" onclick="CheckScroll('#Cod')">Read More</a></li>
+					<p style="margin-bottom:4%"><?php echo $item['title'];?></p>
+					<li><a class="button" onclick="CheckScroll('#<?php echo $item['id']?>')">Read More</a></li>
 				</ul>
 			</article>
-			<article class="item first-items">
-				<header style="border:none">
-					<a href="#"><img src="/Web-Gaming-News/images/BloodBorne.jpg" alt="" /></a>
-				</header>
-				<ul class="actions">
-					<p style="margin-bottom:4%"><b>Bloodborne</b> 60fps Patch Released By Hacker named Lance McDonald
-					</p>
-					<li><a class="button" onclick="CheckScroll('#Bloodborne')">Read More</a></li>
-				</ul>
-			</article>
-			<article class="item first-items">
-				<header style="border:none">
-					<a href="#"><img src="/Web-Gaming-News/images/CyberPunk.jpg" alt="" /></a>
-				</header>
-				<ul class="actions">
-					<p style="margin-bottom:4%"><b>Cyberpunk 2077</b> Dev CD Projekt Red Hacked, Perpetrator Demands
-						Ransom</p>
-					<li><a class="button" onclick="CheckScroll('#Cyberpunk')">Read More</a></li>
-				</ul>
-			</article>
+			<?php endforeach ?>
 		</section>
 		<hr>
 		<section class="main items">
-			<article class="item" id="Cod">
+		<?php foreach($posts as $item): ?>
+			<article class="item" id="<?php echo $item['id']?>">
 				<header>
-					<a href="#"><img src="/Web-Gaming-News/images/COD.webp" alt="" /></a>
-					<h1>Call of Duty<h1>
+					<a href="#"><img src="/Web-Gaming-News/images/<?php echo $item['image'];?>" alt="" /></a>
+					<h1><h1>
 				</header>
 				<p>
-					Following the first day of Call of Duty: Black Ops – Cold War's new ranked mode, League Play,
-					players are starting to suspect that its ranking system isn't hitting the mark. Several Cold War
-					pros report that they've been placed in the bottom-tier Competitor ranking following their five
-					placement matches.
-					Normally, I wouldn't lend much credence to your average player proclaiming that they've been given a
-					lower rank than they deserve, but I raise an eyebrow at any system in which I can outrank a pro. As
-					spotted by the Twitter account CDL Intel, a few pro players are expressing disbelief at their
-					official ranking following an impressive performance.
-					Here's Joseph "Owakening" Conley of the Flordia Mutineers and Adam "Assault" Garcia of the Los
-					Angeles Guerillas reacting to their new Competitor designations.
+					<?php echo $item['content']; ?>
 				</p>
 			</article>
-			<article class="item" id="Bloodborne">
-				<header>
-					<a href="#"><img src="/Web-Gaming-News/images/BloodBorne.jpg" alt="" /></a>
-					<h1>Bloodborne</h1>
-				</header>
-				<p>Many can agree that Bloodborne is one of the best games of the previous console generation--perhaps even the best--but playing it at sub-30 frames per second can be a major adjustment if you're used to dodging your way through Sekiro at 60fps. Now, the well-known hacker Lance McDonald has released his 60 FPS patch for Bloodborne on his Patreon, but you'll need a jailbroken PS4 to try it out.
-					We've known about McDonald's 60fps patch for a while now, since he first showed it last year, but this is the first time that it's been publicly available. McDonald teamed up with Eurogamer's Digital Foundry to do a technical breakdown of the 60fps patch, and the results are fascinating. McDonald's YouTube channel is a treasure trove of behind-the-scenes materials for From Software's games, including Bloodborne and the Souls series. The patch also gives you the option of lowering the rendering resolution of the game to 720p to get a more consistent frame rate.
-				</p>
-			</article>
-			<article class="item" id="Cyberpunk">
-				<header>
-					<a href="#"><img src="/Web-Gaming-News/images/CyberPunk.jpg" alt="" /></a>
-					<h1>CyberPunk 2077</h1>
-				</header>
-				<p>CD Projekt Red has revealed it has been the victim of a cyberattack. The Cyberpunk 2077 and Witcher developer shared a ransom note, which threatened to release sensitive information, including source code for CDPR's games, if the hackers' demands aren't met.
-					In a statement, CDPR confirmed that an "unidentified actor" gained access to the company's servers and has obtained sensitive information. To the extent that CDPR is aware, no personal data was exposed, but the developer's own properties, information, and data has reportedly been accessed by the hackers.CDPR is working with law enforcement and other parties to get to the bottom of the attack. The developer also released the ransom note, which states, "Your have been EPICALLY pwned ! !"</p>
-			</article>
-			<article class="item">
-				<header>
-					<a href="#"><img src="/Web-Gaming-News/images/pic04.jpg" alt="" /></a>
-				</header>
-				<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed
-					feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus
-					lacus non ornare.</p>
-			</article>
+			<?php endforeach ?>
 		</section>
 		<hr>
 		<section class="main">
@@ -179,6 +126,7 @@ else{
 	<script src="/Web-Gaming-News/assets/js/skel.min.js"></script>
 	<script src="/Web-Gaming-News/assets/js/util.js"></script>
 	<script src="/Web-Gaming-News/assets/js/main.js"></script>
+	
 	<script>
 		function CheckScroll(data) {
 			var position = $(data).position();
@@ -189,8 +137,6 @@ else{
 			}, 800)
 		}
 	</script>
-	<!-- <script src="assets/js/snow.js"></script> -->
-	<?php } ?>
 </body>
 
 </html>
