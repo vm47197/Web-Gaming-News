@@ -70,7 +70,7 @@ else{
 						</header>
 						<ul class="actions">
 							<p style="margin-bottom:4%"><b>Ping Pong</b></p>
-							<li><a class="button" href="">Play</a></li>
+							<li><a class="button" href="games/pingpong.php">Play</a></li>
 						</ul>
 					</article>
 					<article class="item first-items">
