@@ -48,11 +48,11 @@ else{
 				<section class="main items">
 					<article class="item first-items" >
 						<header style="border:none">
-							<a href="#"><img src="/Web-Gaming-News/images/Shooter.jpg" alt="" /></a>
+							<a href=""><img src="/Web-Gaming-News/images/Shooter.jpg" alt="" /></a>
 						</header>
 						<ul class="actions">
 							<p style="margin-bottom:4%"><b>Shooter</b>: Shoot to kill foreign objects that are trying to destroy you</p>
-							<li><a class="button" href="">Play</a></li>
+							<li><a class="button" href="games/shooter.php">Play</a></li>
 						</ul>
 					</article>
 					<article class="item first-items">
