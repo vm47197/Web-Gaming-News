@@ -57,6 +57,7 @@ if(isset($_POST['login'])){
         $_SESSION['role'] = $row['role'];
         $_SESSION['full_name'] = $row['full_name'];
         $_SESSION['admin-active'] = $row['active'];
+        $_SESSION['email'] = $row['email'];
         if($_SESSION['role'] == "Admin"){
             header('Location: admin-dashboard.php');
         }else if($_SESSION['role'] == "User"){
@@ -177,5 +178,30 @@ if (isset($_POST['add_new_post'])) {
     $sql = "INSERT INTO posts (title,author,content,created_by,image,active) VALUES ('$title','$author','$content','$created_by','$filename.$ext','$active')";
         mysqli_query($con, $sql);
         header('location: admin-dashboard.php');
+}
+if(isset($_POST['change_pass'])){
+    $id = mysqli_real_escape_string($con,$_POST['id']);
+    $role = mysqli_real_escape_string($con,$_POST['role']);
+    $lastPass = mysqli_real_escape_string($con,$_POST['lastPass']);
+    $newPass = mysqli_real_escape_string($con,$_POST['newPass']);
+    $query="SELECT * FROM users WHERE id=$id";
+    $result = mysqli_query($con,$query);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        if($row['password'] == $lastPass){
+            $sql = "UPDATE users SET password='$newPass' WHERE id='$id'";
+            mysqli_query($con,$sql);
+            $_SESSION["pass_error"] = "Password Successfully Changed";
+            if($role == "Admin"){
+                header('location: /Web-Gaming-News/pages/admin-dashboard.php');
+            }
+            if($role == "User"){
+                header('location: /Web-Gaming-News/index.php');
+            }
+        }
+        else{
+            $_SESSION['pass_error'] = "Last Password does not match the records!!";
+        }
+    }
 }
 ?>

@@ -1,0 +1,309 @@
+.accordion-container {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error {
+    color: red;
+    font-weight: 500 !important;
+}
+
+*:focus-visible {
+    border-radius: 4px;
+    -webkit-animation-name: showFocus;
+    animation-name: showFocus;
+    -webkit-animation-duration: 0.32s;
+    animation-duration: 0.32s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+*:focus {
+    outline: none;
+}
+
+details {
+    margin-bottom: 8px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+summary {
+    position: relative;
+    padding: 24px 24px 24px 56px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 24px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open]>div {
+    opacity: 0;
+    -webkit-animation-name: showContent;
+    animation-name: showContent;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-delay: 0.16s;
+    animation-delay: 0.16s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+details summary:after {
+    content: "";
+    position: absolute;
+    margin-top: 2px;
+    left: 24px;
+    width: 8px;
+    height: 8px;
+    border: solid;
+    border-color: #929AB9;
+    border-width: 0 2px 2px 0;
+    -webkit-animation-name: flipArrowDown;
+    animation-name: flipArrowDown;
+    -webkit-animation-duration: 0.32s;
+    animation-duration: 0.32s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+details[open] summary:after {
+    margin-top: 6px;
+    -webkit-animation-name: flipArrowUp;
+    animation-name: flipArrowUp;
+    -webkit-animation-duration: 0.24s;
+    animation-duration: 0.24s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes showFocus {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 0 0 0 2px #303859;
+    }
+}
+
+@keyframes showFocus {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 0 0 0 2px #303859;
+    }
+}
+
+@-webkit-keyframes showContent {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes flipArrowUp {
+    100% {
+        transform: rotate(-135deg);
+    }
+}
+
+@keyframes flipArrowUp {
+    100% {
+        transform: rotate(-135deg);
+    }
+}
+
+@-webkit-keyframes flipArrowDown {
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes flipArrowDown {
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, .7);
+    transition: all .4s;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal__content {
+    border-radius: 4px;
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background: #fff;
+    padding: 1em 2em;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #585858;
+    text-decoration: none;
+}
+
+.form {
+    width: 400px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    width: 100%;
+    height: 62px;
+    border: 1px solid #c2c2c2;
+    border-radius: 6px;
+}
+
+.file-upload-wrapper:after {
+    content: attr(data-text);
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 10px 15px;
+    display: block;
+    width: calc(100% - 40px);
+    pointer-events: none;
+    z-index: 20;
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+    border-radius: 5px 10px 10px 5px;
+    font-weight: 300;
+}
+
+.file-upload-wrapper:before {
+    content: "Upload";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    height: 60px;
+    background: #4daf7c;
+    color: #fff;
+    font-weight: 700;
+    z-index: 25;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    pointer-events: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.file-upload-wrapper:hover:before {
+    background: #3d8c63;
+}
+
+.file-upload-wrapper input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+.show-hide-text {
+display: flex;
+flex-wrap: wrap;
+}
+.show-hide-text a {
+order: 2;
+}
+.show-hide-text p {
+position: relative;
+overflow: hidden;
+max-height: 60px;
+line-height: 20px;
+}
+.show-hide-text p:after {
+content: "";
+position: absolute;
+right: 0;
+bottom: 0;
+width: 100px;
+height: 20px;
+background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+@supports (-webkit-line-clamp: 3) {
+.show-hide-text p {
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+}
+.show-hide-text p:after {
+display: none;
+}
+}
+
+.show-less {
+display: none;
+}
+.show-less:target {
+display: block;
+}
+.show-less:target ~ p {
+display: block;
+max-height: 100%;
+}
+.show-less:target + a {
+display: none;
+}
+
+.wrapper-p {
+max-width: 300px;
+margin: 50px auto;
+}
+.wrapper p {
+font-size: 16px;
+line-height: 20px;
+}

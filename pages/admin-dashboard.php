@@ -3,6 +3,9 @@ include('connection.php');
 if ($_SESSION['admin-active'] != 1) {
     header("location: login.php");
 }
+if($_SESSION['role'] == "User"){
+    header("location: ../index.php");
+}
 
 $conn = mysqli_connect('localhost', 'frida_root', ')qoyn++@N0g$', 'frida_gamehubdb');
 $users_active = $conn->query("SELECT * FROM users WHERE active = 1");
@@ -18,8 +21,8 @@ $query_total = $conn->query("SELECT * FROM users");
     <title>Gamehub / Dashboard</title>
     <link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/admin-dashboard.min.css">
+    <link rel="stylesheet" href="/Web-Gaming-News/assets/css/admin-dashboard.css">
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.bootstrap4.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -27,266 +30,20 @@ $query_total = $conn->query("SELECT * FROM users");
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
     <script>
         $(document).ready(function() {
             $('#example,#example2,#example3,#example4').DataTable();
         });
     </script>
+    <?php if(isset($_SESSION["pass_error"])): ?>
+        <script type="text/javascript">
+            toastr.success("<?php echo $_SESSION["pass_error"];?>");
+        </script>
+	<?php endif; unset($_SESSION["pass_error"]);?>
     <style>
-        .accordion-container {
-            width: 96%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .error {
-            color: red;
-            font-weight: 500 !important;
-        }
-
-        *:focus-visible {
-            border-radius: 4px;
-            -webkit-animation-name: showFocus;
-            animation-name: showFocus;
-            -webkit-animation-duration: 0.32s;
-            animation-duration: 0.32s;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-        }
-
-        *:focus {
-            outline: none;
-        }
-
-        details {
-            margin-bottom: 8px;
-            background: #fff;
-            border-radius: 4px;
-        }
-
-        summary {
-            position: relative;
-            padding: 24px 24px 24px 56px;
-            font-weight: 600;
-            cursor: pointer;
-            list-style-type: none;
-            font-size: 24px;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        details[open]>div {
-            opacity: 0;
-            -webkit-animation-name: showContent;
-            animation-name: showContent;
-            -webkit-animation-duration: 0.6s;
-            animation-duration: 0.6s;
-            -webkit-animation-delay: 0.16s;
-            animation-delay: 0.16s;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-        }
-
-        details summary:after {
-            content: "";
-            position: absolute;
-            margin-top: 2px;
-            left: 24px;
-            width: 8px;
-            height: 8px;
-            border: solid;
-            border-color: #929AB9;
-            border-width: 0 2px 2px 0;
-            -webkit-animation-name: flipArrowDown;
-            animation-name: flipArrowDown;
-            -webkit-animation-duration: 0.32s;
-            animation-duration: 0.32s;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-        }
-
-        details[open] summary:after {
-            margin-top: 6px;
-            -webkit-animation-name: flipArrowUp;
-            animation-name: flipArrowUp;
-            -webkit-animation-duration: 0.24s;
-            animation-duration: 0.24s;
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-        }
-
-        @-webkit-keyframes showFocus {
-            from {
-                box-shadow: none;
-            }
-
-            to {
-                box-shadow: 0 0 0 2px #303859;
-            }
-        }
-
-        @keyframes showFocus {
-            from {
-                box-shadow: none;
-            }
-
-            to {
-                box-shadow: 0 0 0 2px #303859;
-            }
-        }
-
-        @-webkit-keyframes showContent {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes showContent {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes flipArrowUp {
-            100% {
-                transform: rotate(-135deg);
-            }
-        }
-
-        @keyframes flipArrowUp {
-            100% {
-                transform: rotate(-135deg);
-            }
-        }
-
-        @-webkit-keyframes flipArrowDown {
-            100% {
-                transform: rotate(45deg);
-            }
-        }
-
-        @keyframes flipArrowDown {
-            100% {
-                transform: rotate(45deg);
-            }
-        }
-
-        .modal {
-            visibility: hidden;
-            opacity: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(77, 77, 77, .7);
-            transition: all .4s;
-        }
-
-        .modal:target {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .modal__content {
-            border-radius: 4px;
-            position: relative;
-            width: 500px;
-            max-width: 90%;
-            background: #fff;
-            padding: 1em 2em;
-        }
-
-        .modal__close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #585858;
-            text-decoration: none;
-        }
-
-        .form {
-            width: 400px;
-        }
-
-        .file-upload-wrapper {
-            position: relative;
-            width: 100%;
-            height: 62px;
-            border: 1px solid #c2c2c2;
-            border-radius: 6px;
-        }
-
-        .file-upload-wrapper:after {
-            content: attr(data-text);
-            font-size: 18px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #fff;
-            padding: 10px 15px;
-            display: block;
-            width: calc(100% - 40px);
-            pointer-events: none;
-            z-index: 20;
-            height: 40px;
-            line-height: 40px;
-            color: #999;
-            border-radius: 5px 10px 10px 5px;
-            font-weight: 300;
-        }
-
-        .file-upload-wrapper:before {
-            content: "Upload";
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: inline-block;
-            height: 60px;
-            background: #4daf7c;
-            color: #fff;
-            font-weight: 700;
-            z-index: 25;
-            font-size: 16px;
-            line-height: 60px;
-            padding: 0 15px;
-            text-transform: uppercase;
-            pointer-events: none;
-            border-radius: 0 5px 5px 0;
-        }
-
-        .file-upload-wrapper:hover:before {
-            background: #3d8c63;
-        }
-
-        .file-upload-wrapper input {
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 99;
-            height: 40px;
-            margin: 0;
-            padding: 0;
-            display: block;
-            cursor: pointer;
-            width: 100%;
-        }
+        
     </style>
 </head>
 
@@ -302,6 +59,9 @@ $query_total = $conn->query("SELECT * FROM users");
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="register.php" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="change-password.php" class="nav-link">Change Password</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="admin-dashboard.php?logout='1'" class="nav-link">Logout</a>
@@ -322,6 +82,7 @@ $query_total = $conn->query("SELECT * FROM users");
                             <?php echo $_SESSION['full_name']; ?>
                         </a>
                     </div>
+                    <p>blabla</p>
                 </div>
             </div>
         </aside>
@@ -566,7 +327,9 @@ $query_total = $conn->query("SELECT * FROM users");
                                                                         <?php echo $item['author']; ?>
                                                                     </td>
                                                                     <td>
-                                                                        <?php echo $item['content']; ?>
+                                                                     
+                                                                            <p>Test</p>
+                                                                       
                                                                     </td>
                                                                     <td>
                                                                         <?php echo $find_user_name ?>
@@ -713,7 +476,8 @@ $query_total = $conn->query("SELECT * FROM users");
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Content</label>
-                        <input type="text" class="form-control" name="post_content" value="<?php echo $_SESSION["post_edit_content"] ?>">
+                        <textarea class="form-control" name="post_content" value="<?php echo $_SESSION["post_edit_content"] ?>"></textarea>
+                        <!-- <input type="textarea" class="form-control" name="post_content" value="<?php echo $_SESSION["post_edit_content"] ?>"> -->
                     </div>
                     <div class="form-group">
                         <?php
@@ -727,12 +491,10 @@ $query_total = $conn->query("SELECT * FROM users");
                         <label for="exampleInputEmail1">Created By</label>
                         <input type="text" readonly="readonly" class="form-control" name="post_created_by" value="<?php echo $find_user_name ?>">
                     </div>
-                    <button type="submit" name="post_edit" value="<?php echo $_SESSION["post_edit_id"] ?>" class="btn
-                    btn-success">Modify</button>
+                    <button type="submit" name="post_edit" value="<?php echo $_SESSION["post_edit_id"] ?>" class="btn btn-success">Modify</button>
                 </form>
             </div>
         </div>
-
         <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
         <script type="text/javascript">
             $("#registerform2").validate({

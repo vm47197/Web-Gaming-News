@@ -12,8 +12,8 @@
 		<button class="btn-acc"><span></span><i class="fa fa-user" style="color: #fff;"></i>
 			<ul class="dropdown" style="width: 14em;">
 				<li class="active" style="text-transform:initial;font-size:20px"><div>User Name:</div></li>
-				<li class="active" style="text-transform:initial;font-size:20px;margin-top:-10%"><?php echo  $_SESSION['full_name']." - ".$_SESSION['role']; ?></li>
-				<li><a href="">Change Password</a></li>
+				<li class="active" style="text-transform:initial;font-size:20px;margin-top:-10%"><?php echo $_SESSION['full_name']; ?></li>
+				<li><a href="/Web-Gaming-News/pages/change-password.php">Change Password</a></li>
 				<li><a href="/Web-Gaming-News/pages/login.php">Log In / Register</a></li>
 				<li><a href="/Web-Gaming-News/index.php?logout='1'">Log Out</a></li>
 			</ul>

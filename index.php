@@ -14,7 +14,8 @@ else{
 	header("location:pages/admin-dashboard.php");
 	}
 }
-	?>
+	
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -25,6 +26,7 @@ else{
 	<link rel="stylesheet" href="/Web-Gaming-News/assets/css/main.css" />
 	<link rel="stylesheet" href="/Web-Gaming-News/assets/css/style.css" />
 	<link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 </head>
 <body>
 	<header id="header" class="alt">
@@ -66,9 +68,9 @@ else{
 			<article class="item" id="<?php echo $item['id']?>">
 				<header>
 					<a href="#"><img src="/Web-Gaming-News/images/<?php echo $item['image'];?>" alt="" /></a>
-					<h1><h1>
+					<h1><?php echo $item['title']; ?><h1>
 				</header>
-				<p>
+				<p style="word-break:break-word">
 					<?php echo $item['content']; ?>
 				</p>
 			</article>
@@ -126,7 +128,15 @@ else{
 	<script src="/Web-Gaming-News/assets/js/skel.min.js"></script>
 	<script src="/Web-Gaming-News/assets/js/util.js"></script>
 	<script src="/Web-Gaming-News/assets/js/main.js"></script>
-	
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+	<?php if(isset($_SESSION["pass_error"])): ?>
+			<script type="text/javascript">
+				toastr.success("<?php echo $_SESSION["pass_error"];?>");
+			</script>
+	<?php endif; unset($_SESSION["pass_error"]);?>
+
 	<script>
 		function CheckScroll(data) {
 			var position = $(data).position();
