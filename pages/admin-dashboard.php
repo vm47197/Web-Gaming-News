@@ -82,7 +82,6 @@ $query_total = $conn->query("SELECT * FROM users");
                             <?php echo $_SESSION['full_name']; ?>
                         </a>
                     </div>
-                    <p>blabla</p>
                 </div>
             </div>
         </aside>
@@ -303,7 +302,6 @@ $query_total = $conn->query("SELECT * FROM users");
                                                             <tr>
                                                                 <th>Title</th>
                                                                 <th>Author</th>
-                                                                <th>Content</th>
                                                                 <th>Created By</th>
                                                                 <th>Active</th>
                                                                 <th>Modify</th>
@@ -325,11 +323,6 @@ $query_total = $conn->query("SELECT * FROM users");
                                                                     </td>
                                                                     <td>
                                                                         <?php echo $item['author']; ?>
-                                                                    </td>
-                                                                    <td>
-                                                                     
-                                                                            <p>Test</p>
-                                                                       
                                                                     </td>
                                                                     <td>
                                                                         <?php echo $find_user_name ?>
@@ -371,7 +364,7 @@ $query_total = $conn->query("SELECT * FROM users");
                 <a href="#" class="modal__close">&times;</a>
                 <h1>Add new Post</h1>
                 <hr>
-                <form name="form" method="post" action="admin-dashboard.php" enctype="multipart/form-data">
+                <form name="form" method="post" action="admin-dashboard.php" id="registerform3" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $_SESSION['id'];  ?>">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Title</label>
@@ -468,15 +461,15 @@ $query_total = $conn->query("SELECT * FROM users");
                     <input type="hidden" name="post_id" value="<?php echo $_SESSION["post_edit_id"] ?>">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Title</label>
-                        <input type="text" class="form-control" name="post_title" value="<?php echo $_SESSION["post_edit_title"] ?>">
+                        <input type="text" class="form-control" name="post_title" value="<?php echo $_SESSION["post_edit_title"]; ?>">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Author</label>
-                        <input type="text" class="form-control" name="post_author" value="<?php echo $_SESSION["post_edit_author"] ?>">
+                        <input type="text" class="form-control" name="post_author" value="<?php echo $_SESSION["post_edit_author"]; ?>">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Content</label>
-                        <textarea class="form-control" name="post_content" value="<?php echo $_SESSION["post_edit_content"] ?>"></textarea>
+                        <textarea class="form-control" name="post_content"><?php echo $_SESSION['post_edit_content']; ?></textarea>
                         <!-- <input type="textarea" class="form-control" name="post_content" value="<?php echo $_SESSION["post_edit_content"] ?>"> -->
                     </div>
                     <div class="form-group">
@@ -513,7 +506,6 @@ $query_total = $conn->query("SELECT * FROM users");
                     },
                     add_full_name: {
                         required: true,
-                        minlength: 2
                     }
                 }
             });
@@ -521,14 +513,17 @@ $query_total = $conn->query("SELECT * FROM users");
                 rules: {
                     add_post_title: {
                         required: true,
+                        minlength: 5
                     },
                     add_post_author: {
                         required: true,
+                        minlength: 5
                     },
                     add_post_content: {
                         required: true,
+                        minlength: 5
                     },
-                    file: {
+                    my_file: {
                         required: true,
                     },
                 }
