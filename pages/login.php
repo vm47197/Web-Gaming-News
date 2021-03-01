@@ -7,6 +7,8 @@ include("connection.php");
     <!-- <title>GameHub Login</title> -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GameHub | Login</title>
+    <link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
 </head>
 
 <?php
@@ -22,13 +24,15 @@ echo $_SESSION['error'];
       <h2 class="animation a1">Welcome</h2>
       <h4 class="animation a2">Log In</h4>
     </div>
+    <div id="message" style="color:red;"></div>
     <form method="post" action="login.php" id="loginform">
     <div class="form">
-      <input type="text" class="form-field animation a3" placeholder="Email" name="email">
-      <input type="password" class="form-field animation a4" placeholder="Password" name="password">
+      <input type="text" class="form-field animation a3" placeholder="Email" name="email" id="email">
+      <input type="password" class="form-field animation a4" placeholder="Password" name="password" id="password">
       <p class="animation a5"><a href="#">Forgot Password</a></p>
       <p class="animation a5" style="margin: 0"><a href="register.php">Sign Up</a></p>
-      <button class="animation a6"  type="submit" name="login">Log In</button>
+      <button class="animation a6"  type="button" name="login-" id="but_submit">Log In</button>
+      
     </div>
     </form>
   </div>
@@ -39,6 +43,27 @@ echo $_SESSION['error'];
 <script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 <script>
+  $("#but_submit").click(function(){
+          var email = $("#email").val().trim();
+          var password = $("#password").val().trim();
+
+          if(email != "" && password != "" ){
+              $.ajax({
+                  url:'check-user.php',
+                  type:'post',
+                  data:{email:email,password:password},
+                  success:function(response){
+                      var msg = "";
+                      if(response == 0){
+                          msg = "Invalid username and password!";
+                      }else{
+                        window.location = "admin-dashboard.php";
+                      }
+                      $("#message").html(msg);
+                  }
+              });
+          }
+      });
     $("#loginform").validate({
         rules:{
             password:{

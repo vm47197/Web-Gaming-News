@@ -62,10 +62,18 @@ if(isset($_POST['login'])){
             header('Location: admin-dashboard.php');
         }else if($_SESSION['role'] == "User"){
             header('Location: ../index.php');
-        }else {
-        print("no user exists");
         }
     }
+
+
+    
+    $email = mysqli_real_escape_string($con,$_POST['email']);
+    $password = mysqli_real_escape_string($con,$_POST['password']);
+
+
+
+
+
 }
 
 if(isset($_GET['logout'])){
