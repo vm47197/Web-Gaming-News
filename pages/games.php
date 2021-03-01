@@ -79,7 +79,7 @@ else{
 						</header>
 						<ul class="actions">
 							<p style="margin-bottom:4%"><b>Tic Tac Toe</b></p>
-							<li><a class="button" href="">Play</a></li>
+							<li><a class="button" href="games/ticTacToe.php">Play</a></li>
 						</ul>
 					</article>
 				</section>
