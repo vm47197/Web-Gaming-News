@@ -64,16 +64,8 @@ if(isset($_POST['login'])){
             header('Location: ../index.php');
         }
     }
-
-
-    
     $email = mysqli_real_escape_string($con,$_POST['email']);
     $password = mysqli_real_escape_string($con,$_POST['password']);
-
-
-
-
-
 }
 
 if(isset($_GET['logout'])){
@@ -212,4 +204,21 @@ if(isset($_POST['change_pass'])){
         }
     }
 }
+
+if(isset($_POST['contact'])){
+    $name = mysqli_real_escape_string($con,$_POST['name']);
+    $email = mysqli_real_escape_string($con,$_POST['email']);
+    $message = mysqli_real_escape_string($con,$_POST['message']);
+    $datetime = date('Y-m-d');
+    $checked = false;
+    $sql = "INSERT INTO `contact_request` (`id`, `name`, `email`, `message`, `checked`,`date_of_register`) VALUES (NULL, '$name', '$email', '$message', '$checked', '$datetime');";
+    $VAR = mysqli_query($con,$sql);
+    if($VAR == 1){
+        $_SESSION['contact_success'] = "Email Sent Successfully";
+        header('location: /Web-Gaming-News/index.php');
+    }
+    else{
+        unset($_SESSION['contact_success']);
+    }
+} 
 ?>

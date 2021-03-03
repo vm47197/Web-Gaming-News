@@ -22,12 +22,17 @@ else{
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/contact.css" />
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/font-awesome.min.css" />
     <link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
+    <style>
+    .error{
+        color:red;
+    }
+    </style>
 </head>
 <body>
     <div id="wrapper">
             <article id="contact">
                 <h2 class="major">Contact</h2>
-                <form method="post" action="#">
+                <form method="post" action="contact-us.php" id="contact-form"> 
                     <div class="fields">
                         <div class="field half">
                             <label for="name">Name</label>
@@ -43,7 +48,7 @@ else{
                         </div>
                     </div>
                     <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="submit" name="contact" class="primary" /></li>
                         <li><input type="reset" value="Reset" /></li>
                     </ul>
                 </form>
@@ -60,6 +65,30 @@ else{
             </div>
     </div>
 </body>
+    <script src="../assets/js/jquery.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+    <script>
+     $("#contact-form").validate({
+        rules:{
+            name:{
+                required:true,
+                minlength:5
+            },
+            email:{
+                required:true,
+                email:true,
+            },
+            message:{
+                required:true,
+                minlength:10
+            },
+        }
+    });
+    </script>
+    
+    
 <!-- <script src="../assets/js/snow.js"></script> -->
 </html>
 <?php include '../assets/includeFiles/navbar.php'?>
