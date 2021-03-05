@@ -19,7 +19,7 @@ $query_total = $conn->query("SELECT * FROM users");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gamehub / Dashboard</title>
-    <link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/admin-dashboard.min.css">
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/admin-dashboard.css">
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/font-awesome.min.css">

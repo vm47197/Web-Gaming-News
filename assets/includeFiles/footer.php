@@ -25,7 +25,7 @@
             <a href="/Web-Gaming-News/index.php">Home</a>
           </li>
           <li>
-            <a href="/Web-Gaming-News/pages/about.php">About</a>
+            <a href="/Web-Gaming-News/pages/about-us.php">About</a>
           </li>
           <li>
             <a href="/Web-Gaming-News/pages/games.php">Games</a>
