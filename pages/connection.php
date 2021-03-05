@@ -221,4 +221,25 @@ if(isset($_POST['contact'])){
         unset($_SESSION['contact_success']);
     }
 } 
+
+if (isset($_GET['email_contact'])) {
+    $id = $_GET['email_contact'];
+    $query="SELECT * FROM contact_request WHERE id=$id";
+    $result = mysqli_query($con,$query);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['email_contact_id'] = $row['id'];
+        $_SESSION['email_contact_checked'] = $row['checked'];
+        $_SESSION['email_contact_message'] = $row['message'];
+    }
+}
+
+if(isset($_POST['email_contact_post'])){
+    $id = mysqli_real_escape_string($con,$_POST['email_contact_post']);
+    $checked = mysqli_real_escape_string($con,$_POST['checked']);
+    print($id);
+    print($checked);
+    $sql = "UPDATE contact_request SET checked='$checked' WHERE id='$id'";
+    mysqli_query($con,$sql);
+}
 ?>

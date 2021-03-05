@@ -43,7 +43,13 @@ $query_total = $conn->query("SELECT * FROM users");
         </script>
 	<?php endif; unset($_SESSION["pass_error"]);?>
     <style>
-        
+        .checked-button{
+            border:none;
+            outline:none;
+            background:transparent;
+            display:flex;
+            justify-content: center;
+        }
     </style>
 </head>
 
@@ -358,6 +364,122 @@ $query_total = $conn->query("SELECT * FROM users");
                     </details-accordion>
                 </div>
             </div>
+            <?php
+                #Email-s
+                $email_checked = $conn->query("SELECT * FROM contact_request WHERE checked = 1");
+                $email_non_checked = $conn->query("SELECT * FROM contact_request WHERE checked = 0");
+                $email_total = $conn->query("SELECT * FROM contact_request");
+            ?>
+                <div class="accordion-container">
+                    <details-accordion aria-role="region" aria-labelledby="h-details-accordion">
+                        <details open>
+                            <summary aria-describedby="">Contact Emails</summary>
+                            <!--#region User Counts -->
+                            <section class="content" style="margin:0;">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-6">
+                                            <div class="small-box bg-success">
+                                                <div class="inner">
+                                                    <h3>
+                                                        <?php
+                                                        echo $email_checked->num_rows;
+                                                        ?>
+                                                    </h3>
+                                                    <p>Checked Emails</p>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="fa fa-check"></i>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-6">
+                                            <div class="small-box bg-warning">
+                                                <div class="inner">
+                                                    <h3>
+                                                        <?php
+                                                        echo $email_non_checked->num_rows;
+                                                        ?><sup style="font-size: 20px"></sup>
+                                                    </h3>
+                                                    <p>Unchecked Emails</p>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-6">
+                                            <div class="small-box bg-info">
+                                                <div class="inner">
+                                                    <h3>
+                                                        <?php
+                                                        echo $email_total->num_rows;
+                                                        ?><sup style="font-size: 20px"></sup>
+                                                    </h3>
+                                                    <p>Total Emails</p>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="fa fa-list fa-1x"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--#endregion -->
+                            <div>
+                                <section class="content" style="margin-bottom:1%">
+                                    <div class="container-fluid">
+                                        <div class="col-md-6" style="max-width:100%;padding-bottom:1%">
+                                            <div class="card">
+                                                <div class="card-body p-2">
+                                                    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Full Name</th>
+                                                                <th>Email</th>
+                                                                <th>Date</th>
+                                                                <th>Checked</th>
+                                                                <th>Modify</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php foreach ($email_total as $item) : ?>
+                                                                <tr>
+                                                                    <td>
+                                                                        <?php echo $item['name']; ?>
+                                                                    </td>
+                                                                    <td>
+                                                                        <?php echo $item['email']; ?>
+                                                                    </td>
+                                                                    <td><?php echo $item['date_of_register'];?></td>
+                                                                    <td style="width: 7%;">
+                                                                        <?php   
+                                                                        if($item['checked'] == 1){
+                                                                            echo '<a class="checked-button"><i class="fa fa-check-circle" aria-hidden="true" style="color:green;"></i></a>';
+                                                                        }else{
+                                                                            echo '<a class="checked-button"><i class="fa fa-check-circle" aria-hidden="true" style="color:red;"></i></a>';
+                                                                        }
+                                                                        ?>
+                                                                    </td>
+                                                                    <td style="width: 7%;">
+                                                                    <a class="btn btn-info" href="admin-dashboard.php?email_contact=<?php echo $item['id']; ?>#demo-modal4">Edit</a>
+                                                                    </td>
+                                                                </tr>
+                                                            <?php endforeach; ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                </div>
+                </details>
+                </details-accordion>
+            </div>
         </div>
         <div id="demo-modal-post" class="modal">
             <div class="modal__content">
@@ -485,6 +607,32 @@ $query_total = $conn->query("SELECT * FROM users");
                         <input type="text" readonly="readonly" class="form-control" name="post_created_by" value="<?php echo $find_user_name ?>">
                     </div>
                     <button type="submit" name="post_edit" value="<?php echo $_SESSION["post_edit_id"] ?>" class="btn btn-success">Modify</button>
+                </form>
+            </div>
+        </div>
+        <div id="demo-modal4" class="modal">
+            <div class="modal__content">
+                <a href="#" class="modal__close">&times;</a>
+                <h1>Edit</h1>
+                <hr>
+                <form method="post" action="admin-dashboard.php">
+                    <input type="hidden" name="post_id" value="<?php echo $_SESSION["email_contact_id"] ?>">
+                    <label>Checked</label>
+                    <div class="form-group">
+                        <div>
+                            <label>True</label>
+                            <input type="radio" class="" name="checked" value="1">
+                        </div>
+                        <div>
+                            <label>False</label>
+                            <input type="radio" class="" name="checked" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Message</label>
+                        <textarea class="form-control" name="post_content" readonly="readonly"><?php echo $_SESSION['email_contact_message']; ?></textarea>
+                    </div>
+                    <button type="submit" name="email_contact_post" value="<?php echo $_SESSION["email_contact_id"] ?>" class="btn btn-success">Modify</button>
                 </form>
             </div>
         </div>
