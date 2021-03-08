@@ -64,8 +64,6 @@ if(isset($_POST['login'])){
             header('Location: ../index.php');
         }
     }
-    $email = mysqli_real_escape_string($con,$_POST['email']);
-    $password = mysqli_real_escape_string($con,$_POST['password']);
 }
 
 if(isset($_GET['logout'])){
@@ -79,27 +77,13 @@ if(isset($_GET['logout'])){
     header('location: login.php');
 }
 
-if (isset($_GET['edit'])) {
-    $id = $_GET['edit'];
-    $query="SELECT * FROM users WHERE id=$id";
-    $result = mysqli_query($con,$query);
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['edit_id'] = $row['id'];
-        $_SESSION['edit_full_name']=$row['full_name'];
-        $_SESSION['edit_username'] = $row['username'];
-        $_SESSION['edit_password'] = $row['password'];
-        $_SESSION['edit_email'] = $row['email'];
-        $_SESSION['edit_role'] = $row['role'];
-    }
-}
-if(isset($_POST['edit'])){
-    $id = mysqli_real_escape_string($con,$_POST['id']);
-    $full_name = mysqli_real_escape_string($con,$_POST['full_name']);
-    $username = mysqli_real_escape_string($con,$_POST['username']);
-    $email = mysqli_real_escape_string($con,$_POST['email']);
-    $password = mysqli_real_escape_string($con,$_POST['password']);
-    $role = mysqli_real_escape_string($con,$_POST['role']);
+if(isset($_POST['edit-user'])){
+    $id = mysqli_real_escape_string($con,$_POST['edit-user-id']);
+    $full_name = mysqli_real_escape_string($con,$_POST['edit-user-full_name']);
+    $username = mysqli_real_escape_string($con,$_POST['edit-user-username']);
+    $email = mysqli_real_escape_string($con,$_POST['edit-user-email']);
+    $password = mysqli_real_escape_string($con,$_POST['edit-user-password']);
+    $role = mysqli_real_escape_string($con,$_POST['edit-user-role']);
     if($role == 1){
         $mainrole = "User";
     }
@@ -109,6 +93,7 @@ if(isset($_POST['edit'])){
     $sql = "UPDATE users SET username='$username',full_name='$full_name',email='$email',password='$password',role='$role' WHERE id='$id'";
     mysqli_query($con,$sql);
 }
+
 if(isset($_POST['active-change'])){
     $id = mysqli_real_escape_string($con,$_POST['id']);
     $active = mysqli_real_escape_string($con,$_POST['active-change']);
@@ -124,24 +109,12 @@ if(isset($_POST['active-change'])){
             
     }
 }
-if (isset($_GET['post_edit'])) {
-    $id = $_GET['post_edit'];
-    $query="SELECT * FROM posts WHERE id=$id";
-    $result = mysqli_query($con,$query);
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['post_edit_id'] = $row['id'];
-        $_SESSION['post_edit_title']=$row['title'];
-        $_SESSION['post_edit_author'] = $row['author'];
-        $_SESSION['post_edit_content'] = $row['content'];
-        $_SESSION['post_edit_created_by'] = $row['created_by'];
-    }
-}
+
 if(isset($_POST['post_edit'])){
-    $id = mysqli_real_escape_string($con,$_POST['post_id']);
-    $title = mysqli_real_escape_string($con,$_POST['post_title']);
-    $author = mysqli_real_escape_string($con,$_POST['post_author']);
-    $content = mysqli_real_escape_string($con,$_POST['post_content']);
+    $id = mysqli_real_escape_string($con,$_POST['edit-post-id']);
+    $title = mysqli_real_escape_string($con,$_POST['edit-post-title']);
+    $author = mysqli_real_escape_string($con,$_POST['edit-post-author']);
+    $content = mysqli_real_escape_string($con,$_POST['edit-post-content']);
     
     $sql = "UPDATE posts SET title='$title',author='$author',content='$content' WHERE id='$id'";
     mysqli_query($con,$sql);
@@ -220,25 +193,11 @@ if(isset($_POST['contact'])){
     else{
         unset($_SESSION['contact_success']);
     }
-} 
-
-if (isset($_GET['email_contact'])) {
-    $id = $_GET['email_contact'];
-    $query="SELECT * FROM contact_request WHERE id=$id";
-    $result = mysqli_query($con,$query);
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['email_contact_id'] = $row['id'];
-        $_SESSION['email_contact_checked'] = $row['checked'];
-        $_SESSION['email_contact_message'] = $row['message'];
-    }
 }
 
 if(isset($_POST['email_contact_post'])){
-    $id = mysqli_real_escape_string($con,$_POST['email_contact_post']);
+    $id = mysqli_real_escape_string($con,$_POST['edit-contact-id']);
     $checked = mysqli_real_escape_string($con,$_POST['checked']);
-    print($id);
-    print($checked);
     $sql = "UPDATE contact_request SET checked='$checked' WHERE id='$id'";
     mysqli_query($con,$sql);
 }

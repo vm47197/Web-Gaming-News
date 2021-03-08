@@ -1,5 +1,5 @@
 <?php
-include "connection.php";
+include "../connection.php";
 
 $email = mysqli_real_escape_string($con,$_POST['email']);
 $password = mysqli_real_escape_string($con,$_POST['password']);
@@ -16,9 +16,9 @@ if ($email != "" && $password != ""){
         $_SESSION['admin-active'] = $row['active'];
         $_SESSION['email'] = $row['email'];
         if($_SESSION['role'] == "Admin"){
-            header('Location: admin-dashboard.php');
+            header('Location: ../admin-dashboard.php');
         }else if($_SESSION['role'] == "User"){
-            header('Location: ../index.php');
+            header('Location: ../../index.php');
         }
     }
     else{

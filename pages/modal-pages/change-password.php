@@ -1,9 +1,8 @@
-<?php include "connection.php"?>
+<?php include "../connection.php"?>
 <!DOCTYPE html>
 <html>
 
 <head>
-<link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
 
 </head>
 
@@ -18,7 +17,7 @@
                     <input type="email" id="email" value="<?php echo $_SESSION['email']; ?>" name="email">
                 </div>
                 <div class="input-field">
-                    <label for="password">Current Password</label>
+                    <label for="password">Last Password</label>
                     <input type="password" id="password" name="lastPass">
                 </div>
                 <div class="input-field">
@@ -42,6 +41,7 @@
 </body>
 
 <script></script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 

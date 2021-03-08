@@ -49,7 +49,7 @@ echo $_SESSION['error'];
 
           if(email != "" && password != "" ){
               $.ajax({
-                  url:'check-user.php',
+                  url:'modal-pages/check-user.php',
                   type:'post',
                   data:{email:email,password:password},
                   success:function(response){
