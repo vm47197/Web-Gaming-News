@@ -21,7 +21,7 @@ else{
 <html>
 
 <head>
-	<title>GameHub</title>
+	<title>GameHub | About Us</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="/Web-Gaming-News/assets/css/style.css" />

@@ -29,7 +29,7 @@ echo $_SESSION['error'];
     <div class="form">
       <input type="text" class="form-field animation a3" placeholder="Email" name="email" id="email">
       <input type="password" class="form-field animation a4" placeholder="Password" name="password" id="password">
-      <p class="animation a5"><a href="#">Forgot Password</a></p>
+      <p class="animation a5"><a href="/Web-Gaming-News/pages/change-password.php">Forgot Password</a></p>
       <p class="animation a5" style="margin: 0"><a href="register.php">Sign Up</a></p>
       <button class="animation a6"  type="button" name="login-" id="but_submit">Log In</button>
       
@@ -172,6 +172,7 @@ body {
   color: #fff;
   letter-spacing: 1px;
   font-family: "Rubik", sans-serif;
+  cursor:pointer;
 }
 
 .animation {
