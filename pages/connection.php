@@ -91,6 +91,11 @@ if(isset($_POST['edit-user'])){
         $mainrole = "Admin";
     }
     $sql = "UPDATE users SET username='$username',full_name='$full_name',email='$email',password='$password',role='$role' WHERE id='$id'";
+    $_SESSION['id'] = $id ;
+    $_SESSION['username'] = $username;
+    $_SESSION['role'] = $role;
+    $_SESSION['full_name'] = $full_name;
+    $_SESSION['email'] = $email;
     mysqli_query($con,$sql);
 }
 
@@ -106,7 +111,7 @@ if(isset($_POST['active-change'])){
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['admin-active'] = $row['active'];
-            
+        
     }
 }
 
@@ -154,15 +159,17 @@ if (isset($_POST['add_new_post'])) {
 }
 if(isset($_POST['change_pass'])){
     $id = mysqli_real_escape_string($con,$_POST['id']);
+    $email = mysqli_real_escape_string($con,$_POST['email']);
     $role = mysqli_real_escape_string($con,$_POST['role']);
     $lastPass = mysqli_real_escape_string($con,$_POST['lastPass']);
     $newPass = mysqli_real_escape_string($con,$_POST['newPass']);
-    $query="SELECT * FROM users WHERE id=$id";
+    $query = "SELECT * FROM users WHERE email='$email'";
     $result = mysqli_query($con,$query);
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         if($row['password'] == $lastPass){
-            $sql = "UPDATE users SET password='$newPass' WHERE id='$id'";
+            $this_id = $row['id'];
+            $sql = "UPDATE users SET password='$newPass' WHERE id='$this_id'";
             mysqli_query($con,$sql);
             $_SESSION["pass_error"] = "Password Successfully Changed";
             if($role == "Admin"){
@@ -201,4 +208,15 @@ if(isset($_POST['email_contact_post'])){
     $sql = "UPDATE contact_request SET checked='$checked' WHERE id='$id'";
     mysqli_query($con,$sql);
 }
+
+if(isset($_POST['addbug'])){
+    #$id = mysqli_real_escape_string($con,$_POST['id']);
+    $game = mysqli_real_escape_string($con,$_POST['game']);
+    $bug_type = mysqli_real_escape_string($con,$_POST['bug_type']);
+    $message = mysqli_real_escape_string($con,$_POST['message']);
+    $sql = "INSERT INTO bug_reports (type_id,game_name,message) VALUES ('$bug_type','$game','$message')";
+    mysqli_query($con,$sql);
+    header('location: games.php');
+} 
+
 ?>

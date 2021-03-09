@@ -17,7 +17,7 @@ else{
 <html>
 
 <head>
-    <title>GameHub</title>
+    <title>GameHub | Games</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/main.css" />
@@ -93,15 +93,15 @@ else{
                     <span aria-hidden="true">&times;</span>
                 </a>
                 <h1 style="color:#000 !important;margin:0">Report Bugs</h1>
-                <form method="post" action="admin-dashboard.php" id="registerform2" enctype="multipart/form-data">
+                <form method="post" action="games.php" id="registerform2">
                     <input type="hidden" name="id">
                     <div class="form-group">
                         <label style="margin:0">Game</label>
-                        <select>
-                            <option name="game" value="Shooter">Shooter</option>
-                            <option name="game" value="Snake">Snake</option>
-                            <option name="game" value="Ping Pong">Ping Pong</option>
-                            <option name="game" value="Tic Tac Toe">Tic Tac Toe</option>
+                        <select name="game">
+                            <option value="Shooter">Shooter</option>
+                            <option value="Snake">Snake</option>
+                            <option value="Ping Pong">Ping Pong</option>
+                            <option value="Tic Tac Toe">Tic Tac Toe</option>
                         </select>
                     </div>
                     <?php 
@@ -110,15 +110,15 @@ else{
                     ?>
                     <div class="form-group">
                         <label style="margin:0">Bug Type</label>
-                        <select>
+                        <select name="bug_type">
                             <?php foreach($bug_types as $item): ?>
-                                <option value="<?php echo $item['type_id']; ?>">  <?php echo $item['description']; ?>  </option>
+                                <option value="<?php echo $item['type_id']; ?>"><?php echo $item['description'];?></option>
                             <?php endforeach;?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label style="margin:0">Message</label>
-                        <textarea type="text" class="form-control" name="add_full_name" style="resize:none;margin-bottom:4%"></textarea>
+                        <textarea type="text" class="form-control" name="message" style="resize:none;margin-bottom:4%"></textarea>
                     </div>
                     <button type="submit" name="addbug" class="btn btn-success">Submit Report</button>
                 </form>
@@ -130,7 +130,22 @@ else{
     <script src="/Web-Gaming-News/assets/js/skel.min.js"></script>
     <script src="/Web-Gaming-News/assets/js/util.js"></script>
     <script src="/Web-Gaming-News/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
     <script>
+        $("#registerform2").validate({
+            rules: {
+                game: {
+                    required: true,
+                },
+                bug_type: {
+                    required: true,
+                },
+                message: {
+                    required: true,
+                    minlength: 5
+                },
+            }
+        });
     function CheckScroll(data) {
         var position = $(data).position();
         var top = position.top;
@@ -145,6 +160,10 @@ else{
 
 </html>
 <style>
+.error{
+    color:red;
+}
+
 #header {
     background-image: url(/Web-Gaming-News/images/games.png) !important;
 }
