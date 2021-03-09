@@ -210,7 +210,6 @@ if(isset($_POST['email_contact_post'])){
 }
 
 if(isset($_POST['addbug'])){
-    #$id = mysqli_real_escape_string($con,$_POST['id']);
     $game = mysqli_real_escape_string($con,$_POST['game']);
     $bug_type = mysqli_real_escape_string($con,$_POST['bug_type']);
     $message = mysqli_real_escape_string($con,$_POST['message']);

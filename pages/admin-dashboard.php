@@ -42,12 +42,18 @@ $query_total = $conn->query("SELECT * FROM users");
         $(".modal").css("opacity", "0");
     });
 
-    $(".modal__close").on('click', function() {
-        window.location.href = "admin-dashboard.php";
-    });
-    $(window).on('beforeunload', function() {
-        $(window).scrollTop(0);
-    });
+    // $(".close").on('click', function() {
+    //     //window.location.href = "admin-dashboard.php";
+    //     $(".modal").css("visibility", "hidden");
+    //     $(".modal").css("opacity", "0");
+    //     //$("#create-user-modal,#create-post-modal,#edit-user-modal,#edit-post-modal,#edit-contact-modal").css("visibility","hidden");
+    //     //$("#create-user-modal,#create-post-modal,#edit-user-modal,#edit-post-modal,#edit-contact-modal").css("opacity","0");
+    // });
+   
+    function ExitModal(){
+        $(".modal").css("visibility", "hidden");
+        $(".modal").css("opacity", "0");
+    }
 
     function UserCreateModal() {
         $("#create-user-modal").css("visibility", "visible");
@@ -147,7 +153,7 @@ $query_total = $conn->query("SELECT * FROM users");
                     <a href="register.php" class="nav-link">Register</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="modal-pages/change-password.php" class="nav-link">Change Password</a>
+                    <a href="change-password.php" class="nav-link">Change Password</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="admin-dashboard.php?logout='1'" class="nav-link">Logout</a>
@@ -669,9 +675,9 @@ $query_total = $conn->query("SELECT * FROM users");
         <!--#region User Create -->
         <div id="create-user-modal" class="modal">
             <div class="modal__content">
-                <a type="button" class="close" href="">
+                <button type="button" class="close" onclick="ExitModal()">
                     <span aria-hidden="true">&times;</span>
-                </a>
+                </button>
                 <h1>Add new User</h1>
                 <hr>
                 <form method="post" action="admin-dashboard.php" id="registerform2" enctype="multipart/form-data">
@@ -707,9 +713,9 @@ $query_total = $conn->query("SELECT * FROM users");
         <!--#region User Edit -->
         <div id="edit-user-modal" class="modal">
             <div class="modal__content">
-                <a type="button" class="close" href="">
+                <button type="button" class="close" onclick="ExitModal()">
                     <span aria-hidden="true">&times;</span>
-                </a>
+                </button>
                 <hs>Edit</h1>
                     <hr>
                     <form method="post" action="admin-dashboard.php" id="registerform">
@@ -745,9 +751,9 @@ $query_total = $conn->query("SELECT * FROM users");
         <!--#region Post Create -->
         <div id="create-post-modal" class="modal">
             <div class="modal__content">
-                <a type="button" class="close" href="">
+                <button type="button" class="close" onclick="ExitModal()">
                     <span aria-hidden="true">&times;</span>
-                </a>
+                </button>
                 <h1>Add new Post</h1>
                 <hr>
                 <form name="form" method="post" action="admin-dashboard.php" id="registerform3"
@@ -778,9 +784,9 @@ $query_total = $conn->query("SELECT * FROM users");
         <!--#region Post Edit -->
         <div id="edit-post-modal" class="modal">
             <div class="modal__content">
-                <a type="button" class="close" href="">
+            <button type="button" class="close" onclick="ExitModal()">
                     <span aria-hidden="true">&times;</span>
-                </a>
+                </button>
                 <h1>Edit</h1>
                 <hr>
                 <form method="post" action="admin-dashboard.php">
@@ -799,12 +805,14 @@ $query_total = $conn->query("SELECT * FROM users");
                     </div>
                     <div class="form-group">
                         <?php
-                        $this_id = $_SESSION["post_edit_created_by"];
-                        $user_result = $conn->query("SELECT * FROM users WHERE id=$this_id");
-                        if (mysqli_num_rows($user_result) > 0) {
-                            $row = mysqli_fetch_assoc($user_result);
-                            $find_user_name = $row['full_name'];
-                        }
+                        if(isset($_SESSION["post_edit_created_by"])){
+                            $this_id = $_SESSION["post_edit_created_by"];
+                            $user_result = $conn->query("SELECT * FROM users WHERE id=$this_id");
+                            if (mysqli_num_rows($user_result) > 0) {
+                                $row = mysqli_fetch_assoc($user_result);
+                                $find_user_name = $row['full_name'];
+                            }
+                        }   
                         ?>
                         <label>Created By</label>
                         <input type="text" readonly="readonly" class="form-control" name="edit-post-created_by"
@@ -819,9 +827,9 @@ $query_total = $conn->query("SELECT * FROM users");
         <!--#region Contact Email Edit -->
         <div id="edit-contact-modal" class="modal">
             <div class="modal__content">
-                <a type="button" class="close" href="">
+            <button type="button" class="close" onclick="ExitModal()">
                     <span aria-hidden="true">&times;</span>
-                </a>
+                </button>
                 <h1>Edit</h1>
                 <hr>
                 <form method="post" action="admin-dashboard.php">

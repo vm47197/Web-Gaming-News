@@ -23,9 +23,20 @@ else{
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/main.css" />
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/style.css" />
     <link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
+    <script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
+    <script src="/Web-Gaming-News/assets/js/skel.min.js"></script>
+    <script src="/Web-Gaming-News/assets/js/util.js"></script>
+    <script src="/Web-Gaming-News/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 	<script>
-		
-
+        $(document).ready(function() {
+            $(".modal").css("visibility", "hidden");
+            $(".modal").css("opacity", "0");
+        });
+		function ExitModal(){
+            $(".modal").css("visibility", "hidden");
+            $(".modal").css("opacity", "0");
+        }
 	</script>
 </head>
 
@@ -85,13 +96,14 @@ else{
                 </ul>
             </article>
         </section>
-    </div>
-	<a style="position:fixed;bottom:0;right:0;color:white;margin:10px" href="#demo-modal"><i class="fa fa-question-circle fa-2x" aria-hidden="true"></i></a>
+    </div> 
+            
+	<a style="position:fixed;bottom:0;right:0;color:white;margin:10px" href="#demo-modal" onclick="$('.modal').css('visibility', 'visible');$('.modal').css('opacity', '1');"><i class="fa fa-question-circle fa-2x" aria-hidden="true"></i></a>
     <div id="demo-modal" class="modal">
             <div class="modal__content">
-                <a type="button" class="close" href="" style="float:right">
+                <button type="button" class="close" onclick="ExitModal()" id="close_mdl_btn">
                     <span aria-hidden="true">&times;</span>
-                </a>
+                </button>
                 <h1 style="color:#000 !important;margin:0">Report Bugs</h1>
                 <form method="post" action="games.php" id="registerform2">
                     <input type="hidden" name="id">
@@ -126,11 +138,7 @@ else{
         </div>
     
     <!-- Scripts -->
-    <script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
-    <script src="/Web-Gaming-News/assets/js/skel.min.js"></script>
-    <script src="/Web-Gaming-News/assets/js/util.js"></script>
-    <script src="/Web-Gaming-News/assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+    
     <script>
         $("#registerform2").validate({
             rules: {
@@ -162,6 +170,13 @@ else{
 <style>
 .error{
     color:red;
+}
+#close_mdl_btn{
+    padding:0;
+    background:none;
+    box-shadow:none;
+    float:right;
+    outline:none;
 }
 
 #header {
