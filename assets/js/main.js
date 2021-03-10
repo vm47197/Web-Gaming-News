@@ -19,43 +19,57 @@
 
 		var	$window = $(window),
 			$body = $('body');
-
-		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
-
 			$window.on('load', function() {
 				window.setTimeout(function() {
 					$body.removeClass('is-loading');
 				}, 100);
 			});
-
-		// Fix: Placeholder polyfill.
 			$('form').placeholder();
-
-		// Prioritize "important" elements on medium.
 			skel.on('+medium -medium', function() {
 				$.prioritize(
 					'.important\\28 medium\\29',
 					skel.breakpoint('medium').active
 				);
 			});
-
-		// Items.
 			$('.item').each(function() {
-
 				var $this = $(this),
 					$header = $this.find('header'),
 					$a = $header.find('a'),
 					$img = $header.find('img');
-
-				// Set background.
 					$a.css('background-image', 'url(' + $img.attr('src') + ')');
-
-				// Remove original image.
 					$img.remove();
-
 			});
 
 	});
 
 })(jQuery);
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+	try{
+		slides[slideIndex - 1].style.display = "block";
+	}catch{  }
+}

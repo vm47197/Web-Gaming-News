@@ -135,7 +135,7 @@ if (isset($_POST['add_new_post'])) {
     $title = mysqli_real_escape_string($con, $_POST['add_post_title']);
     $author = mysqli_real_escape_string($con, $_POST['add_post_author']);
     $content = mysqli_real_escape_string($con, $_POST['add_post_content']);
-    $created_by =  mysqli_real_escape_string($con, $_POST['id']);
+    $created_by =  mysqli_real_escape_string($con, $_POST['post-create-id']);
     $active = true;
     if (($_FILES['my_file']['name'] != "")) {
         $target_dir = "../images/";

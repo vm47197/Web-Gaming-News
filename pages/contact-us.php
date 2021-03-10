@@ -20,6 +20,7 @@ else{
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/contact.css" />
+    <link rel="stylesheet" href="/Web-Gaming-News/assets/css/loading.css" />
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/font-awesome.min.css" />
     <link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
     <style>
@@ -64,12 +65,23 @@ else{
                 width="970" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" id="map-Iframe"></iframe>
             </div>
     </div>
+    <!--#region Preloader-->
+    <div id="loader-wrapper" style="display: block;">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--#endregion-->
 </body>
     <script src="../assets/js/jquery.min.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+    <script src="/Web-Gaming-News/assets/js/snow.js"></script>
     <script>
+    $(document).ready(function () {
+        $("#loader-wrapper").fadeOut(800);
+    });
      $("#contact-form").validate({
         rules:{
             name:{

@@ -168,7 +168,7 @@
 		}
 	}
 </style>
-<script src="../assets/js/jquery.min.js"></script>
+<script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
 <script>
 	$(document).ready(function () {
 		$(".nav__content").css("cursor", "default");

@@ -3,10 +3,7 @@
  * Making it snow on the internets since 2003. You're welcome.
  */
 var snowStorm = (function (window, document) {
-  // --- common properties ---
   var getCheckedValue = document.querySelector("#toggle-Snow");
-  console.log(getCheckedValue);
-  // --- common properties ---
   if (getCheckedValue != null) {
     getCheckedValue.addEventListener("click", CheckValue);
     function CheckValue() {

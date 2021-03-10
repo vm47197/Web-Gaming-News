@@ -136,6 +136,16 @@ $query_total = $conn->query("SELECT * FROM users");
         display: flex;
         justify-content: center;
     }
+    @media(max-width:576px)
+    {
+        .d-sm-inline-block{
+            display: block !important;
+        }
+        .navbar-nav{
+            flex-direction:unset !important;
+            flex-wrap: wrap !important;
+        }
+    }
     </style>
 </head>
 
@@ -758,7 +768,7 @@ $query_total = $conn->query("SELECT * FROM users");
                 <hr>
                 <form name="form" method="post" action="admin-dashboard.php" id="registerform3"
                     enctype="multipart/form-data">
-                    <input type="hidden" name="post-create-id" value="">
+                    <input type="hidden" name="post-create-id" value="<?php echo $_SESSION['id']; ?>">
                     <div class="form-group">
                         <label>Title</label>
                         <input type="text" class="form-control" name="add_post_title">
@@ -818,7 +828,7 @@ $query_total = $conn->query("SELECT * FROM users");
                         <input type="text" readonly="readonly" class="form-control" name="edit-post-created_by"
                             value="<?php echo $find_user_name;?>">
                     </div>
-                    <button type="submit" name="post_edit">Modify</button>
+                    <button type="submit" name="post_edit" class="btn btn-success" >Modify</button>
                 </form>
             </div>
         </div>

@@ -22,6 +22,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/main.css" />
     <link rel="stylesheet" href="/Web-Gaming-News/assets/css/style.css" />
+    <link rel="stylesheet" href="/Web-Gaming-News/assets/css/loading.css" />
     <link rel="shortcut icon" href="/Web-Gaming-News/images/titlelogo.png" type="image/x-icon">
     <script src="/Web-Gaming-News/assets/js/jquery.min.js"></script>
     <script src="/Web-Gaming-News/assets/js/skel.min.js"></script>
@@ -32,6 +33,7 @@ else{
         $(document).ready(function() {
             $(".modal").css("visibility", "hidden");
             $(".modal").css("opacity", "0");
+            $("#loader-wrapper").fadeOut(800);
         });
 		function ExitModal(){
             $(".modal").css("visibility", "hidden");
@@ -163,7 +165,14 @@ else{
         }, 800)
     }
     </script>
-    <!-- <script src="assets/js/snow.js"></script> -->
+    <!--#region Preloader-->
+    <div id="loader-wrapper" style="display: block;">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--#endregion-->
+    <script src="/Web-Gaming-News/assets/js/snow.js"></script>
 </body>
 
 </html>

@@ -21,7 +21,7 @@
         </div>
     </div>
 </div>
-<canvas style="width: 100% !important;height: 100% !important;background-color: #fff;touch-action: none;"></canvas>
+<canvas style="width: 99.6% !important;height: 100% !important;background-color: #fff;touch-action: none;"></canvas>
 
 </html>
 <style>
