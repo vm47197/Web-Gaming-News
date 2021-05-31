@@ -575,7 +575,7 @@ $query_total = $conn->query("SELECT * FROM users");
                                                                         if($item['checked'] == 1){
                                                                             echo '<a class="checked-button"><i class="fa fa-check-circle" aria-hidden="true" style="color:green;"></i></a>';
                                                                         }else{
-                                                                            echo '<a class="checked-button"><i class="fa fa-check-circle" aria-hidden="true" style="color:red;"></i></a>';
+                                                                            echo '<a class="checked-button"><i class="fa fa-times-circle" aria-hidden="true" style="color:red;"></i></a>';
                                                                         }
                                                                         ?>
                                                                 </td>

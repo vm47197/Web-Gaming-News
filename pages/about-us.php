@@ -33,7 +33,7 @@ else{
 	<!-- Header -->
 	<header id="header" class="alt">
 		<div class="inner">
-			<h1>Check out our team of yound professionals</h1>
+			<h1>Check out our team of young professionals</h1>
 		</div>
 	</header>
 		

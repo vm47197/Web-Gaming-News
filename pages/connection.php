@@ -217,5 +217,4 @@ if(isset($_POST['addbug'])){
     mysqli_query($con,$sql);
     header('location: games.php');
 } 
-
 ?>
